@@ -6,8 +6,16 @@ sidebar_position: 4
 ---
 
 ## Introduction: The "Why"
-Imagine running a complex data processing engine or a multi-million dollar financial ledger application blindly. The program executes perfectly, calculates balances down to the penny, and terminates—leaving you with absolutely zero visibility into its internal operations. Without a mechanism to pipe data out of your program's isolated memory space and onto a physical interface, your code remains an impenetrable black box.
-Debugging becomes an impossible guessing game, auditing is a fantasy, and user interaction cannot exist. To make any software system functional, we must understand how to stream diagnostic information and evaluation results from inside the runtime execution context to the outside world. In Python, this foundational bridge begins with streaming text to your standard console window.
+Imagine running a complex data processing engine or a multi-million dollar financial ledger application blindly. 
+The program executes perfectly, calculates balances down to the penny, and terminates—leaving you with absolutely zero visibility into its internal operations. 
+
+Without a mechanism to pipe data out of your program's isolated memory space and onto a physical interface, your code remains an impenetrable black box.
+
+
+Debugging becomes an impossible guessing game, auditing is a fantasy, and user interaction cannot exist. 
+
+To make any software system functional, we must understand how to stream diagnostic information and evaluation results from inside the runtime execution context to the outside world. 
+In Python, this foundational bridge begins with streaming text to your standard console window.
 
 ## Learning Outcomes
 By the end of this lesson, you will confidently be able to:
@@ -33,7 +41,7 @@ print('This is a single-quoted string literal.')
 ```
 
 
-When Python parses your code, an unquoted sequence like print(ledger) forces the interpreter to search memory for an active **identifier** (a variable or function name) called ledger. Wrapping those characters in quotes—print("ledger")—instructs the system to bypass evaluation, allocate volatile memory for a literal string object, and forward those exact characters to the standard output buffer.
+When Python parses your code, an unquoted sequence like `print(ledger)` forces the interpreter to search memory for an active **identifier** (a variable or function name) called `ledger`. Wrapping those characters in quotes—`print("ledger")`—instructs the system to bypass evaluation, allocate volatile memory for a literal string object, and forward those exact characters to the standard output buffer.
 
 ### 3. Escape Sequences and Control Characters
 There are structural instructions that cannot easily be typed as literal text within a script file, such as a physical carriage return or an inline quotation mark that matches your external wrapper. To bypass this, parsers recognize an **Escape Character**, designated by the backslash (\).
