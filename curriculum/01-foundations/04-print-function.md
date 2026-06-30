@@ -56,7 +56,7 @@ print("Entry Line 1\nEntry Line 2\nEntry Line 3")
 
 
 ## Assignments
- * **Python Documentation on Built-in Functions:** Thoroughly review the [Official Python print() Specification](https://docs.python.org/3/tutorial/inputoutput.html). Focus deeply on the function signature layout and read through the behavioral details of the optional keyword parameters: `sep`, `end`, and `flush`.
+ * **Python Documentation on Built-in Functions:** Thoroughly review the [Official Python print() Specification](https://docs.python.org/3/library/functions.html#print). Focus deeply on the function signature layout and read through the behavioral details of the optional keyword parameters: `sep`, `end`, and `flush`.
  * **Real Python Stream Foundations:** Read through the [Real Python Guide to the print() Function](https://realpython.com/python-print/). Focus completely on Section 2 ("Printing Custom Text") and Section 4 ("Preventing Line Breaks") to grasp how arguments intercept default newline configurations.
 
 ## Knowledge Checks
