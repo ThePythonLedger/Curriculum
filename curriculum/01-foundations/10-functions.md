@@ -1,7 +1,7 @@
 ---
 id: functions
 title: Functions
-sidebar_label: 12. Functions
-sidebar_position: 13
+sidebar_label: 10. Functions
+sidebar_position: 11
 ---
 # Work in progress

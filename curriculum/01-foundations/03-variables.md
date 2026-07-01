@@ -1,8 +1,8 @@
 ---
 id: variables
 title: Variables
-sidebar_label: 5. Variables
-sidebar_position: 5
+sidebar_label: 3. Variables
+sidebar_position: 3
 ---
 
 ## Introduction: The "Why"
@@ -79,20 +79,20 @@ To keep code professional and clean, the Python community adheres to **PEP 8 (Py
 
 ## Knowledge Checks
 Before advancing to your interactive validation task, ensure you can thoroughly articulate the answers to these architectural questions. Use your assignment readings to locate the underlying engineering answers.
- 1. If you execute `alpha = [1, 2, 3]` and subsequently execute `beta = alpha`, how many distinct objects exist in memory, and what happens if you mutate the object using the name `beta`?
+ 1. If you execute `alpha = 35` and subsequently execute `beta = alpha`, how many distinct objects exist in memory, and what happens if you mutate the object using the name `beta`?
  2. Python handles memory reclamation using a strategy called **Reference Counting**. What precise real-time metric causes the garbage collector to safely purge an object from volatile application memory?
- 3. According to PEP 8 documentation, what specific typographical formatting style is strictly reserved for variables that represent system-wide, unchanging constants?
+ 3. According to PEP 8 documentation, what specific typographical formatting style is strictly reserved for variables that represent system-wide, unchanging **constants**?
 
 
 ## 🏆 The Ledger Challenge: The Character Sheet
 To verify your comprehension of name binding, object reference mapping, and text streaming, you will construct a dynamic programmatic profile marker block.
 
 ### Task
- 1. Initialize an identifier named coder_name and bind it to a string literal containing your name.
- 2. Initialize an identifier named coding_level and bind it to an initial integer object of 1.
- 3. Initialize an identifier named favorite_language and bind it to a string literal object of "Python".
- 4. Reassign the coding_level variable to point to an updated integer object of 2 (simulating a state transition).
- 5. Construct a print execution that maps these variables into a readable profile block streamed to your console screen.
+ 1. Initialize an identifier named `coder_name` and bind it to a *string literal* containing your **name**.
+ 2. Initialize an identifier named `coding_level` and bind it to an initial *integer* object of **1**.
+ 3. Initialize an identifier named `favorite_language` and bind it to a *string literal* object of **"Python"**.
+ 4. Reassign the `coding_level` variable to point to an *updated integer* object of **2** (simulating a state transition).
+ 5. Construct a **print** function that maps these variables into a readable profile streamed to your console screen.
 ```python interactive
 # 1. Bind your initial variables below
 

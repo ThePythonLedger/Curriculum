@@ -1,8 +1,8 @@
 ---
 id: complex-data-types
 title: Complex data types
-sidebar_label: 10. Complex data types
-sidebar_position: 11
+sidebar_label: 8. Complex data types
+sidebar_position: 9
 ---
 # Python Data Structures: Beyond the Basics
 

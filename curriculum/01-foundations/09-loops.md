@@ -1,8 +1,8 @@
 ---
 id: loops
 title: Loops
-sidebar_label: 11. Loops
-sidebar_position: 12
+sidebar_label: 9. Loops
+sidebar_position: 10
 ---
 # Python Iteration: Mastering the Loop
 

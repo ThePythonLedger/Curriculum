@@ -1,8 +1,8 @@
 ---
 id: programming-languages
 title: What is a programming language?
-sidebar_label: 2. What is a programming language?
-sidebar_position: 2
+sidebar_label: 3. What is a programming language?
+sidebar_position: 3
 ---
 
 # What is a programming language?
@@ -57,4 +57,4 @@ A "paradigm" is just a style or approach to writing code. Two of the most common
 Python is a "Multi-paradigm" language. This is why it is so popular for beginners! You can write simple lists of instructions (Imperative), or you can build complex systems using Objects (OOP).
 
 ## Next steps
-Now that we are familiar with *programming languages* in general, its time to move on to our target. The **Python** programming language.
+Now that we are familiar with *programming languages* in general, its time to move on to our target. [The **Python** programming language](/lessons/foundations/why-python).
