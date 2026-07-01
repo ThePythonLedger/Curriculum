@@ -57,4 +57,12 @@ A "paradigm" is just a style or approach to writing code. Two of the most common
 Python is a "Multi-paradigm" language. This is why it is so popular for beginners! You can write simple lists of instructions (Imperative), or you can build complex systems using Objects (OOP).
 
 ## Next steps
-Now that we are familiar with *programming languages* in general, its time to move on to our target. [The **Python** programming language](/lessons/foundations/why-python).
+Now that we are familiar with *programming languages* in general, its time to move on to our target. The **Python** programming language.
+
+import Link from '@docusaurus/Link';
+
+<div className="text--right m--0">
+    <Link className="button button--primary" to="/lessons/foundations/why-python">
+    Start Next Lesson →
+    </Link>
+</div>
