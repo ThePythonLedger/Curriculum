@@ -98,4 +98,4 @@ is_admin = False
 
 
 ## Next Steps
-Now that you've mastered how to branch your execution path using single-variable logic, we are going to supercharge our decisions. In the next lesson, we'll explore **Logical Operators** (and, or, not) to construct sophisticated, multi-layered logical expressions.
+Now that you've mastered how to branch your execution path using single-variable logic, we are going to practice. In the next lesson, we'll tackle your first mini project.
