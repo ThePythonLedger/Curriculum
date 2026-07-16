@@ -96,6 +96,7 @@ is_admin = False
 
 # 2. Build your security logic below using if, elif, and else
 
+```
 
 ## Next Steps
 Now that you've mastered how to branch your execution path using single-variable logic, we are going to practice. In the next lesson, we'll tackle your first mini project.
