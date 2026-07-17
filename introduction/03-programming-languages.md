@@ -68,28 +68,6 @@ You must be able to confidently answer these questions using the assignment link
 2. According to Python's core philosophy outlined in PEP 20, if your code has an error, should that error be silenced secretly or allowed to pass explicitly? What is the one exception to this rule?
 3. If Python is "Strongly Typed," what specific error type is raised when you try to combine incompatible types, such as adding an integer to a string?
 
-## 🏆 The Ledger Challenge
-
-Let's look at how Python evaluates code top-to-bottom, how it handles variable labels, and what happens when we violate its type system rules. 
-
-Below is a broken Python program. Your goal is to reorder the lines and fix the data type incompatibility so that the code successfully calculates the final balance of an account without crashing.
-
-```python
-# { "interactive": true }
-
-# --- STARTER CODE ---
-# Hint: Python executes top-to-bottom. Labels must point to data BEFORE they are used!
-
-# Calculate the final balance
-final_balance = starting_balance + deposit_amount
-
-starting_balance = 500
-deposit_amount = "150"  # Watch out: This is a string (text), not a number!
-
-print("Your final balance is:")
-print(final_balance)
-```
-
 > 💡 **Documentation Hunting Tip:** Look back at Section 3.1.1 of the *Python Docs: Informal Introduction to Python* assignment. See how numbers are written versus how strings (text) are wrapped in quotes. To fix the code above, make sure `deposit_amount` is an integer, not a string!
 
 ## Next Steps
