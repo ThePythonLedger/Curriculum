@@ -57,7 +57,6 @@ A paradigm is a fundamental style or approach to writing code. Python is famous 
 
 To truly understand these foundational concepts, explore these official and industry-standard resources. 
 * **[Python Docs: Informal Introduction to Python](https://docs.python.org/3/tutorial/introduction.html):** Read through Section 3.1. Focus heavily on how Python handles numbers and strings as basic data types.
-* **[Real Python: Python Terms and Definitions](https://realpython.com/lessons/python-terms-definitions/):** Watch or read this breakdown. Pay special attention to the definitions of *Syntax*, *Runtime*, and *Dynamic Typing*.
 * **[PEP 20 – The Zen of Python](https://peps.python.org/pep-0020/):** Read the guiding principles of Python's design. Focus on the core philosophy: *"Explicit is better than implicit"* and *"Simple is better than complex."*
 
 ## Knowledge Checks
@@ -68,7 +67,7 @@ You must be able to confidently answer these questions using the assignment link
 2. According to Python's core philosophy outlined in PEP 20, if your code has an error, should that error be silenced secretly or allowed to pass explicitly? What is the one exception to this rule?
 3. If Python is "Strongly Typed," what specific error type is raised when you try to combine incompatible types, such as adding an integer to a string?
 
-> 💡 **Documentation Hunting Tip:** Look back at Section 3.1.1 of the *Python Docs: Informal Introduction to Python* assignment. See how numbers are written versus how strings (text) are wrapped in quotes. To fix the code above, make sure `deposit_amount` is an integer, not a string!
+> 💡 **Documentation Hunting Tip:** Look back at Section 3.1.1 of the *Python Docs: Informal Introduction to Python* assignment. See how numbers are written versus how strings (text) are wrapped in quotes.
 
 ## Next Steps
 
