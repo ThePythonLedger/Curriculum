@@ -33,9 +33,9 @@ Every computer, whether it's a massive server or the smartphone in your pocket, 
 
 ### Storage vs. RAM vs. CPU
 
-* **Storage (The Storage Closet):** This is your hard drive (SSD/HDD). It holds your files, apps, and Python scripts permanently. It is massive but slow. When your computer is turned off, your code sits safely here.
-* **RAM (The Workbench):** This is your computer's temporary, active workspace. It is incredibly fast but has limited space. When you tell your computer to run a Python script, the computer copies the script from your slow storage closet and lays it out on the high-speed RAM workbench. 
-* **The CPU (The Craftsperson):** This is the processor—the actual brain of the computer. The CPU can *only* read instructions and manipulate data that is currently sitting laid out on the RAM workbench. 
+* **Storage (The Storage Closet):** This is your hard drive (SSD/HDD). It holds your files, apps, and Python scripts permanently. It is massive but slow. When your computer is turned off, your code sits safely here. [Deep dive into Computer Storage](https://medium.com/@dilshandareeju/computer-storage-device-c25655abef33)
+* **RAM (The Workbench):** This is your computer's temporary, active workspace. It is incredibly fast but has limited space. When you tell your computer to run a Python script, the computer copies the script from your slow storage closet and lays it out on the high-speed RAM workbench. [Deep dive into Computer RAM Memory](https://www.integralmemory.com/articles/understanding-ram-what-you-need-to-know/)
+* **The CPU (The Craftsperson):** This is the processor - the actual brain of the computer. The CPU can *only* read instructions and manipulate data that is currently sitting laid out on the RAM workbench. [Deep dive into CPU](https://aws.amazon.com/what-is/cpu/)
 
 ### How Python Evaluates Your Code
 
