@@ -79,15 +79,6 @@ Before moving on to the practical challenge, ensure you can comfortably research
 
 ---
 
-## 🏆 The Ledger Challenge
-
-Let's test your understanding of top-to-bottom execution and how variables point to data. 
-
-Below is a broken Python script. Because Python reads code strictly line-by-line, it will crash if you try to use a variable label before you have actually created it and pointed it to data.
-
-### Your Task
-Rearrange and fix the lines of code below so that the script runs from top to bottom without crashing. 
-
 > 💡 **Documentation Hunting Tip:** Look closely at the error message you get when running the broken code. Search the official Python documentation or your assignment links for the phrase `NameError`. Understanding what a `NameError` means under the hood is a superpower for a beginner.
 
 ---
