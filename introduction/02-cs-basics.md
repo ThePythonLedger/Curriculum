@@ -43,30 +43,6 @@ When the CPU reads your Python script on the workbench, it behaves exactly like 
 
 If line 2 tells Python to calculate a number, it will complete that calculation before it ever looks at line 3. Python will never skip ahead or predict the future. 
 
-### Under the Hood: Labels, Not Boxes
-
-When you write code, you will want your program to remember data. To do this, we use **variables**. 
-
-Many introductory tutorials will tell you that a variable is a "box" that you stuff data into. **This is an inaccurate mental model that will cause you trouble later.** In Python, a variable is actually a **sticky note label**, and the data is an object sitting on the RAM workbench. 
-
-```
-[ Your Code ]        [ RAM Workbench Memory ]
-   my_number   --->    ( The integer value 42 )
-```
-
-When you create a variable, Python allocates a tiny piece of space on the RAM workbench to hold the value (like the number `42`), and then assigns your variable name as a label pointing directly to that exact spot in memory. If you change what that variable means later, you are simply peeling off the sticky note and slapping it onto a new piece of data. 
-
-When your Python program finishes running, the workbench is completely wiped clean by your computer, and those spaces in memory are freed up for other tasks.
-
----
-
-## Assignments
-
-To prepare for your first coding session, read through the official Python documentation to see how the language introduces itself. 
-
-* [The Python Tutorial - Whetting Your Appetite](https://docs.python.org/3/tutorial/appetite.html): Focus deeply on why Python is useful and how it handles scripts.
-* [Real Python - Interactivity with Python](https://realpython.com/interacting-with-python/): Focus on the sections explaining how Python code is executed line-by-line.
-
 ---
 
 ## Knowledge Checks
@@ -75,7 +51,6 @@ Before moving on to the practical challenge, ensure you can comfortably research
 
 1. What does it mean when developers say Python is an "interpreted" language regarding how it executes code top-to-bottom?
 2. If your computer suddenly loses power while a Python program is running, what happens to the data that was stored in RAM? Why?
-3. If two different variable names are pointed at the exact same value in memory, does Python create two copies of that value on the workbench? 
 
 ---
 
