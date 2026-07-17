@@ -65,7 +65,7 @@ When your Python program finishes running, the workbench is completely wiped cle
 To prepare for your first coding session, read through the official Python documentation to see how the language introduces itself. 
 
 * [The Python Tutorial - Whetting Your Appetite](https://docs.python.org/3/tutorial/appetite.html): Focus deeply on why Python is useful and how it handles scripts.
-* [Real Python - Interactivity with Python](https://realpython.com/python-programming-language/): Focus on the sections explaining how Python code is executed line-by-line.
+* [Real Python - Interactivity with Python](https://realpython.com/interacting-with-python/): Focus on the sections explaining how Python code is executed line-by-line.
 
 ---
 
