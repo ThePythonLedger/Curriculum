@@ -105,4 +105,4 @@ total_tools = 15
 
 ## Next Steps
 
-Now that you have a solid mental model of the workbench and how Python reads your code line-by-line, we are ready to open the toolbox. In the next lesson, we will look at **Built-in Data Types** and learn how to create different kinds of data on our memory workbench.
+Now that you have a solid mental model of the workbench and how Python reads your code line-by-line, we are ready to open the toolbox and learn what a programming language actually is.
