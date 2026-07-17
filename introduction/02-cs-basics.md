@@ -88,17 +88,6 @@ Below is a broken Python script. Because Python reads code strictly line-by-line
 ### Your Task
 Rearrange and fix the lines of code below so that the script runs from top to bottom without crashing. 
 
-```python interactive
-
-# 1. Try running this code as-is to see the error Python throws!
-# 2. Fix the order so the variables are created BEFORE they are printed.
-
-print("The workbench says our total is:")
-print(total_tools)
-
-total_tools = 15
-```
-
 > 💡 **Documentation Hunting Tip:** Look closely at the error message you get when running the broken code. Search the official Python documentation or your assignment links for the phrase `NameError`. Understanding what a `NameError` means under the hood is a superpower for a beginner.
 
 ---
