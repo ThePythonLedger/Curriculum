@@ -88,8 +88,7 @@ Below is a broken Python script. Because Python reads code strictly line-by-line
 ### Your Task
 Rearrange and fix the lines of code below so that the script runs from top to bottom without crashing. 
 
-```python
-# { "interactive": true }
+```python interactive
 
 # 1. Try running this code as-is to see the error Python throws!
 # 2. Fix the order so the variables are created BEFORE they are printed.
