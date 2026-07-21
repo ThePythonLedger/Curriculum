@@ -4,60 +4,85 @@ title: What is a computer and how programs are executed?
 sidebar_label: 2. What is a computer?
 sidebar_position: 2
 ---
+# How Computers "Think"
+You don't need to be an expert in computer science to be a good developer, but understanding how your programs run on the machine is essential in deeper understanding the concepts we will cover.
 
-## Introduction: The Digital Workshop
+In the next short sections, you will learn how computer follows instructions, work with information, make decisions and repeat tasks.
 
-Imagine you are sitting at a physical workbench, ready to build a wooden birdhouse. You have a blueprint telling you what to do, a pile of raw lumber, and a pencil to label your pieces. 
+## Computers Are Not Magic
+Computer programs are just instructions for a computer to follow. Think of them as a recipe that contains step by step instructions that the computer will follow.
 
-Before you drive your first nail, you instinctively understand how your workshop functions: you know you have to lay your blueprints flat on the table to read them, and you know that if you don't write down your measurements, you will forget them.
+*Once you see the code as steps your machine executes, its stops looking like magic*
 
-Writing code in Python isn't much different. Many beginners treat programming like casting magic spells out of a textbook—typing commands without understanding where that data goes or why it behaves the way it does. This leads to massive frustration the moment a program doesn't run the way they expect.
+## What Is Data?
+Data is "stuff" that computer works with and is usually grouped in 3 mayor categories:
+* Numbers (your age, price of the item or a score in a game)
+* Text (your name, a message, title)
+* Yes/No answers (is the light on?)
+ A program takes this **data** and does calculations on them, moves them around and displays the result back to user.
 
-To write great software, you don't need a degree in computer engineering, but you *do* need a clear mental model of the digital workshop where your Python code will perform. Let's look at how a computer actually manages your instructions.
+*Almost all programmes do just this. Move and calculate data to achieve some result*
 
----
+## Making Decisions
+Programs can make decisions just like you do in real life. 
+*If it's raining - take an umbrella, otherwise leave it at home.*
 
-## Learning Outcomes
+Programs work the same way. If something is **true** do one thing, and if not, do something else. That is how programs decide things. They look at data and make a decision based on some specific conditions.
 
-By the end of this lesson, you will be able to:
+*"If this then that" concept is how programs make decisions*
 
-* **Identify** the distinct roles of Storage, RAM, and the CPU during code execution.
-* **Explain** how Python reads and evaluates a script from top to bottom.
-* **Describe** how Python uses variables as labels pointing to data in memory, rather than boxes containing them.
+## Repeating Things
+Some parts of your program will need to run tasks over and over again - like you fold the laundry - one item at a time.
 
----
+Programs do this too, so you don't need to repeat yourself with the same commands over and over.
 
-## Conceptual Overview: The Hardware Trio
+*Computers are excellent at repeating task and they never complain or get tired. This is one of the reasons we use them.*
 
-Every computer, whether it's a massive server or the smartphone in your pocket, relies on three core components to run your Python code. 
+# What Is an Actual Computer?
+Computer is a machine consisting of many parts. We will focus on 3 main parts that play a vital role in executing our programmes.
 
-### Storage vs. RAM vs. CPU
+These are:
+* CPU
+* RAM
+* Storage
 
-* **Storage (The Storage Closet):** This is your hard drive (SSD/HDD). It holds your files, apps, and Python scripts permanently. It is massive but slow. When your computer is turned off, your code sits safely here. [Deep dive into Computer Storage](https://medium.com/@dilshandareeju/computer-storage-device-c25655abef33)
-* **RAM (The Workbench):** This is your computer's temporary, active workspace. It is incredibly fast but has limited space. When you tell your computer to run a Python script, the computer copies the script from your slow storage closet and lays it out on the high-speed RAM workbench. [Deep dive into Computer RAM Memory](https://www.integralmemory.com/articles/understanding-ram-what-you-need-to-know/)
-* **The CPU (The Craftsperson):** This is the processor - the actual brain of the computer. The CPU can *only* read instructions and manipulate data that is currently sitting laid out on the RAM workbench. [Deep dive into CPU](https://aws.amazon.com/what-is/cpu/)
+## CPU - Central Processing Unit
+This is the brain of your machine. Its responsible for executing instructions that your program gives it. The CPU understands instructions as tiny commands, like *move this piece of data over here*
 
-### How Python Evaluates Your Code
+CPU have a tiny bit of extremely fast memory called `cache`. As this memory is small, we also use **RAM Memory**
 
-When the CPU reads your Python script on the workbench, it behaves exactly like a human reading a recipe: it reads **top-to-bottom, line-by-line**. 
+## RAM - Random Access Memory
+This is very fast and fairly large peace of memory, that CPU uses to load your program while executing, so it has fast access to all data that it needs for the operation.
+RAM Memory data is deleted if power is lost. That's why we need another form of memory: **Storage**
 
-If line 2 tells Python to calculate a number, it will complete that calculation before it ever looks at line 3. Python will never skip ahead or predict the future. 
+## Storage - HDD/SSD
+This is where your files, your programs, and everything else is stored, when not in use. This storage solution has the most capacity but it is also the slowest. Computer use this memory to store data permanently and it is not lost on power cut out.
 
----
+## What Is Hardware?
+Physical components that you actually see when you open a computer are called **hardware**. The ones listed above (CPU, RAM, Storage) are just some of the components you can have.
 
-## Knowledge Checks
+## What Is Software?
+All programs are considered **software**. We cannot see these, but we do see work they do for us.
 
-Before moving on to the practical challenge, ensure you can comfortably research and answer these architectural questions using the assignments above:
+# What Is Operating System (OS)?
+Operating system (OS) is a collection of sofware that manages *hardware* and applications by allocating resources.
 
-1. What does it mean when developers say Python is an "interpreted" language regarding how it executes code top-to-bottom?
-2. If your computer suddenly loses power while a Python program is running, what happens to the data that was stored in RAM? Why?
+Examples of operating systems are:
+* Windows
+* Linux distro
+* MacOS
+* Android
 
----
+All computers, from your cellphone to huge servers all run some kind of operating system. Its essential peace that organizes and manages how hardware and software talk to each other.
 
-> 💡 **Documentation Hunting Tip:** Look closely at the error message you get when running the broken code. Search the official Python documentation or your assignment links for the phrase `NameError`. Understanding what a `NameError` means under the hood is a superpower for a beginner.
+## How Do They Work Together 
+When you run any program, your **Operating System (OS)** takes data stored in permanent storage and moves it into RAM so CPU can have instant access to it.
 
----
+# Recap
+You have reached the end of this lesson. Before you go to next lesson, take a moment to answer following questions:
+* What is a computer program?
+* What does CPU in a computer does?
+* What is the biggest (but also slowest) type of memory in a computer?
+*
 
-## Next Steps
-
-Now that you have a solid mental model of the workbench and how Python reads your code line-by-line, we are ready to open the toolbox and learn what a programming language actually is.
+For a deep dive into how computers run your programs, visit [this article](https://cpu.land/the-basics)
