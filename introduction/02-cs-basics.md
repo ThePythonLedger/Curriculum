@@ -83,6 +83,5 @@ You have reached the end of this lesson. Before you go to next lesson, take a mo
 * What is a computer program?
 * What does CPU in a computer does?
 * What is the biggest (but also slowest) type of memory in a computer?
-*
 
 For a deep dive into how computers run your programs, visit [this article](https://cpu.land/the-basics)
