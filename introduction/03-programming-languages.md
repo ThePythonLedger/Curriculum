@@ -18,6 +18,7 @@ A **programming language** solves this. It acts as the ultimate bridge: a struct
 
 Now that you understand the high-level architecture of what a programming language is we can finally start with learning **Python**.
 
+import Link from '@docusaurus/Link';
 <div className="text--right m--0">
     <Link className="button button--primary" to="/lessons/foundations/why-python">
     Start my journey →
