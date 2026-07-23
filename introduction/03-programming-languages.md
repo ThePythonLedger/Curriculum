@@ -5,6 +5,7 @@ sidebar_label: 3. What is a programming language?
 sidebar_position: 3
 ---
 import Link from '@docusaurus/Link';
+
 ## The Translation Problem
 
 Imagine you are trying to order food in a country where you don't speak a word of the local language. You can point at pictures, make hand gestures, or mimic eating, but miscommunications are bound to happen. 
@@ -20,7 +21,7 @@ A **programming language** solves this. It acts as the ultimate bridge: a struct
 Now that you understand the high-level architecture of what a programming language is we can finally start with learning **Python**.
 
 <div className="text--right m--0">
-    <Link className="button button--primary" to="/lessons/foundations/why-python">
+  <Link className="button button--primary" to="/lessons/foundations/why-python">
     Start my journey →
-    </Link>
+  </Link>
 </div>
