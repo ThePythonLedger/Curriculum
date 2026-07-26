@@ -127,9 +127,9 @@ Python has a built-in support for **complex** numbers, as well as for **bytes** 
 Type casting refers to transforming one datatype to another. For example, to transform string `"32"` to integer `32`.
 ```python interactive
 a = "32"
-print(f"Type of a is: {type(a)} and value is: {a}")
+print("Type:", type(a), "Value:", a)
 b = int(a)
-print(f"Type of b is: {type(b)} and value is: {b}")
+print("Type:", type(b), "Value:", b)
 ```
 > If you try to convert letters to **int** or **float** Python will raise a **ValueError**. We will learn how to deal with errors in later lessons.
 
@@ -347,22 +347,23 @@ Write a Python script that calculates the total cost of a customer's order at a 
 5. Evaluate customer discount eligibility using **logical operators**.
 
 ## Task
-Define the following variables
+### Define the Following Variables
 * Name of the store selling the item - *string*
 * Name of the item - *string*
 * Price of the item - *float*
 * Quantity of item - *float*
 
-Calculate subtotal, tax amount and total price
+### Calculate Subtotal, Tax Amount and Total Price
 * Calculate **subtotal** by multiplying item **price** with item **quantity**
 * Calculate **tax amount** by multiplying **subtotal** with **tax rate** (0.08)
 * Calculate **total price** by adding **subtotal** to **tax amount**
 
-Set customer status and happy hour check
+### Set Customer Status and Happy Hour Check
 * Customer **is** a *VIP member* (create a variable that represents this and set it to `True`)
 * Currently it's not happy hour (create a variable that represents this and set it to `False`)
 
-Check if the customer **is** a VIP member **and** buying 3 or more products **or** its *happy hour* currently. If this check is `True` then apply a discount of 10%
+### Check for and Apply Discount
+* If the customer is VIP **and** quantity is 3 or more items **or** is *happy hour*, give 10% discount 
 * There should be only one check that utilizes `or` and `and` logical operators
 
 Define a variable containing a separator line using **string multiplication**
