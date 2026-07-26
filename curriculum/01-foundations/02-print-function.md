@@ -1,86 +1,389 @@
 ---
-id: print-function
-title: The Print Function
-sidebar_label: 2. The Print Function
+id: foundations
+title: Foundations
+sidebar_label: 2. Foundations
 sidebar_position: 2
 ---
+# Introduction
+In this introductory lesson we will start with writing some Python code. 
 
-## Introduction: The "Why"
-Imagine running a financial ledger application completely blindly. The program runs perfectly, calculates balances down to the penny, and finishes—leaving you with absolutely zero visibility into its internal operations. 
+# Lesson Overview
+What you will learn in the following lesson:
+* Outputting data back to user
+* Declaring variables
+* Python core data types (*integer*, *float*, *string*, *boolean*, *None*)
+* Performing operation on numbers
+* Performing operations on strings
+* Using logical and mathematical operators
 
-Without a mechanism to push data out of your program and onto your screen, your code remains an impenetrable black box. Debugging becomes an impossible guessing game, auditing is a fantasy, and user interaction cannot exist. To make any software system functional, we must understand how to output information so humans can read and verify it. In Python, this foundational bridge begins with displaying text in your terminal.
+# How to Run Python Code?
+In this beginner course we will use our python interpreter right here on the website.
 
-## Learning Outcomes
-By the end of this lesson, you will confidently be able to:
-* Display text and tracking metrics to the terminal using Python.
-* Differentiate between raw text (string literals) and code names (identifiers).
-* Use escape sequences to structure and format multi-line textual output.
-* Leverage official documentation to discover keyword arguments that modify how text is displayed.
+> There is no need for any installation step at this stage. Later we will use *local development environment* and learn how to download and use python on your own machine.
 
-## Conceptual Overview
+# Outputting Data Back to User
+In Python, we use `print` function to output some text back to user.
+```python interactive
+print("Welcome to The Python Ledger")
+```
+Whatever you pass into the function will be outputted to the screen.
 
-### 1. What is the `print()` Function?
-The `print()` function is Python's primary tool for sending information to your screen. It takes whatever data you provide inside its parentheses, converts it into readable text, and displays it directly in your terminal window. It is the fundamental way a program talks back to you.
+Additional resources:
+* [Your Guide to Python print Function - Real Python](https://realpython.com/python-print/)
+* [Print and Standard Out - Stanford CS](https://cs.stanford.edu/people/nick/py/python-print.html)
+* [Python print() function - Mimo](https://mimo.org/glossary/python/print-function)
 
-### 2. Text vs. Code (String Literals vs. Identifiers)
-Textual data in Python is handled through a data type known as a **String**. To tell the Python interpreter that a sequence of characters is raw text and not code instructions, you must wrap it within matching string delimiters—either single quotes (`'`) or double quotes (`"`).
+# Code Comments
+Code comments are ignored by programming language and are useful to us, programmers. We use them to explain the logic in the code.
+
+In Python, code comments start with `#` sign. Everything after that sign is considered a comment and python will not execute it.
+```python
+# This is a comment
+```
+
+# Declaring Variables
+You can think of **variables** as boxes where your program stores various data. Python does not require any special syntax for declaring variables.
+
+**Variables** are defined by *assignment*.
+```python
+my_variable = 5
+```
+
+Declaring variables has some rules:
+* It must start with a letter or underscore
+* It can contain lowercase and uppercase letters, underscores, and numbers
+
+Styling guide **PEP8** suggests the use of `snake_case` for variable naming in python.
+[Style Guide for Python Code](https://peps.python.org/pep-0008/)
+
+# Python Core Data Types
+Python has 4 core data types with addition of `None` which is a special value representing **no value**.
+
+> Python has a special `type()` function which returns what type some data is. We will use this to inspect the following data types.
+
+## Integer
+Integers represent **whole numbers**. We use them to represent age of user, score of the game and similar things.
+
+In Python, they are represented as `int`.
+```python interactive
+my_integer = 5
+
+print(type(my_integer))
+print(my_integer)
+```
+
+## Float
+Floats represent **real numbers**. We use them to represent prices in shop and various other purposes.
+
+In Python, they are represented as `float`
+```python interactive
+my_float = 1.25
+
+print(type(my_float))
+print(my_float)
+```
+
+## String
+Strings represents **text** data. We use them to represent names, titles, descriptions and various other purposes.
+
+In Python, they are represented as `str` and must be wrapped with single (`'`) or double (`"`) quotes.
+```python interactive
+string1 = "Double quoted string"
+string2 = "Single quoted string"
+
+print(type(string1), type(string2))
+print(string1, string2)
+```
+
+## Boolean
+Boolean values represent **yes** or **no** state. We use them to represent if something is *true* or *false*.
+
+In Python, they are represented as `bool` and only two valid values are `True` or `False`.
+```python interactive
+bool1 = True
+bool2 = False
+
+print(type(bool1), type(bool2))
+print(bool1, bool2)
+```
+
+## None
+This special value `None` represents when there is no value. Its useful when some of the data is missing or arriving at a later time.
 
 ```python interactive
-print("This is a double-quoted string literal.")
-print('This is a single-quoted string literal.')
+none_value = None
+
+print(type(none_value))
+print(none_value)
 ```
 
-When Python reads your code, an unquoted word like `print(ledger)` forces it to search for an active **identifier** (such as a variable name) called `ledger`. Wrapping those characters in quotes—`print("ledger")`—instructs Python to treat it as literal text and display that exact word on the screen.
+## Complex, Bytes, Bytearray
+Python has a built-in support for **complex** numbers, as well as for **bytes** representations, but we will deal with those later.
 
-### 3. Formatting with Escape Sequences
-Sometimes you need to format text in ways that are hard to type directly, like breaking a single string into multiple lines. To do this, Python uses an **Escape Character**, which is represented by a backslash (`\`).
+## Learn More About Datatypes
+* [Basic Datatypes in Python - Real Python](https://realpython.com/python-data-types/)
+* [Built-In Types - Python official documentation](https://docs.python.org/3/library/stdtypes.html)
+# Type Casting
+Type casting refers to transforming one datatype to another. For example, to transform string `"32"` to integer `32`.
+```python interactive
+a = "32"
+print(f"Type of a is: {type(a)} and value is: {a}")
+b = int(a)
+print(f"Type of b is: {type(b)} and value is: {b}")
+```
+> If you try to convert letters to **int** or **float** Python will raise a **ValueError**. We will learn how to deal with errors in later lessons.
 
-When Python encounters a backslash inside a string, it stops reading it as normal text and treats the next character as a special instruction. The most common of these is `\n`, the **newline** character. It commands the text to drop down to a brand new line.
+We can also convert to and from other types.
+```python interactive
+a = 5
+print(a)
+print(str(a))
+print(float(a))
+```
+
+# Performing Operations on Numbers
+Number data types, `int` and `float` are very useful when we must do some math.
+## Addition
+Adding two numbers together can be done with `+` operator.
+```python interactive
+a = 5
+b = 2
+
+print(a + b)
+```
+
+## Subtraction
+Subtraction of two numbers is done with `-` operator.
+```python interactive
+a = 5
+b = 2
+
+print(a - b)
+```
+
+## Multiplication
+Multiplication of two numbers is done with `*` operator.
+```python interactive
+a = 5
+b = 2
+
+print(a * b)
+```
+
+## Division
+Division of two numbers is done with `/` operator.
+```python interactive
+a = 5
+b = 2
+
+print(a / b)
+```
+> Division **always** returns `float`
+
+> You must be careful when dividing two numbers as the second number must not be equal to 0. If the *divisor* (second number) is 0, Python will raise **ZeroDivisionError**.
+
+## Floor Division
+Sometimes we may need to only get *whole number* from division and we dont care about the remainder. In that case we can use something called **floor (integer) division**. 
+
+**Floor division** is done with `//` operator.
+```python interactive
+a = 5
+b = 2
+
+print(a // b)
+```
+
+## Modulo Operator
+Sometimes we may need to know remainder of *division* but we do not care about the whole number, only the remainder. In that case we use **modulo** operator.
+
+**Modulo** in done with `%` operator.
+```python interactive
+a = 10
+b = 3
+
+print(a % b)
+```
+> Result of this operation is 1 because 3 goes into 10 three times and whats left is 1.
+
+## Exponentiation
+Raises the left value to the power of the right value.
+
+**Exponentiation** is done with `**` operator.
+```python interactive
+a = 10
+b = 2
+
+print(a ** b)
+``` 
+
+# Performing Operations on Strings
+We can perform various operations on strings in Python. For example, we can:
+
+## Add Strings Together
+```python interactive
+a = "Hello"
+b = " World"
+
+print(a + b)
+```
+
+## Multiply Strings
+```python interactive
+print("-" * 20)
+```
+## Get a Single Letter
+```python interactive
+a = "The Python Ledger"
+
+print(a[0]) # First letter at index 0
+print(a[1]) # Second letter at index 1
+print(a[-1]) # Last letter at index -1
+```
+> Python always starts counting at 0. This is called an **index**.
+
+## Convert Case
+```python interactive
+a = "MixEd CasiNG"
+
+print(a.upper()) # Uppercase
+print(a.lower()) # Lowercase
+print(a.title()) # Titlecase
+```
+
+## Strings Cannot Be Modified in Place
+Strings in Python are **immutable**.
+This means that they cannot be modified in place and every operation on strings results in a new string.
+
+We demonstrate this in the following example
+```python interactive
+a = "hello"
+a.upper()
+print(a) # Expecting "HELLO", but gets "hello"
+
+b = a.upper()
+print(b)
+```
+
+## String Formatting
+Modern Python recommends usage of `f-string` for string formatting. Only difference is that we use letter `f` in front of the string to mark it as `f-string`. 
+Then we can use `{ }` syntax to inject variables directly into strings.
 
 ```python interactive
-print("Entry Line 1\nEntry Line 2\nEntry Line 3")
+course_name = "Python Course"
+formatted_string = f"I am starting {course_name}"
+
+print(formatted_string)
 ```
 
----
 
-## Assignments
-* **Official Python Documentation:** Review the [Official Python print() Specification](https://docs.python.org/3/library/functions.html#print). Focus deeply on the function signature and read through the behavioral details of the optional keyword parameters: `sep` and `end`.
-* **Real Python Guide:** Read through the [Real Python Guide to the print() Function](https://realpython.com/python-print/). Focus completely on Section 2 ("Printing Custom Text") and Section 4 ("Preventing Line Breaks") to grasp how arguments change default text behaviors.
+# Comparisons
+We can compare values
 
----
+In Python we use these comparison operators:
+* **Equal to** (`==`)
+* **Not equal to** (`!=`)
+* **Greater than** (`>`)
+* **Less than** (`<`)
+* **Greater than or equal to** (`>=`)
+* **Less than or equal to** (`<=`)
 
-## Knowledge Checks
-Before you proceed to the interactive task, you must be able to answer these questions using your assignment readings. 
+All of these return a `boolean` value. `True` or `False`
+```python interactive
+a = 5
+b = 3
 
-1. By default, invoking `print()` automatically drops the cursor down to a new line after displaying your text. Which internal keyword argument dictates this behavior, and what exact value must you pass it to prevent this automatic newline action?
-2. What does the `sep` keyword argument do when you pass multiple pieces of text separated by commas into a single `print()` function?
-3. If you must output a text string that contains both a literal single quote and a literal double quote simultaneously, how does the escape character (`\`) resolve the resulting parsing conflict without throwing a `SyntaxError`?
-
----
-
-## 🏆 The Ledger Challenge: The Signature
-To verify your comprehension of text formatting rules, you must construct a formal terminal marker block for our financial records.
-
-### Task
-Use a **single** invocation of the `print()` function and the `\n` escape character to format and output a 3-line ledger signature matching the layout below exactly.
-
-```text
-NAME: [Your Name]
-DATE: 2026-03-18
-STATUS: Active
+print(a == b) # False
+print(a != b) # True
+print(a > b) # True
+print(a < b) # False
+print(a >= b) # True
+print(a <= b) # False
 ```
+# Logical Operators
+In Python we have 3 logical operators. These are:
+* `and`
+* `or`
+* `not`
+
+## `and` Logical Operator
+`and` operator is used to check if both conditions (on left and right side) are `True`. If so the whole expression is evaluated to `True`.
+
+## `or` Logical Operator
+`or` operator is used when we need to check if **any** of the conditions are `True`. If so, whole expression is evaluated to `True`
+
+## `not` Logical Operator
+`not` operator is used for inverting logic. If something is `True` it will invert it to `False`
 
 ```python interactive
-# 🏆 The Ledger Challenge
-# Emit a single print statement that outputs the 3-line signature precisely.
+print((5 > 3) and (8 > 4)) # True
+print((6 > 7) and (8 > 4)) # False
 
-# Write your code below:
+print((5 > 3) or (8 > 4)) # True
+print((6 < 7) or (8 > 4)) # True
 
+print(not True) # False
 ```
 
-💡 **Documentation Hunting Tip:** Re-verify from your assignment resources how the interpreter treats the backslash character when combined with layout commands. Remember that you do not need to use multiple print statements; a single string object can carry the `\n` instructions required to split your text across separate output lines.
+# Quiz Time
+> Some of the questions will require you to read from external resource linked in this lesson and you are higly encouraged to do so.
 
----
+Before attempting to solve the challenge below, try to answer these questions:
+* What are **core** datatypes in Python?
+* How do we represent **real numbers**?
+* How do you split the string into multiple lines (using **string delimiters**)
+* `print()` function always prints a newline character at the end of its output. How do we tell it not to do that?
+* From what index Python starts counting?
 
-## Next Steps
-Now that you can programmatically stream data out of your application into a human-readable format, your code is capable of reporting its operations. In the next lesson, we will explore how to capture, tag, and hold dynamic data inside your application using **variables**.
+# Mini-Project: The Café Receipt & Loyalty Calculator
+
+## Project Goal
+Write a Python script that calculates the total cost of a customer's order at a coffee shop, applies formatting, and checks if they qualify for a VIP loyalty reward using logical operators.
+
+## Instructions
+1. Use proper `snake_case` variable names.  
+2. Track item details using **strings**, **integers**, and **floats**.
+3. Perform calculations using *arithmetic operators*.  
+4. Format the final output using **f-strings** and **string repetition**.  
+5. Evaluate customer discount eligibility using **logical operators**.
+
+## Task
+Define the following variables
+* Name of the store selling the item - *string*
+* Name of the item - *string*
+* Price of the item - *float*
+* Quantity of item - *float*
+
+Calculate subtotal, tax amount and total price
+* Calculate **subtotal** by multiplying item **price** with item **quantity**
+* Calculate **tax amount** by multiplying **subtotal** with **tax rate** (0.08)
+* Calculate **total price** by adding **subtotal** to **tax amount**
+
+Set customer status and happy hour check
+* Customer **is** a *VIP member* (create a variable that represents this and set it to `True`)
+* Currently it's not happy hour (create a variable that represents this and set it to `False`)
+
+Check if the customer **is** a VIP member **and** buying 3 or more products **or** its *happy hour* currently. If this check is `True` then apply a discount of 10%
+* There should be only one check that utilizes `or` and `and` logical operators
+
+Define a variable containing a separator line using **string multiplication**
+
+Finally print out the receipt on the screen showing:
+```
+Separator line
+Store name
+Separator line
+Item: quantity x item name
+Subtotal
+Tax amount
+Total price
+Separator line
+Has discount been included?
+Separator line
+```
+## Your Solution
+
+```python interactive
+# Use this to solve your first mini project
+
+
+```
