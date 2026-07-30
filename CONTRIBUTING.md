@@ -8,7 +8,7 @@ To keep things simple, we use a Two-Repo System:
 * The Ledger (This Repo): Contains only Markdown files.
 * The Engine: A separate repository that handles the website and the Python interpreter.
 
-You do not need to know `React` or `JavaScript` to contribute here. You only need to know `Markdown` and `Python`.
+You do not need to know `React` or `JavaScript` to contribute here. You only need to know `Markdown` and `Python`. Its also a good idea to visit **Docusaurus** documentation as this is our rendering engine which has some additional markdown elements which you can use.
 
 ## 🛠️ How to Contribute
 1. Fix a Typo or Bug
@@ -26,7 +26,16 @@ If you want to add a new section to the curriculum:
     5. Submit a PR for review.
 
 ## 📝 Lesson Structure
-Every lesson should follow this bite-sized format to ensure consistency:
+> **Interactive Sandbox:** Use the `interactive` tag > to provide a live editor if you want to do so.
+> ```
+>     ```python interactive
+>     # Provide starter code here
+>     print("Try changing this!")
+>     ```
+> ```
+> Our engine will provide the student with code editor and runnable python interpreter right there in the browser.
+
+Every lesson should follow this relativly short format to ensure consistency:
 
 1. **Front Matter:** Every file must start with:
 ```
@@ -37,16 +46,14 @@ Every lesson should follow this bite-sized format to ensure consistency:
     sidebar_label: X. Introduction
     ---
 ```
-2. **Theory:** A concise explanation of the concept (2–3 paragraphs max).
-3. **Interactive Sandbox:** Use the `interactive` tag to provide a live editor.
-```
-    ```python interactive
-    # Provide starter code here
-    print("Try changing this!")
-    ```
-```
+> If the document you are writing is a **lesson**, be sure to **tag** it as such by adding `lesson: true` to front matter.
+> ```
+> lesson: true
+> ```
 
-4. **The Challenge:** A small task the student must complete to prove they understood the concept.
+2. **Theory:** A concise explanation of the concept (2–3 paragraphs max)
+
+3. **The Challenge:** A small task the student must complete to prove they understood the concept.
 
 ## 🐍 Style Guide
 * **Tone:** Encouraging, professional, and clear. Avoid overly academic jargon.
