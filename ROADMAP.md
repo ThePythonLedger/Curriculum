@@ -8,7 +8,7 @@ This may be subject to change.
 
 2. Foundations
     * [x] What is Python?
-    * [ ] Local Development Enviroment
+    * [ ] Local Development Enviroment (WIP)
         * Command Prompt
         * Downloading & Installing Python
         * VS Code
