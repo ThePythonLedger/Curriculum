@@ -8,13 +8,13 @@ Inspired by the philosophy of *The Odin Project*, we believe the best way to lea
 
 ## 💡 The Philosophy
 
-* **Zero-Friction Starts:** The first steps of the journey happen entirely in the browser. No installers, no PATH errors, no friction.
+* **Local Development Enviroment:** Real developers use their local machines to build and tests software. This is exactly how we are going to start. Locally, on your own machine.
 
-* **The "Training Wheels" Phase:** We move from the browser to the local machine early. Real developers use terminals, Git, and IDEs; our students do too.
+* **Interactive Lessons:** We use `Skulp` engine to render interactive python code blocks. If your code block has `interactive` tag, our engine will render it as runnable python code - directly in the browser.
 
 * **Curriculum-as-Code:** This entire resource lives on GitHub. If a lesson is unclear or a link is broken, the students are encouraged to fix it themselves.
 
-* **Bite-Sized Mastery:** Lessons are broken down into small, digestible sections to maintain momentum and prevent burnout.
+* **Documentation as Lessons:** This project is inspired by [The Odin Project](https://www.theodinproject.com/) which pushes students to **read documentation** to find out more about things they are learning. This course aims to do the same. Lessons should be relatively short, provide basic concept about the topic and point the students to find out more by reading documentation or well written articles.
 
 ## 🏗️ How It Works
 This project is split into two parts to ensure maximum stability and ease of contribution:
@@ -24,27 +24,11 @@ This project is split into two parts to ensure maximum stability and ease of con
 * **The Engine:** A separate Docusaurus-based platform that consumes these Markdown files and injects a live Python interpreter (Skulpt) into the interactive lessons.
 
 ## 🗺️ The Roadmap
-* **Phase 1:** The Foundations (In-Browser)
-Variables, Data Types, and Logic.
-Loops and Functions.
-Project: The Text-Adventure Engine.
+Please see [ROADMAP.md](/ROADMAP.md) for our current roadmap and work in progress (WIP) status.
 
-* **Phase 2:** The Developer’s Toolbelt (Local)
-Setting up VS Code and Python locally.
-Mastering the Command Line.
-Version Control with Git & GitHub.
-
-* **Phase 3:** Intermediate Python
-Data Structures (Lists, Dicts, Tuples).
-File I/O and Error Handling.
-Working with APIs and JSON.
-
-* **Phase 4:** Object-Oriented Programming
-Classes, Inheritance, and Design Patterns.
-Testing with pytest.
-Capstone: The Expense Tracker Dashboard.
+Roadmap is subject to change. If you feel we should reorganize our structure, feel free to raise an issue and / or contact us on Discord.
 
 ## 🤝 Contributing
 We are always looking for *"Ledger Keepers"*.
 
-Whether you are fixing a typo or designing a new project, your contributions are welcome. Please see CONTRIBUTING.md for our style guide and workflow.
+Whether you are fixing a typo or designing a new project or lesson, your contributions are welcome. Please see [CONTRIBUTING.md](/CONTRIBUTING.md) for our style guide and workflow.
