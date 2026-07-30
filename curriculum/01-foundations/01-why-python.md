@@ -3,6 +3,7 @@ id: why-python
 title: What is Python
 sidebar_label: 1. What is Python
 sidebar_position: 1
+lesson: true
 ---
 
 # Why Should You Use Python?
@@ -39,5 +40,3 @@ To understand why Python behaves the way it does, it helps to look at its underl
 | **Strongly Typed** | While Python is flexible, it is also disciplined. It won't allow "unsafe" actions—like trying to add a number to a sentence—without alerting you first. |
 
 Python is more than just a programming language; it’s a gateway into the world of logic and creation. Whether you're looking to start a new career or just automate your workflow, Python provides the most accessible path forward.
-
-<MarkLessonComplete />

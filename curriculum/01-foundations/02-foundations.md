@@ -3,6 +3,7 @@ id: foundations
 title: Foundations
 sidebar_label: 2. Foundations
 sidebar_position: 2
+lesson: true
 ---
 # Introduction
 In this introductory lesson we will start with writing some Python code. 
@@ -388,5 +389,3 @@ Separator line
 
 
 ```
-
-<MarkLessonComplete />

@@ -26,4 +26,3 @@ Now that you understand the high-level architecture of what a programming langua
   </Link>
 </div>
 
-<MarkLessonComplete />
