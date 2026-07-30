@@ -25,3 +25,5 @@ Now that you understand the high-level architecture of what a programming langua
     Start my journey →
   </Link>
 </div>
+
+<MarkLessonComplete />

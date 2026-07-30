@@ -76,3 +76,5 @@ print("The Python Ledger is active.")
 ```
 
 Lets start with our first lesson. We will learn what a computer is and how programs are executed.
+
+<MarkLessonComplete />
