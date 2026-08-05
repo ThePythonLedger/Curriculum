@@ -1,8 +1,8 @@
 ---
 id: why-python
 title: What is Python
-sidebar_label: 1. What is Python
-sidebar_position: 1
+sidebar_label: 4 What is Python
+sidebar_position: 4
 lesson: true
 ---
 
