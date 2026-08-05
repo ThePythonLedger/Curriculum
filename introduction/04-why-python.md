@@ -6,6 +6,7 @@ sidebar_position: 4
 lesson: true
 ---
 import Link from '@docusaurus/Link';
+
 # Why Should You Use Python?
 
 **Python** is a versatile, high-level programming language designed with a clear philosophy: code should be as easy to read as it is to write. Because its syntax closely mimics the English language, it removes the "language barrier" between your ideas and the computer, making it an ideal choice for beginners and professionals alike.
