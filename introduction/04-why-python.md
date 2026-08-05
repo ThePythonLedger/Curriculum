@@ -5,7 +5,7 @@ sidebar_label: 4 What is Python
 sidebar_position: 4
 lesson: true
 ---
-
+import Link from '@docusaurus/Link';
 # Why Should You Use Python?
 
 **Python** is a versatile, high-level programming language designed with a clear philosophy: code should be as easy to read as it is to write. Because its syntax closely mimics the English language, it removes the "language barrier" between your ideas and the computer, making it an ideal choice for beginners and professionals alike.
@@ -40,3 +40,9 @@ To understand why Python behaves the way it does, it helps to look at its underl
 | **Strongly Typed** | While Python is flexible, it is also disciplined. It won't allow "unsafe" actions—like trying to add a number to a sentence—without alerting you first. |
 
 Python is more than just a programming language; it’s a gateway into the world of logic and creation. Whether you're looking to start a new career or just automate your workflow, Python provides the most accessible path forward.
+
+<div className="text--right m--0">
+  <Link className="button button--primary" to="/lessons/foundations/output-variable-datatypes">
+    Start my journey →
+  </Link>
+</div>
