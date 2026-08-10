@@ -2,6 +2,8 @@ name: Notify Engine
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'bot_challenges/**'
 
 jobs:
   dispatch:
