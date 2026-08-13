@@ -1,0 +1,8 @@
+{
+  "label": "Prerequsites",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Tools you will need as a developer"
+  }
+}

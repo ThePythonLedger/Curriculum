@@ -1,12 +1,11 @@
 ---
 id: how-course-works
 title: How this course works
-sidebar_label: 1. How this course works
+sidebar_label: How this course works
 sidebar_position: 1
 ---
 
 # How to Participate in This Course
-
 **The Python Ledger** is an open-source, community-driven roadmap designed to take you from writing your first line of code to building professional-grade software. We don’t just teach you Python syntax; we teach you how to think like a developer.
 
 In this first unit, we’ll learn what is a computer and how it runs the code you write.

@@ -1,7 +1,7 @@
 ---
 id: input-and-conditionals
 title: User Input and Conditionals
-sidebar_label: 3. User Input and Conditionals
+sidebar_label: User Input and Conditionals
 sidebar_position: 3
 lesson: true
 ---
@@ -76,11 +76,9 @@ elif age <= 15:
 ```
 
 ## Assigment
-Use knowlege from previus lessons as well as this one to determine if the value of variable `number` is **odd** or **even**.
-1. Define a variable with the name `number` and set its value to some **integer**.
-2. Use **conditionals** to determine if the number is **odd** or **even**
-3. Print the correct message in this format:
-`<number> is <odd/even>`
+We now know enough to build a basic calculator.
+1. Ask the user to supply following
+2. Based on user *operand* calculate the result and assign it to variable with a name `result`.
 
 ### Assignment Area
 Use our built in Python interpreter to solve your assignment.

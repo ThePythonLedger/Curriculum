@@ -1,7 +1,7 @@
 ---
 id: math-strops-and-comparisons
 title: Math, String Operations and Comparisons
-sidebar_label: 02 - Math, String Operations and Comparisons
+sidebar_label: Math, String Operations and Comparisons
 sidebar_position: 2
 lesson: true
 ---
@@ -121,7 +121,7 @@ print(a[1]) # Second letter at index 1
 print(a[-1]) # Last letter at index -1
 ```
 
-:::info
+:::info[In programming we count from 0]
 
 Python always starts counting at 0. This is called an **index**.
 

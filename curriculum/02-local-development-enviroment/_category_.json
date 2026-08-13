@@ -1,8 +1,0 @@
-{
-  "label": "Local development enviroment",
-  "position": 2,
-  "link": {
-    "type": "generated-index",
-    "description": "Its time to take off the training wheels. We are going to learn how to user the command line (aka. terminal), how to set up Python on your machine and how to get started with your own developer path using git and GitHub."
-  }
-}
