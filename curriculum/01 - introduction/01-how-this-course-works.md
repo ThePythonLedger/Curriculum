@@ -58,8 +58,23 @@ This course is written in *English*. As you develop your programming skills, you
 
 If you are a non-english speaker or *English* is not your primary language, this fact is to prepare you for your journey and not to discourage you.
 
+## A Note About Logging In
+Our website does not store any user data on the servers. Everything is stored in your own browser and no data is ever transmitted to any third party sites.
+
+Logging into the website is completly optional but brings a few benefits.
+
+### Benefits of Logging In
+Logging in requires only **display name**. No passwords, emails or any third party authorization is required. As we mentioned before, all of data is stored in your local browser and can be always downloaded as well as uploaded to continue on another device. You can find those options in your proflie page after logging in.
+
+Current benefits is that logging in enables lesson tracking, so you will always know where you left of.
+
+### Github Cloud Sync
+During this course, you will be required to create an account on a website called **Github**. This is a central place where you will store all of your projects and show yourself to the world. We will discuss this topic more in later lessons.
+
+Github provides something called **gist**. You can think of them as a notes and these can be *secret* or *public*. Our platform can make use of *secret* gist (only available to your account) to store your leason progress remotely, so you dont have to think about downloading and uploading data yourself. Github integration is completly optional.
+
 ## What to Expect Next?
-Once you completed this foundation course you should be able to understand how programs are executed on your machine (or any other).
+Once you completed this foundation course you should be able to understand how programs are executed on your machine (or any other). You should be able to create and execute your own python programs
 
 As you move between lessons, each portion is build on the last one so skipping stuff will make it harder to understand later lessons. 
 
