@@ -15,6 +15,22 @@ In this lesson you will learn:
 * How to make program respond to conditions
 * How to use `if-elif-else` to branch your program
 
+## User Input
+Our program would not be very useful if it cannot take data from the user. In Python we do this using `input()` function.  `input()` takes any string as a **user prompt** (what will be displayed to the user while waiting for input)
+
+```python interactive
+name = input("What is your name?" )
+
+```
+
+:::info[`input()` always returns a string]
+
+`input()` function **always** returnes a *string*. This is something you need to watch for when you ask the user to enter some data. If you need numbers (integer or float) you will need to **type cast** it to some other type.
+
+If you cannot remember how to do this, check out previus [Core Datatypes - Type Casting](core-datatypes#type-casting) lesson.
+
+:::
+
 ## Conditionals - What Are They?
 **Conditionals** is a name for a group of keywords that branch the program logic depending on **condition**.
 In Python we have:
@@ -94,5 +110,11 @@ Use **modulo** operator to determine the remainder of division with 2. If remain
 :::
 
 ## Deepen Your Knowledge
+
+:::danger[This lesson is still work in progress.
+
+Will be ready soon
+
+:::
 
 ## What's Next
