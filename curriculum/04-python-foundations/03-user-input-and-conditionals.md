@@ -54,12 +54,10 @@ else:
 ```
 In this basic example, our program will execute its task depending on **conditions**. In the current example, we ask Python to compare value in variable `a` to **int** 5. If they are equal, program executes one branch and if its not, program executes another branch.
 
-:::info
+:::info[Indentation as Code Section]
 
-Unlike other programming languages that use *curly braces* to mark blocks of code, in Python we use **indentation**.
+Unlike other programming languages that use *curly braces* to mark blocks (sections) of code, in Python we use **indentation**.
 This is extremely important to learn as Python will raise **IndentationError** if you do it wrong.
-
-Learn more about [Indentation in Python](https://realpython.com/ref/glossary/indentation/) from this **Real Python** article and [The Importance of Indentation](https://medium.com/@duruprincewilluzochukwu/the-importance-of-indentation-in-python-a-beginners-guide-21cec5292519) from this **Medium** article.
 
 :::
 
@@ -92,23 +90,28 @@ elif age <= 15:
 ```
 
 ## Assigment
-We now know enough to build a basic calculator.
-1. Ask the user to supply following
-2. Based on user *operand* calculate the result and assign it to variable with a name `result`.
+Now that you know how to get user input and branch your program using conditional logic (`if`, `elif`, `else`) the code can move away from hardcoded values and become interactive. 
 
-### Assignment Area
-Use our built in Python interpreter to solve your assignment.
-```python interactive
-# Write your assignment below
+**Goal:** use `input()` to collect user choices, cast strings to numbers, and use conditional logic to apply discounts and stock checks.
 
-```
-
-:::tip
-
-Use **modulo** operator to determine the remainder of division with 2. If remainder is 0, then the number is **even** otherwise its **odd**
-
-:::
+1. Open `main.py` file in our `simple-python-shop` project directory.
+2. Add a new variable `item_stock` and set it to some integer
+3. Interactive input: 
+    * Ask the user for desired `item_quantity` using `input()`. **Don't forget** to cast the string to integer !
+4. Stock & Availability Check
+    * If `item_quantity` is less or equal to `0` print an error message: `Invalid quantity ordered`
+    * If `item_quantity` is greater then `item_stock` print `Sorry, we do not have enough stock.`
+5. Dynamic discount (conditionals)
+    * Calculate the total (you should have this from the last lesson)
+    * If `total` is over `100` apply a **10%** discount (`total * 0.90`) and print: `Discount applied: 10%`
+    * Otherwise print: `No discount applied`
+6. Receipt Output
+    * Output the final receipt showing item name, quantity, applied discount state, and final amount due.
+7. Commit and push your updated code to Github.
 
 ## Deepen Your Knowledge
+* Learn more about [Indentation in Python](https://realpython.com/ref/glossary/indentation/) from this **Real Python** article
+* Learn [The Importance of Indentation](https://medium.com/@duruprincewilluzochukwu/the-importance-of-indentation-in-python-a-beginners-guide-21cec5292519) from this **Medium** article.
 
 ## What's Next
+Now that our programs can take user input, calculate things and evaluate what to do on those calculations, we can jump into **loops**. These help us to run a peace of code multiple times without us repeating the code.
