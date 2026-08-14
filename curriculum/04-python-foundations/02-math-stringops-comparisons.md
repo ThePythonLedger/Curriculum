@@ -211,21 +211,29 @@ print((6 < 7) or (8 > 4)) # True
 print(not True) # False
 ```
 
-
 ## Assignment
-We will expand on our last assignment and introduce a calculation for all items
-
-1. Add a new variable with a name `is_vip` is set its value to some **boolean**.
-2. Calculate the price of all items, by multiplying `item_price` with `item_quantity`. Put the result in variable named `total`
-3. Print out the following sentence, replacing `<placeholder>` with specific variables. Use **f-strings** for your output. 
-> `Shop <shop_name> issues a receipt for <item_quantity> x <item_name> with total of <total> for VIP: <is_vip>`
-
-### Assignment Area
-Use our built in Python interpreter to solve your assignment.
-```python interactive
-# Write your assignment below
-
-```
+In the last assignment we have declared our shop variables and printed the inventory. In this one you are tasked with:
+1. Open your code editor in your last project directory `simple-python-shop`
+2. Open `main.py` file we have been working on
+3. Standardize your strings:
+    * Convert `shop_name` to **uppercase** (e.g., `MERLIN SHOP`)
+    * Convert item name to **titlecase** (e.g., `Excalibur`)
+4. Calculate the checkout price:
+    * Create variable `total` by multiplying `item_price` and `item_quantity`
+5. Comparison checks:
+    * Create a boolean `is_large_order` that evaluates whether `item_quantity` is greater then or equal to `3`.
+6. Update your output to use **f-string** :
+    ```
+    Welcome to MERLIN SHOP
+    --------------------------------
+    Item: Excalibur
+    Purchased: 3 x 67.20
+    Total: $201.60
+    Large Order: True
+    --------------------------------
+    Thank you for your purchase !
+    ```
+7. Commit your changes with `git` and push to Github
 
 ## Deepen Your Knowledge
 1. Learn more about [Basic math in Python](https://cs.stanford.edu/people/nick/py/python-math.html#math) from article in **Stanford University**, covering all the topics in this lesson but in a different style and a bit more.
