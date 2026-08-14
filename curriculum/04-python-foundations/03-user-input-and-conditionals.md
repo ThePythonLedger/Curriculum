@@ -27,7 +27,7 @@ name = input("What is your name?" )
 
 `input()` function **always** returnes a *string*. This is something you need to watch for when you ask the user to enter some data. If you need numbers (integer or float) you will need to **type cast** it to some other type.
 
-If you cannot remember how to do this, check out previus [Core Datatypes - Type Casting](./01-output-variables-datatypes#type-casting) lesson.
+If you cannot remember how to do this, check out previus [Core Datatypes - Type Casting](./01-output-variable-datatypes.md#type-casting) lesson.
 
 :::
 
