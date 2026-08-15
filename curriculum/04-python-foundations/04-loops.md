@@ -4,7 +4,7 @@ title: Loops
 sidebar_label: Loops
 sidebar_position: 4
 lesson: true
-isDraft: true
+IsDraft: true
 ---
 
 # Loops
@@ -24,7 +24,7 @@ In this lesson you will learn
 In Python, we have two loops that behave sligly diffrently, so lets get to know them.
 
 ## While Loop
-While loops are used when we need to repeat some code block **while some condition is True**. To create a **while** loop, we use keyword `while` followed by `condition` then a colon (`:`). We also have to indent the the code block which we wish to execute in the loop
+While loops are used when we need to repeat some code block **while some condition is True**. To create **while** loop, we use keyword `while` followed by `condition` then a colon (`:`). We also have to indent the code block which we wish to execute in the loop
 ```python
 while condition:
 ```
@@ -55,7 +55,7 @@ For loops are used when you know the number of times the code must loop. They ar
 for item in sequence:
 ```
 
-### `range()` Function
+## `range()` Function
 Python gives us `range()` function that returns a type of *sequence* called **generator**. We will learn about these at later lesson, for now, just know that we mostly use them in *for* loops to execute a loop specific number of times.
 
 You can pass diffrent arguments to the function to get diffrent behaviur. Function takes in 3 arguments, with the 1 being required.
@@ -88,7 +88,46 @@ for item in range(0, 11, 2):
 ```
 Now we have told the function we want every number from 0 to 11 but in **step**s of 2. We can also count in reverse by setting **step** argument to negative integer.
 
+## `break` And `continue`
+### `break`
+What if you need to break out of the loop early? You have found something you are looking for and the loop needs to finish? Python has a keyword `brake` which does exactly what it's name suggests. Breaks out of the loop.
+
+Let us demonstrate this:
+```python interactive
+find = 5
+for item in range(10):
+    if item == find:
+        print("Found what we are looking for..")
+        break
+print("Exited the loop")
+```
+
+### `continue`
+In some situations it's useful to continue with iteration but skipping this specific one. This is where `continue` keyword comes in.
+
+Let us demonstrate this:
+```python interactive
+skip = 5
+for item in range(10):
+    if item == skip:
+        continue
+    print(item)
+```
+
+:::tip[Both `break` and `continue` work only in loops]
+
+These statements `break` and `continue` work only in loops. If you try to use them outside of the loop you will encounter an error.
+
+:::
+
 ## Assigment
+1. Open `main.py` in your `simple-python-shop` project.
+2. Create a new variable named `item_count` and set it to `0` as its initial value.
+3. Use a `while` loop to repeatedly prompt the user for an item price.
+    * If the price entered is 0 break out of the loop
+    * Otherwise, add the price user entered to `total` and increment `item_count` by 1.
+4. When the loop finishes, determine if the `total` can have a discount and print out the final receipt.
+5. Make sure your program works, then commit and push your code
 
 ## Deepen Your Knowlege
 
