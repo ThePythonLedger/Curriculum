@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "curriculum/04-python-foundations/03-user-input-and-conditionals.md",
+                "file": "curriculum/04-python-foundations/04-loops.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03-user-input-and-conditionals"
+              "title": "04-loops"
             }
           }
         ]
@@ -175,6 +175,7 @@
   },
   "active": "2e1ed48e5158c04e",
   "lastOpenFiles": [
+    "curriculum/04-python-foundations/03-user-input-and-conditionals.md",
     "curriculum/04-python-foundations/04-loops.md"
   ]
 }
