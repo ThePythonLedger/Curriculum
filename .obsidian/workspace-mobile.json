@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "curriculum/04-python-foundations/04-loops.md",
+                "file": "curriculum/04-python-foundations/03-user-input-and-conditionals.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "04-loops"
+              "title": "03-user-input-and-conditionals"
             }
           }
         ]
@@ -117,7 +117,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "curriculum/04-python-foundations/04-loops.md",
+            "file": "curriculum/04-python-foundations/03-user-input-and-conditionals.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -136,7 +136,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "curriculum/04-python-foundations/04-loops.md",
+            "file": "curriculum/04-python-foundations/03-user-input-and-conditionals.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           },
@@ -150,7 +150,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "curriculum/04-python-foundations/04-loops.md",
+            "file": "curriculum/04-python-foundations/03-user-input-and-conditionals.md",
             "followCursor": false,
             "showSearch": false,
             "searchQuery": ""
@@ -174,5 +174,7 @@
     }
   },
   "active": "2e1ed48e5158c04e",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "curriculum/04-python-foundations/04-loops.md"
+  ]
 }
