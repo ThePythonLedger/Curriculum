@@ -118,7 +118,6 @@ for item in range(10):
 
 These statements `break` and `continue` work only in loops. If you try to use them outside of the loop you will encounter an error.
 
-
 :::
 
 ## Assigment
