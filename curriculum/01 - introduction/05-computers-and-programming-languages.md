@@ -3,6 +3,7 @@ id: cs-basics
 title: Computers and Programming Languages
 sidebar_label: Computers and Programming Languages
 sidebar_position: 5
+lesson: true
 ---
 # Introduction to Computer Science
 You don't need to be an expert in computer science to be a good developer, but understanding how your programs run on the machine is essential in deeper understanding the concepts we will cover.

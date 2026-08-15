@@ -3,6 +3,7 @@ id: how-course-works
 title: How this course works
 sidebar_label: How this course works
 sidebar_position: 1
+lesson: true
 ---
 
 # How to Participate in This Course

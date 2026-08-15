@@ -3,6 +3,7 @@ id: motivation-and-mindset
 title: Motivation and Mindset
 sidebar_label: Motivation and Mindset
 sidebar_position: 2
+lesson: true
 ---
 # Motivation and Mindset
 ## Introduction

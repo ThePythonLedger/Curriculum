@@ -3,6 +3,7 @@ id: text-editors
 title: Text Editors
 sidebar_label: Text Editors
 sidebar_position: 2
+lesson: true
 ---
 # Text Editors
 ## Introduction

@@ -3,6 +3,7 @@ id: installations
 title: Installations
 sidebar_label: Installations
 sidebar_position: 1
+lesson: true
 ---
 # Installations
 ## Introduction
