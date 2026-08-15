@@ -64,12 +64,5 @@ If you want to give it a try, you can use this free browser based [Pomofocus](ht
 How long will this course take me? All the things you will do after you finish the course?
 
 Wrong thinking and another form of **procrastination**.
-
-:::danger[This lesson is still under construction]
-
-This lessons requires more details and attention. Will fix it soon.
-
-:::
-
 ## What's Next
 Now that you sre motivated and ready to learn, lets see how you can ask for help.
