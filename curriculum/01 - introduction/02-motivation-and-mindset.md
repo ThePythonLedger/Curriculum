@@ -4,6 +4,7 @@ title: Motivation and Mindset
 sidebar_label: Motivation and Mindset
 sidebar_position: 2
 lesson: true
+isDraft: true
 ---
 # Motivation and Mindset
 ## Introduction

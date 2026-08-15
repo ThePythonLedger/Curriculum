@@ -4,6 +4,7 @@ title: Introduction to Git
 sidebar_label: Introduction to Git
 sidebar_position: 1
 lesson: true
+isDraft: true
 ---
 # Introduction to Git
 ## Work in progress
