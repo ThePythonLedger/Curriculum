@@ -4,7 +4,6 @@ title: Text Editors
 sidebar_label: Text Editors
 sidebar_position: 2
 lesson: true
-isDraft: true
 ---
 # Text Editors
 ## Introduction
