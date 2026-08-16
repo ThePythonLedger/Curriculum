@@ -31,7 +31,7 @@ Visual Studio Code (or just VSCode) is a very good free code editor. It has exce
     * Linux
     * MacOS
     * WSL2
-2. Familiarize yourself with VSCode as this allows you to save time and become more productive.
+2. Familiarize yourself with VSCode as this allows you to save time and become more productive. Visit [Get Started with VSCode](https://code.visualstudio.com/docs/editing/getting-started) (skip the **Github Copilot** section - see below)
 
 :::tip[Turn off AI features]
 
