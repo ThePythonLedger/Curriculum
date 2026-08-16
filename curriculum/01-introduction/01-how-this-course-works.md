@@ -82,7 +82,7 @@ As you move between lessons, each portion is build on the last one so skipping s
 ### The Path Ahead
 We start with a few introductory but fundemental topics such as your motivation, how to ask for help, and basics of computer science and programming in general.
 
-Next, we’ll move to your local machine, where you’ll learn the "Developer’s Toolbelt": the **Command Line**, **VS Code**, and **Git**. From there, we dive into the deep into **Python**.
+Next, we’ll move to your local machine, where you’ll learn the "Developer’s Toolbelt": the **Command Line**, **VS Code**, and **Git**. From there, we dive deep into **Python**.
 
 ### Embedded Python Runner
 Our platform has a simple Python runner as part of the course, so you will be able to run code examples and play around directly in the webpage. Be aware that you will be required to make **assigments** and **excercises** on your own device, making use of your local development workflow.
