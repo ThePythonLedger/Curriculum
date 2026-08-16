@@ -32,3 +32,5 @@ Open a terminal (command line) on your computer.
 The window that opens will probably be mostly blank with the exception of some text and **prompt**. Depending on your operating system, the line will end with `$` (or `%` on newer MacOS) indicating that its ready for command. Let's try our first command. Type `whoami` and press <kbd>Enter</kbd>. This returns your username. See, commands are not scary, it just takes time to practice them.
 
 Often the instructions on varius sources will use `$ whoami` examples. Do not copy or write `$` character, only the command in front of it.
+
+## Basic Commands
