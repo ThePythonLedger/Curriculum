@@ -1,12 +1,50 @@
-name: Notify Engine
+name: Curriculum CI & Dispatch
+
 on:
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - 'bot_challenges/**'
   push:
     branches: [main]
     paths-ignore:
       - 'bot_challenges/**'
 
 jobs:
-  dispatch:
+  # STATUS CHECK: Clones the contributor's PR content alongside Engine to verify MDX syntax
+  validate-build:
+    name: Validate Docusaurus Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Curriculum (PR Code)
+        uses: actions/checkout@v4
+        with:
+          path: Curriculum
+
+      - name: Checkout Engine
+        uses: actions/checkout@v4
+        with:
+          repository: ThePythonLedger/Docusaurus-engine
+          path: engine
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: engine/package-lock.json
+
+      - name: Test Build in Engine
+        run: |
+          cd engine
+          npm ci
+          npm run build
+
+  # DISPATCH: Triggers the live site rebuild ONLY after a push/merge to main passes validation
+  dispatch-engine:
+    name: Notify Engine
+    needs: validate-build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: Repository Dispatch
