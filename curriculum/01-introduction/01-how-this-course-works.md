@@ -80,14 +80,17 @@ Once you completed this foundation course you should be able to understand how p
 As you move between lessons, each portion is build on the last one so skipping stuff will make it harder to understand later lessons. 
 
 ### The Path Ahead
-We start with a few introductory but fundemental topics such as your motivation, how to ask for help, 
+We start with a few introductory but fundemental topics such as your motivation, how to ask for help, and basics of computer science and programming in general.
 
-Next, we take the wheels off. We’ll move to your local machine, where you’ll learn the "Developer’s Toolbelt": the **Command Line**, **VS Code**, and **Git**. From there, we dive into the deep end: **Data Structures**, **APIs**, and **Object-Oriented Programming (OOP)**.
+Next, we’ll move to your local machine, where you’ll learn the "Developer’s Toolbelt": the **Command Line**, **VS Code**, and **Git**. From there, we dive into the deep into **Python**.
 
-This is an example of our browser based editor, feel free to run your first python code.
+### Embedded Python Runner
+Our platform has a simple Python runner as part of the course, so you will be able to run code examples and play around directly in the webpage. Be aware that you will be required to make **assigments** and **excercises** on your own device, making use of your local development workflow.
+
+This is an example of our browser based editor. For now, don't wory about what it says in the **code** (but you can surely take a guess as python reads like english). Just press the `▶ Execute Program` button and see it in action.
 ```python interactive
 print("Entry #1: My journey begins.")
 print("The Python Ledger is active.")
 ```
 
-Lets start with our first lesson. We will learn what a computer is and how programs are executed.
+Lets start with getting our head in the right mindset.
