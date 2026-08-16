@@ -27,7 +27,7 @@ The Python Ledger supports *unix-based* operating systems:
 MacOS is an operating system that ships with Apple laptops. It is an *unix-based* operating system and by installing just a few things, you are ready to go.
 
 ### Linux (Ubuntu and official flavours)
-[Linux](https://en.wikipedia.org/wiki/Linux) is an free, open-source operating system that is extremly well with almost all programming languages. Most development tools are written for *Linux* first. Your tools will be most up to date, have the best documentation and generally running better on a *Linux* operating system.
+[Linux](https://en.wikipedia.org/wiki/Linux) is an free, open-source operating system that is extremly well suited for almost all programming languages. Most development tools are written for *Linux* first. Your tools will be most up to date, have the best documentation and generally running better on a *Linux* operating system.
 
 ## Why Limited Support (no Windows)
 Because most of the development tools are written for Linux operating system, you need to have a dedicated environment even if you plan on using *Windows* as your development OS in the feature. This also helps us all to get on the same page when requesting help in our community or in general public. Windows has its special quirks and writing instructions specific to *Windows* would be tedius and time-consuming.
@@ -42,9 +42,9 @@ A [virtual machine](https://en.wikipedia.org/wiki/Virtual_machine) (VM) is a sim
 
 This is very common way for you to experiment with diffrent operating systems, tools or anything else, because its separated from you **host machine** and cannot modify it.
 
-:::info[Virtual Machines consume resources]
+:::note[Virtual Machines consume resources]
 
-Your **host** operating system now has to share resources with other **guest** machines running.
+Your **host** operating system has to share resources with other **guest** machines running.
 
 If you own a system with low performances, this may be the wrong option. See **dual-booting** below.
 
@@ -60,9 +60,9 @@ WSL2 is a special VM allowing you to simulate Linux directly in Windows. While p
 
 ## Assigment
 1. If you do use Windows as your operating system, choose one of the options below to install a dedicated environment.
-    * Virtual Machine (recommended) - Most easy and realiable way to get started. VM runs inside your current OS (like Windows). **Tutorial coming soon**
-    * Ubuntu/Windows dual-boot - Install Ubuntu as a separate operating system alongside Windows and choose which one to start. Great for lower end systems as there is no *virtualization* step. [Step by step tutorial on dual booting](https://medium.com/linuxforeveryone/how-to-install-ubuntu-20-04-and-dual-boot-alongside-windows-10-323a85271a73)
-    * WSL2 (advanced) - Run Linux from Windows. Can couse confusion with new learners.
+    * Virtual Machine (recommended) - Most easy and realiable way to get started. VM runs inside your current OS (like Windows). [Step by step tutorial on VirtualBox](https://dev.to/rejoice/a-beginners-guide-to-installing-linux-os-using-virtualbox-on-a-windows-machine-3ge4). Be sure the use the latest LTS Ubuntu version depending on when you are reading this tutorial.
+    * Ubuntu/Windows dual-boot - Install Ubuntu as a separate operating system alongside Windows and choose which one to start. Great for lower end systems as there is no *virtualization* step. [Step by Step tutorial on dual booting](https://medium.com/linuxforeveryone/how-to-install-ubuntu-20-04-and-dual-boot-alongside-windows-10-323a85271a73)
+    * WSL2 (advanced) - Run Linux from Windows. Can couse confusion with new learners. [Step by Step WSL2 installation guide]
 
 ## What's Next
 Now that you have a dedicated environment, we will continue with installation of **text editor**.
