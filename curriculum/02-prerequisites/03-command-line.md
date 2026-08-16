@@ -34,4 +34,4 @@ The window that opens will probably be mostly blank with the exception of some t
 Often the instructions on varius sources will use `$ whoami` examples. Do not copy or write `$` character, only the command in front of it.
 
 ## Basic Commands
-Lets start by exploring our filesystem. Type in `ls` and press <kbd>Enter</kbd>
+Lets start by exploring our filesystem. Type in `ls` and press <kbd>Enter</kbd>. This lists out your current directory contents. But where is that directory even located? Let's find out: type `pwd` and press <kbd>Enter</kbd> and see your current filepath.
