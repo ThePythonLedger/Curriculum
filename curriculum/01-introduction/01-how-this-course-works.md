@@ -65,7 +65,7 @@ Our website does not store any user data on the servers. Everything is stored in
 Logging into the website is completly optional but brings a few benefits.
 
 ### Benefits of Logging In
-Logging in requires only **display name**. No passwords, emails or any third party authorization is required. As we mentioned before, all of data is stored in your local browser and can be always downloaded as well as uploaded to continue on another device. You can find those options in your proflie page after logging in.
+Logging in requires only **display name**. No passwords, emails or any third party authorization is required. As we mentioned before, all of data is stored in your local browser and can be always downloaded as well as uploaded to continue on another device. You can find those options in your profile page after logging in.
 
 Current benefits is that logging in enables lesson tracking, so you will always know where you left of.
 
@@ -80,7 +80,7 @@ Once you completed this foundation course you should be able to understand how p
 As you move between lessons, each portion is build on the last one so skipping stuff will make it harder to understand later lessons. 
 
 ### The Path Ahead
-We start with the **Training Wheels** on. You’ll write and run code directly in your browser using our interactive editor. This allows you to focus purely on logic without fighting with installation errors.
+We start with a few introductory but fundemental topics such as your motivation, how to ask for help, 
 
 Next, we take the wheels off. We’ll move to your local machine, where you’ll learn the "Developer’s Toolbelt": the **Command Line**, **VS Code**, and **Git**. From there, we dive into the deep end: **Data Structures**, **APIs**, and **Object-Oriented Programming (OOP)**.
 
