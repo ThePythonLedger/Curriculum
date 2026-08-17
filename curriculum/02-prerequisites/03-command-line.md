@@ -4,7 +4,6 @@ title: Command Line
 sidebar_label: Command Line
 sidebar_position: 3
 lesson: true
-isDraft: true
 ---
 # Command Line
 ## Introduction
@@ -131,5 +130,5 @@ command -flag target
 ### Built-in Help System
 Commands in linux usually have built in help system. If you use `-h` or `--help` with a command, it will show you its options and description on what each one does. You can also read full documentation by accessing command *manual* by typing `man <command>` (for example: `man ls`). This usually produces a large document to be viewed in your terminal. If you can't seem to exit the document viewer, press <kbd>Q</kdb>.
 
-## Running Python Script
-**Todo**
+## What's Next?
+Python is no diffrent, its basicly a command that runs your `.py` files (yes, Python file extension is `.py`).  In the next leason we will learn two Python operating modes and how to run your first python program.

@@ -2,7 +2,7 @@
 id: setting-up-git
 title: Setting up Git
 sidebar_label: Setting up Git
-sidebar_position: 4
+sidebar_position: 2
 lesson: true
 isDraft: true
 ---
