@@ -7,4 +7,21 @@ lesson: true
 isDraft: true
 ---
 # Setting up Git
-## Work in progress
+## Introduction {#introduction}
+
+
+## Lesson Overview {#overview}
+
+
+## Lesson Content
+
+
+
+
+## Assignment {#assignment}
+
+
+## Deepen Your Knowlege {#learn-more}
+
+
+## What's Next {#next-lesson}
