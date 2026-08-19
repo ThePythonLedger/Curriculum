@@ -157,6 +157,11 @@ We will learn how to read and deal with errors in later lessons.
 
 :::
 
+## Excercise
+Visit our [python-excercise repository](https://github.com/ThePythonLedger/python-exercises) and follow instructions there to *fork* and *clone* your own copy of excercises repository.
+
+After cloning, try to solve [excercise-1](https://github.com/ThePythonLedger/python-exercises/tree/main/exercises%2Ffoundations%2F01_hello_world) and [excercise-2](https://github.com/ThePythonLedger/python-exercises/tree/main/exercises%2Ffoundations%2F02_datatypes) for better understanding.
+
 ## Assignment {#assignment}
 Try the following excercise to establish your knowlege. We will build a shop, starting with defining (declaring) diffrent variables in this lesson and progress with our little shop as we go further along.
 
