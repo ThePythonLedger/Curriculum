@@ -211,6 +211,9 @@ print((6 < 7) or (8 > 4)) # True
 print(not True) # False
 ```
 
+## Excercise
+Try to solve [excercise-3](https://github.com/ThePythonLedger/python-exercises/tree/main/exercises%2Ffoundations%2F03_math_and_comparisons) for better understanding.
+
 ## Assignment
 In the last assignment we have declared our shop variables and printed the inventory. In this one you are tasked with:
 1. Open your code editor in your last project directory `simple-python-shop`
