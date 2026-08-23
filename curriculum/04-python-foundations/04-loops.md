@@ -4,7 +4,7 @@ title: Loops
 sidebar_label: Loops
 sidebar_position: 4
 lesson: true
-IsDraft: true
+isDraft: true
 ---
 
 # Loops
