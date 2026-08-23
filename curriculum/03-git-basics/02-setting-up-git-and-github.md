@@ -4,7 +4,6 @@ title: Setting up Git and Github
 sidebar_label: Setting up Git & Github
 sidebar_position: 2
 lesson: true
-isDraft: true
 ---
 # Setting up Git and Github
 ## Introduction {#introduction}
@@ -39,7 +38,7 @@ This will prevent your email from leaking from your contributions. If you wish s
 :::
 
 ### Set up 2FA (Optional)
-**Todo**
+To set up 2-factor auth, follow [Configuring two-factor authentication](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication).
 
 ## Connect Git with Github
 For `git` to work as intended, you need to provide the credentials it can use to represent your local user (you) to Github.
@@ -64,7 +63,7 @@ git config --get user.name
 git config --get user.email
 ```
 
-## Create SSH Key
+### Create SSH Key
 SSH key is cryptographically secure identifier, like a long password used to identify your device. Github uses SSH keys to allow you access to your repositories without asking for a password each time.
 
 First, let's make sure you have *ed25519* algorithm already installed. Run the following command:
@@ -83,7 +82,7 @@ Next it will ask for a passphrase; this is like a password for SSH key stored on
 
 If you choose a passphrase enter it, or if you dont wish to use it, leave it blank and just press <kbd>Enter</kbd>.
 
-## Tell Github Your SSH Key
+### Tell Github Your SSH Key
 Now we need go tell Github what is your SSH key. Open Github webpage, then click on your profile picture (top right corner), then `Settings`, then `SSH and GPG keys`. Then click on the green button that says `New SSH Key`.
 
 Give your key some descriptive name, so you will know it belongs to that machine, and leave the window open while you complete the next steps.
@@ -99,7 +98,7 @@ Now go back to Github window and paste the copied SSK key into the key field. Ke
 
 You are done, you have successfully connected your local Git with remote Github. All that is left to do is test the connection.
 
-## Test Connection
+### Test Connection
 Test your SSH key by following [GitHub’s directions for testing your SSH connection](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection?platform=linux). Make sure the fingerprint output in the terminal matches [one of GitHub’s four public fingerprints](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints).
 
 You should see this response in your terminal: 
@@ -111,3 +110,4 @@ Don’t let GitHub’s lack of providing shell access trouble you.
 If you see this message, you’ve successfully added your SSH key and you can move on. If the output doesn’t correctly match up, then try going through these steps again or come to our Discord server to ask for help.
 
 ## What's Next {#next-lesson}
+In the next lesson we take a look at basic `git` commands, what they do and we create our first repository, both local and remote, so let's jump right in!

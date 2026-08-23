@@ -21,5 +21,5 @@ Github is an online platform that enables hosting our `git`-s to remote servers,
 Github is under Microsoft domain which some developers don't like, so there are more alternatives like *gitlab*, *bitbucket*, etc ... For the purpose of this course we will be using Github.
 
 ## What's Next
-In the next lesson, we are going to set up Git and connect it to Github.
+In the next lesson, we are going to set up Git and connect it to Github so those two can talk to each other securely.
 
