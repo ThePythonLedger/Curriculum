@@ -51,9 +51,12 @@ Unlike functions, as we cannot modify tuples, we don't have a lot of methods ava
     print(fruits.index("banana"))
     ```
 
-
+:::explore[Learn more about Python lists]
+**Todo**
+:::
 
 ## Assignment {#assignment}
-
+**Todo**
 
 ## What's Next {#next-lesson}
+**Todo**

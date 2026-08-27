@@ -72,9 +72,12 @@ print("Intersection:", set1 & set2)
 print("Difference:", set1 - set2)
 ```
 
-
+:::explore[Learn more about Python lists]
+**Todo**
+:::
 
 ## Assignment {#assignment}
-
+**Todo**
 
 ## What's Next {#next-lesson}
+**Todo**
