@@ -1,12 +1,12 @@
 ---
 id: lists
-title: Lists
-sidebar_label: Lists
+title: List
+sidebar_label: List
 sidebar_position: 1
 lesson: true
 isDraft: true
 ---
-# Lists
+# List
 ## Introduction {#introduction}
 Up until now we have stored a single value in a variable, but what if we need to hold multiple values in some variable? Do we create multiple variables? Of course not, Python has a *built-in* mechanisms for dealing with collections of data which we call **data structures**. In this lesson we first take a look at **list**.
 
@@ -16,6 +16,7 @@ Lists in Python are *built-in* data structure for storing ordered collections of
 In this lesson we will cover:
 * What lists are?
 * How to create a list?
+* How to slice elements from the list?
 * How to insert, modify or delete elements
 * How to access elements
 * Iterating over the lists using `for` loops
@@ -59,6 +60,37 @@ last_elem = mylist[-1]
 
 print(f"First element of the list is {first_elem} and last is {last_elem}")
 ```
+
+:::tip[List slicing]
+Similar how we use indexes, we can also cut our list (or elements within it) however we like. This is called **list slicing** and its a very effective way to get a subset of collection.
+
+It's syntax is `[start:stop:step]` (just like in **range()** function we learned in loops lesson). Let's see an example :
+```python interactive
+a = ["apple", "pear", "banana"]
+
+b = a[0:2]
+print(a)
+print(b)
+```
+Result of `b` will be `["apple", "pear"]`. As you can see, slicing creates a new list with elements from the slice, while leaving original list with no changes.
+
+You can reverse a list by using negative step:
+```python interactive
+a = ["apple", "pear", "banana"]
+
+b = a[::-1]
+print(a)
+print(b)
+```
+
+In Python, **strings** behave like a *sequence types*, so you can do exact same slicing and dicing on the strings to get the characters out and they also support iteration.
+```python interactive
+a = "banana"
+b = a[::-1]
+print(b)
+```
+
+:::
 
 ### Adding Elements
 There are multiple ways to insert elements to the list, depending on where you want to place it. 
@@ -125,10 +157,12 @@ Learn more about Python lists from these resources:
 :::
 
 ## Exercise
-**Todo**
+Complete [Exercise 05 — The Cozy Bakery Inventory](#) to practice list creation, indexing, modification, and using python documentation to solve list tasks.
 
 ## Assignment {#assignment}
 **Todo**
 
 ## What's Next {#next-lesson}
-**Todo**
+Lists are ordered and mutable, which makes them ideal for collections that grow or change over time. But what if you need an ordered collection that **cannot** be modified once created?
+
+In the next lesson, we will look at **Tuples** — Python's immutable data structure for storing fixed collections of data.
