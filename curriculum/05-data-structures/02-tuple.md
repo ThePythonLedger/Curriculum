@@ -51,8 +51,9 @@ Unlike functions, as we cannot modify tuples, we don't have a lot of methods ava
     print(fruits.index("banana"))
     ```
 
-:::explore[Learn more about Python lists]
-**Todo**
+:::explore[Learn more about Python Tuples]
+* [Python built-in types: tuples from RealPython](https://realpython.com/ref/builtin-types/tuple/)
+* [Tuples and Sequences from official Python documentation](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences)
 :::
 
 ## Assignment {#assignment}

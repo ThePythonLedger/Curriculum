@@ -149,7 +149,7 @@ This is very useful as we often need to work with specific elements from the lis
 
 :::explore[Learn more about Python lists]
 
-Learn more about Python lists from these resources:
+Learn more about Python Lists from these resources:
 * [Google for Education - Python Lists](https://developers.google.com/edu/python/lists)
 * [Official Python Documentation on Lists](https://docs.python.org/3/library/stdtypes.html#typesseq-list)
 * [Official Python Documentation on Data Structures - more on Lists](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)

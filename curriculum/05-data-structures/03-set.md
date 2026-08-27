@@ -72,8 +72,10 @@ print("Intersection:", set1 & set2)
 print("Difference:", set1 - set2)
 ```
 
-:::explore[Learn more about Python lists]
-**Todo**
+:::explore[Learn more about Python Sets]
+Learn more about sets in these materials:
+* [Python built-in data types from RealPython](https://realpython.com/ref/builtin-types/set/)
+* [Python data structures: set from official Python documentation](https://docs.python.org/3/tutorial/datastructures.html#sets)
 :::
 
 ## Assignment {#assignment}
