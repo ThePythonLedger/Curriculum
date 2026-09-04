@@ -7,21 +7,26 @@ lesson: true
 isDraft: true
 ---
 # Lesson Title
-## Introduction {#introduction}
 
 
 ## Lesson Overview {#overview}
 
-
-## Lesson Content
-
+##  Concept Overview
 
 
+
+###  Lesson Content
+
+
+
+:::explore
+Documentation Hunting
+:::
+
+## Answer These Questions
+
+## Exercise
 
 ## Assignment {#assignment}
-
-
-## Deepen Your Knowlege {#learn-more}
-
 
 ## What's Next {#next-lesson}

@@ -10,7 +10,7 @@ Inspired by the philosophy of *The Odin Project*, we believe the best way to lea
 
 * **Local Development Enviroment:** Real developers use their local machines to build and tests software. This is exactly how we are going to start. Locally, on your own machine.
 
-* **Interactive Lessons:** We use `Skulp` engine to render interactive python code blocks. If your code block has `interactive` tag, our engine will render it as runnable python code - directly in the browser.
+* **Interactive Lessons:** We use `Skulp` engine to render interactive python code blocks. If your code block has `interactive` tag, our engine will render it as runnable python code - directly in the browser. This helps students retaing knowlege and see the code in actuon, right there in the browser - no context switching. This should only be used to explain the concepts in the lessons and not for **exercises** or **assigments**.
 
 * **Curriculum-as-Code:** This entire resource lives on GitHub. If a lesson is unclear or a link is broken, the students are encouraged to fix it themselves.
 
