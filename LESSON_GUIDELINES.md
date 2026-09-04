@@ -29,6 +29,9 @@ In addition to [standard markdown](https://www.markdownguide.org/) and [Docusaur
 
 * **Custom *Learn More* admonition** - in addition to Docusaurus provided admonitions, we have implemented a custom one for *Learn More* section. To create such admonition, use standard Docusaurus syntax with `explore` keyword.
 
+## ⚠️ No AI in lesson content
+We strongly belive that human written content has way more value and can teach a lot more then AI generated content can, so please do not use AI to write the content. If you do not have the time or knowlege, do not use AI as it will be rejected.
+
 ## ⚠️ Guidelines & What to Watch Out For
  * **❌ Don't list every method.** Do not give a table of every string or list method. Give them one example, then send them to the official docs to discover the rest.
  * **✅ Accurate Mental Models.** Avoid overly childish analogies, but also avoid assuming knowledge the student doesn't have yet. Don't reach for systems-level concepts like threads, processes, or execution contexts — a beginner has no scaffolding for these. Instead, build correct foundational models they *can* understand. Accuracy means not teaching things that will need to be "un-taught" later, not front-loading advanced vocabulary. Keep it simple, concise and provide links to external documentation and articles.
