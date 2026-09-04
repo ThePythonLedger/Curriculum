@@ -57,7 +57,7 @@ There is some risk due to changing your storage, but you should be fine as long 
 ### WSL 2 
 WSL2 is a special VM allowing you to simulate Linux directly in Windows. While powerful, it does not offer clear separation on which operating system you are working on, making it easyer for beginners to make mistakes.
 
-## Assigment
+## Assignment
 1. If you do use Windows as your operating system, choose one of the options below to install a dedicated environment.
     * Virtual Machine (recommended) - Most easy and realiable way to get started. VM runs inside your current OS (like Windows). [Step by step tutorial on VirtualBox](https://dev.to/rejoice/a-beginners-guide-to-installing-linux-os-using-virtualbox-on-a-windows-machine-3ge4). Be sure the use the latest LTS Ubuntu version depending on when you are reading this tutorial.
     * Ubuntu/Windows dual-boot - Install Ubuntu as a separate operating system alongside Windows and choose which one to start. Great for lower end systems as there is no *virtualization* step. [Step by Step tutorial on dual booting](https://medium.com/linuxforeveryone/how-to-install-ubuntu-20-04-and-dual-boot-alongside-windows-10-323a85271a73)
