@@ -27,7 +27,6 @@ If you want to add a new section to the curriculum:
     6. Submit a **draft PR** for so we can label the lesson as *Being Worked On* as soon as you have some content. Our pipeline will check your document for inconsistencies automaticly even in draft PRs.
 
 ## 🚦 Pull Request Process
-* *
 * Submit a **draft PR** as soon as possible so somebody else does not do double work.
 * Ensure your Markdown is valid and links are not broken.
 * When your changes are complete, submit a PR.
