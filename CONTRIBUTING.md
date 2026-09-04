@@ -23,11 +23,14 @@ If you want to add a new section to the curriculum:
     2. Open an **Issue** first to discuss the scope.
     3. Fork this repository.
     4. Create a new `.md` file in the appropriate folder (e.g., 01-foundations/).
-    5. Follow the [Lesson Guidelines](/LESSON_GUIDELINES.md) document to structure your lesson to confront with the project.
-    6. Submit a PR for review.
+    5. Follow the [Lesson Guidelines](/LESSON_GUIDELINES.md) document to structure your lesson to confront with the project lessons.
+    6. Submit a **draft PR** for so we can label the lesson as *Being Worked On* as soon as you have some content. Our pipeline will check your document for inconsistencies automaticly even in draft PRs.
 
 ## 🚦 Pull Request Process
+* *
+* Submit a **draft PR** as soon as possible so somebody else does not do double work.
 * Ensure your Markdown is valid and links are not broken.
+* When your changes are complete, submit a PR.
 * Your PR will be reviewed by a maintainer.
 * Once merged, the Engine will automatically detect the changes and rebuild the live site within minutes.
 
