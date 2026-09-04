@@ -1,6 +1,6 @@
 ---
 id: math-strops-and-comparisons
-title: Math, String Operations and Comparisons
+title: Arithmetic Operations & Operators, Operations On Strings and Comparisons
 sidebar_label: Math, String Operations and Comparisons
 sidebar_position: 2
 lesson: true
