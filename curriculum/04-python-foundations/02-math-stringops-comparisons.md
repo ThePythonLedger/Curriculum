@@ -6,7 +6,7 @@ sidebar_position: 2
 lesson: true
 ---
 
-# Math, String Operations and Comparisons
+# Arithmetic operators & operations, String Operations and Comparisons
 In the last lesson we have learned how to output data to our screen, how to declare a variable and what different core data types exists in Python. In this lesson we will learn how math works in Python.
 
 ## Lesson Overview
