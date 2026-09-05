@@ -1,16 +1,41 @@
 name: Preview Pages Management
 
 on:
-  pull_request:
-    branches: [main]
-    types: [opened, synchronize, reopened, closed]
-    paths-ignore:
-      - 'bot_challenges/**'
+  issue_comment:
+    types: [created]
 
 jobs:
-  # DEPLOY PREVIEW: Triggered when PRs are opened, updated, or reopened
+  check-permission:
+    name: Check Author & Command
+    if: github.event.issue.pull_request && contains(github.event.comment.body, '/preview')
+    runs-on: ubuntu-latest
+    outputs:
+      authorized: ${{ steps.check.outputs.authorized }}
+    steps:
+      - name: Check user permissions
+        id: check
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const username = context.actor;
+            
+            // Check commenter's permission on the repository
+            const { data: permission } = await github.rest.repos.getCollaboratorPermissionLevel({
+              owner,
+              repo,
+              username,
+            });
+            
+            const allowed = ['admin', 'write'].includes(permission.permission);
+            if (!allowed) {
+              core.setFailed(`User @${username} is not authorized to trigger preview deployments.`);
+            }
+            core.setOutput('authorized', allowed);
+
   deploy-preview:
     name: Deploy Preview to Cloudflare Pages
+    needs: check-permission
     if: github.event.action != 'closed'
     runs-on: ubuntu-latest
     permissions:
