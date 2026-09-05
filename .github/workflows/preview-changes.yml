@@ -1,0 +1,104 @@
+name: Preview Pages Management
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, closed]
+    paths-ignore:
+      - 'bot_challenges/**'
+
+jobs:
+  # DEPLOY PREVIEW: Triggered when PRs are opened, updated, or reopened
+  deploy-preview:
+    name: Deploy Preview to Cloudflare Pages
+    if: github.event.action != 'closed'
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write # Required to post/update the preview link comment
+      contents: read
+    steps:
+      - name: Checkout Curriculum (PR Code)
+        uses: actions/checkout@v4
+        with:
+          path: Curriculum
+
+      - name: Checkout Engine
+        uses: actions/checkout@v4
+        with:
+          repository: ThePythonLedger/Docusaurus-engine
+          path: engine
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: engine/package-lock.json
+
+      - name: Build Site Assets
+        env:
+          DOCUSAURUS_URL: https://pr-${{ github.event.number }}.python-ledger-preview.pages.dev
+          DOCUSAURUS_BASE_URL: /
+        run: |
+          cd engine
+          npm ci
+          npm run build
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v4
+        id: cloudflare_deploy
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: pages deploy engine/build --project-name=python-ledger-preview --branch=pr-${{ github.event.number }}
+
+      - name: Comment Preview Link on PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = context.issue.number;
+            const previewUrl = `https://pr-${prNumber}.python-ledger-preview.pages.dev`;
+            const message = `🚀 **Preview Deployment Ready!**\n\nContributors can view changes live at:\n${previewUrl}`;
+            
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+            });
+            const botComment = comments.find(c => c.body.includes('Preview Deployment Ready!'));
+
+            if (botComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: message,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body: message,
+              });
+            }
+
+  # CLEANUP PREVIEW: Triggered when the PR is closed or merged
+  cleanup-preview:
+    name: Delete Cloudflare Pages Preview
+    if: github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Delete Cloudflare Pages Branch
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+        run: |
+          BRANCH_NAME="pr-${{ github.event.number }}"
+          echo "Deleting Cloudflare Pages branch: $BRANCH_NAME"
+          npx wrangler pages project delete-branch python-ledger-preview --branch="$BRANCH_NAME" --yes
