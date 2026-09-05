@@ -111,24 +111,24 @@ jobs:
               issue_number: prNumber,
               body: message,
             });
-    # CLEANUP PREVIEW: Triggered when the PR is closed or merged
+
+  # CLEANUP PREVIEW: Triggered when the PR is closed or merged
   cleanup-preview:
     name: Delete Cloudflare Pages Preview
     if: github.event.action == 'closed'
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Delete Cloudflare Pages Branch
+      - name: Delete Cloudflare Pages Branch via API
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
         run: |
           BRANCH_NAME="pr-${{ github.event.number }}"
-          echo "Deleting Cloudflare Pages deployment alias for branch: $BRANCH_NAME"
+          PROJECT_NAME="python-ledger-preview"
           
-          # Force delete the alias/branch deployments
-          npx wrangler pages deployment delete --project-name=python-ledger-preview "pr-${{ github.event.number }}" --force
+          echo "Deleting Cloudflare Pages branch: $BRANCH_NAME"
+          
+          curl -s -X DELETE \
+            "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${PROJECT_NAME}/branches/${BRANCH_NAME}" \
+            -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+            -H "Content-Type: application/json"
