@@ -83,7 +83,7 @@ jobs:
               });
             }
 
-  # CLEANUP PREVIEW: Triggered when the PR is closed or merged
+    # CLEANUP PREVIEW: Triggered when the PR is closed or merged
   cleanup-preview:
     name: Delete Cloudflare Pages Preview
     if: github.event.action == 'closed'
@@ -100,5 +100,7 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
         run: |
           BRANCH_NAME="pr-${{ github.event.number }}"
-          echo "Deleting Cloudflare Pages branch: $BRANCH_NAME"
-          npx wrangler pages project delete-branch python-ledger-preview --branch="$BRANCH_NAME" --yes
+          echo "Deleting Cloudflare Pages deployment alias for branch: $BRANCH_NAME"
+          
+          # Force delete the alias/branch deployments
+          npx wrangler pages deployment delete --project-name=python-ledger-preview "pr-${{ github.event.number }}" --force
