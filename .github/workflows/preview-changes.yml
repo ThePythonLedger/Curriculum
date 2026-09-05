@@ -60,6 +60,7 @@ jobs:
             core.setOutput('pr_num', pr.data.number);
             core.setOutput('sha', pr.data.head.sha);
             core.setOutput('ref', pr.data.head.ref);
+            core.setOutput('pr_author', pr.data.user.login);
 
       - name: Checkout Curriculum (PR Code)
         uses: actions/checkout@v4
@@ -102,8 +103,16 @@ jobs:
         with:
           script: |
             const prNumber = context.issue.number;
+            const prAuthor = "${{ steps.pr_data.outputs.pr_author }}";
+            const triggerUser = context.actor;
             const previewUrl = `https://pr-${prNumber}.python-ledger-preview.pages.dev`;
-            const message = `🚀 **Preview Deployment Ready!**\n\nTriggered by @${context.actor}. View changes live at:\n${previewUrl}`;
+
+            let mentions = `@${triggerUser}`;
+            if (prAuthor && prAuthor !== triggerUser) {
+              mentions += ` @${prAuthor}`;
+            }
+
+            const message = `🚀 **Preview Deployment Ready!**\n\ncc ${mentions}\n\nView changes live at:\n${previewUrl}`;
             
             await github.rest.issues.createComment({
               owner: context.repo.owner,
