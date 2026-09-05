@@ -48,8 +48,8 @@ jobs:
         uses: cloudflare/wrangler-action@v4
         id: cloudflare_deploy
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
           command: pages deploy engine/build --project-name=python-ledger-preview --branch=pr-${{ github.event.number }}
 
       - name: Comment Preview Link on PR
@@ -96,8 +96,8 @@ jobs:
 
       - name: Delete Cloudflare Pages Branch
         env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
         run: |
           BRANCH_NAME="pr-${{ github.event.number }}"
           echo "Deleting Cloudflare Pages branch: $BRANCH_NAME"
