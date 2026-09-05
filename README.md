@@ -2,6 +2,7 @@
 
 The open-source, community-driven roadmap to Python mastery.
 
+
 The Python Ledger is a free, comprehensive curriculum designed to take students from their first "Hello World" to building professional-grade applications. 
 
 Inspired by the philosophy of *The Odin Project*, we believe the best way to learn is by doing, reading documentation, and contributing to the ecosystem.
