@@ -131,6 +131,7 @@ This may be subject to change.
     * [ ] `pathlib` / `os` module
     * [ ] `csv` module
     * [ ] `sys` module
+<<<<<<< HEAD
     * [ ] `re` module
 13. Third-party Modules
     * [ ] Virtual Environments
@@ -148,6 +149,25 @@ This may be subject to change.
 13. Object Oriented Programming - Part 2
     * [ ] Four Pillars of Object-Oriented Programming (Encapsulation, Abstraction, Inheritance, Polymorphism)
 18. Capstone Project 6
+10. Third-party Modules
+    * [ ] Virtual Environments
+    * [ ] Using `pip` and `requirements.txt`
+    * [ ] Creating python package -  `pyproject.toml` file
+11. Capstone Project 2
+    * [ ] Clean Code Priciples
+    * [ ] Capstone Project
+12. Object Oriented Programming - Part 1
+    * [ ] Introduction to classes and instances
+    * [ ] Methods (instance, class, static)
+    * [ ] Dunder Methods (`__str__`, `__repr__`, etc...)
+13. Capstone Project 3
+    * [ ] Capstone Project
+14. Object Oriented Programming - Part 2
+    * [ ] Four Pillars of Object-Oriented Programming (Encapsulation, Abstraction, Inheritance, Polymorphism)
+15. Capstone Project 4
+    * [ ] Capstone Project
+>>>>>>> f8b636d (Updated lists lessons and ROADMAPmd)
+=======
 10. Third-party Modules
     * [ ] Virtual Environments
     * [ ] Using `pip` and `requirements.txt`
