@@ -10,6 +10,7 @@ This may be subject to change.
 ## Roadmap
 1. Introduction
     * [x] How course works?
+<<<<<<< HEAD
     * [x] Motivation and Mindset
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31,6 +32,11 @@ This may be subject to change.
     * [ ] 🚧 Asking for Help — #32 👤 tkcompani
 >>>>>>> 3f081b9 (chore: reconcile roadmap status [skip ci])
     * [ ] Join the Community — #33
+=======
+    * [ ] Motivation and Mindset
+    * [ ] Asking for Help
+    * [x] Join the Community
+>>>>>>> f8b636d (Updated lists lessons and ROADMAPmd)
     * [x] Computer Science basics, Programming and Python 
 2. Prerequisites 
     * [x] Software Installation
@@ -72,6 +78,7 @@ This may be subject to change.
 7. Working on Projects, Solving bugs, Reading errors
 =======
 5. Data Structures
+<<<<<<< HEAD
     * [ ] 🚧 Lists — #57 👤 razorblade23
     * [ ] 🚧 Tuples — #58 👤 razorblade23
     * [ ] 🚧 Sets — #59 👤 razorblade23
@@ -105,6 +112,27 @@ This may be subject to change.
 11. Capstone Project 3
     * [ ] Capstone Project
 12. Built-in and Modules
+=======
+    * [x] Lists
+    * [x] Tuples
+    * [x] Sets
+    * [x] Dictionaries
+6. Comprehensions
+    * [ ] List Coprehension
+    * [ ] Set Coprehension
+    * [ ] Dict Coprehension
+7. Code Organization
+    * [ ] Functions
+    * [ ] Scope and Namespaces (LEGB rule)
+    * [ ] Understanding Errors and Error Handling
+    * [ ] File Handling
+    * [ ] Modules
+8. Capstone Project 1
+    * [ ] Problem Solving
+    * [ ] Problem Solving - Fizz-Buzz Example 
+    * [ ] Capstone Project
+9. Built-in and Modules
+>>>>>>> f8b636d (Updated lists lessons and ROADMAPmd)
     * [ ] `math` module
     * [ ] `json` module
     * [ ] `random` module
@@ -112,6 +140,7 @@ This may be subject to change.
     * [ ] `pathlib` / `os` module
     * [ ] `csv` module
     * [ ] `sys` module
+<<<<<<< HEAD
     * [ ] `re` module
 13. Third-party Modules
     * [ ] Virtual Environments
@@ -134,4 +163,22 @@ This may be subject to change.
     * [ ] Four Pillars of Object-Oriented Programming (Encapsulation, Abstraction, Inheritance, Polymorphism)
 18. Capstone Project 6
     * [ ] Capstone Project
->>>>>>> d188ac4 (chore: reconcile roadmap status [skip ci])
+=======
+10. Third-party Modules
+    * [ ] Virtual Environments
+    * [ ] Using `pip` and `requirements.txt`
+    * [ ] Creating python package -  `pyproject.toml` file
+11. Capstone Project 2
+    * [ ] Clean Code Priciples
+    * [ ] Capstone Project
+12. Object Oriented Programming - Part 1
+    * [ ] Introduction to classes and instances
+    * [ ] Methods (instance, class, static)
+    * [ ] Dunder Methods (`__str__`, `__repr__`, etc...)
+13. Capstone Project 3
+    * [ ] Capstone Project
+14. Object Oriented Programming - Part 2
+    * [ ] Four Pillars of Object-Oriented Programming (Encapsulation, Abstraction, Inheritance, Polymorphism)
+15. Capstone Project 4
+    * [ ] Capstone Project
+>>>>>>> f8b636d (Updated lists lessons and ROADMAPmd)
