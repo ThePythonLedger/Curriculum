@@ -172,3 +172,4 @@ Use them with caution and remember:
 ## Assignment {#assignment}
 
 ## What's Next {#next-lesson}
+Coprehensions are very useful in every day life as a Python programmer, but there is one thing that is universal accross all languages, so let's start a new chapter; *code organization*. First thing to learn are **functions** which enable us to write modular code.
