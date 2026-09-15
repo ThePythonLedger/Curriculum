@@ -30,7 +30,7 @@ while condition:
 ```
 
 We can demonstrate this in the following example:
-```python interactive
+```python interactive debug
 a = 0
 while a < 5:
     print(f"a is: {a}")
