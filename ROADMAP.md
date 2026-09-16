@@ -86,14 +86,31 @@ This may be subject to change.
 6. Code Organization
     * [ ] Functions
     * [ ] Scope and Namespaces (LEGB rule)
-    * [ ] Understanding Errors and Error Handling
-    * [ ] File Handling
+    * [ ] Type Hints
     * [ ] Modules
 7. Capstone Project 1
     * [ ] Problem Solving
     * [ ] Problem Solving - Fizz-Buzz Example 
+    * [ ] Capstone Project - **Hangman game**
+8. Errors, Debugging, I/O
+    * [ ] Understanding Errors and Error Handling
+    * [ ] `logging` module
+    * [ ] Debugging tehniques
+    * [ ] File Handling
+9. Capstone Project 2
+    * [ ] Git Workflow: Branches and Pull Requests
+    * [ ] Revisiting Project 1 (hangman game):
+        * Creating branch, adding features, merging back to `main`
+        * Loading *words* from external file
+        * Catching and logging errors
     * [ ] Capstone Project
-8. Built-in and Modules
+10. Intermediate Python
+    * [ ] Decorators
+    * [ ] Generators
+    * [ ] Context Managers
+11. Capstone Project 3
+    * [ ] Capstone Project
+12. Built-in and Modules
     * [ ] `math` module
     * [ ] `json` module
     * [ ] `random` module
@@ -101,21 +118,26 @@ This may be subject to change.
     * [ ] `pathlib` / `os` module
     * [ ] `csv` module
     * [ ] `sys` module
-9. Third-party Modules
+    * [ ] `re` module
+13. Third-party Modules
     * [ ] Virtual Environments
     * [ ] Using `pip` and `requirements.txt`
     * [ ] Creating python package -  `pyproject.toml` file
-10. Capstone Project 2
+    * [ ] ? Linting, Formatting, Type Checking (`ruff`, `mypy`) ?
+14. Capstone Project 4
     * [ ] Clean Code Priciples
     * [ ] Capstone Project
-11. Object Oriented Programming - Part 1
+    * [ ] Testing Your Code (`pytest`)
+    * [ ] Revisit Project 4
+        * Develop a testing suite for the project
+15. Object Oriented Programming - Part 1
     * [ ] Introduction to classes and instances
     * [ ] Methods (instance, class, static)
     * [ ] Dunder Methods (`__str__`, `__repr__`, etc...)
-12. Capstone Project 3
+16. Capstone Project 5
     * [ ] Capstone Project
-13. Object Oriented Programming - Part 2
+17. Object Oriented Programming - Part 2
     * [ ] Four Pillars of Object-Oriented Programming (Encapsulation, Abstraction, Inheritance, Polymorphism)
-14. Capstone Project 4
+18. Capstone Project 6
     * [ ] Capstone Project
 >>>>>>> f8b636d (Updated lists lessons and ROADMAPmd)
