@@ -44,22 +44,14 @@ This may be subject to change.
     * [ ] Problem Solving - Fizz-Buzz Example — #67
     * [ ] Capstone Project - **Hangman game** — #68
 8. Errors, Debugging, I/O
+    * [ ] Functions
+    * [ ] Scope and Namespaces (LEGB rule)
     * [ ] Understanding Errors and Error Handling
-    * [ ] `logging` module
-    * [ ] Debugging tehniques
     * [ ] File Handling
-9. Capstone Project 2
-    * [ ] Git Workflow: Branches and Pull Requests
-    * [ ] Revisiting Project 1 (hangman game):
-        * Creating branch, adding features, merging back to `main`
-        * Loading *words* from external file
-        * Catching and logging errors
-    * [ ] Capstone Project
-10. Intermediate Python
-    * [ ] Decorators
-    * [ ] Generators
-    * [ ] Context Managers
-11. Capstone Project 3
+    * [ ] Modules
+7. Capstone Project 1
+    * [ ] Problem Solving
+    * [ ] Problem Solving - Fizz-Buzz Example 
     * [ ] Capstone Project
 12. Built-in and Modules
     * [-] Data Structures
@@ -129,10 +121,7 @@ This may be subject to change.
     * [ ] `pathlib` / `os` module
     * [ ] `csv` module
     * [ ] `sys` module
-<<<<<<< HEAD
-<<<<<<< HEAD
-    * [ ] `re` module
-13. Third-party Modules
+9. Third-party Modules
     * [ ] Virtual Environments
     * [ ] Using `pip` and `requirements.txt`
     * [ ] Creating python package -  `pyproject.toml` file
