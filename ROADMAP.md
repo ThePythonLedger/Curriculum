@@ -29,11 +29,11 @@ This may be subject to change.
     * [x] User Input and Conditionals
     * [x] Loops
 5. Data Structures
-    * [ ] 🚧 Lists — #57 👤 razorblade23
-    * [ ] 🚧 Tuples — #58 👤 razorblade23
-    * [ ] 🚧 Sets — #59 👤 razorblade23
-    * [ ] 🚧 Dictionaries — #60 👤 razorblade23
-    * [ ] 🚧 Coprehensions (`list`, `dict` `set`) — #61 👤 razorblade23
+    * [x] Lists (WIP)
+    * [x] Tuples (WIP)
+    * [x] Sets (WIP)
+    * [x] Dictionaries (WIP)
+    * [x] Coprehensions (`list`, `dict` `set`) (WIP)
 6. Code Organization
     * [ ] 🚧 Functions — #62 👤 tajirdev
     * [ ] Scope and Namespaces (LEGB rule) — #63
