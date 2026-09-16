@@ -84,7 +84,7 @@ This may be subject to change.
     * [ ] Project 3 - *probably: * weather app
 7. Working on Projects, Solving bugs, Reading errors
     * [ ] Motivation and Mindset
-    * [ ] Asking for Help
+    * [ ] Asking for Help (WIP)
     * [x] Join the Community
     * [x] Computer Science basics, Programming and Python 
 2. Prerequisites 
