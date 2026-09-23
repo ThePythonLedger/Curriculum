@@ -25,11 +25,24 @@ Before starting with commands, it's useful to get to know ourself with some word
 * **Commit**: A snapshot of your code at the time of creating **commit**. Commits are what allow you to undo your changes to any older commit at any time.
 * **Branch**: A parallel codebase for you to experiment with and build new features without affecting the **main** branch
 * **Pull Request (PR)**: When work on the branch is finished, you issue a pull request to your *main* branch so changes can be *merged*.
-* **Remote**: A copy of your repository NOT on your local machine (etc.: *Github*)
+* **Remote**: A copy of your repository NOT on your local machine (etc.: *GitHub*)
+
+:::tip
+Do not worry about what these words mean just yet or try to remember it all. We will use `git` commonly throuout the course, and you will get plenty of exercise in using it.
+:::
 
 ## Assignment {#assignment}
+1. To keep things organized while you work on projects, choose a directory on your local computer where you will store all of them and `cd` into it. For example create a directory called `Projects` in your `Documents` directory. For the rest of the course, we will assume your `Projects` directory has the following path: `~/Documents/Projects`.
+2. Now we need to create a directory which we will use to store our **assigment** project which we will evolve after each lesson. Create a new directory by executing `mkdir simple-bookstore`, then `cd` into it by executing `cd simple-bookstore`.
+3. We need to tell `git` to start tracking changes in our directory, which is called **initialization**. Run `git init` command to let `git` know that you want to start tracking this directory.
+4. Now we will create our first file: `README.md`. This file serves as description of your project and usually contains information on running your projects. We will not worry about this now, just open your code editor in that directory by executing `code .` command (**NOTE:** don't forget the dot `.` at the end of the command). Create a new file with the name `README.md` and write some content in it, like:
+    ```
+    This is the start of my python journey!
+    ```
+    Or whatever contents you want.
+## Assignment {#assignment}
 1. Choose a directory on your local computer where you will store all of your projects and `cd` into it. For example create a directory called `Projects` in your `Documents` directory. For the rest of the course, we will assume your `Projects` directory has the following path: `~/Documents/Projects`.
-2. Create a new directory by executing `mkdir simple-python-shop`, then `cd` into it by executing `cd simple-python-shop`.
+2. Create a new directory by executing `mkdir simple-bookstore`, then `cd` into it by executing `cd simple-bookstore`.
 3. Initialize `git` repository by executing `git init` command. This tells `git` to start tracking for changes in our directory. 
 4. Let's create a `README.md` file as every good repository should have one. Open your code editor in that directory by executing `code .` command (**NOTE:** don't forget the `.` at the end of the command). Create a new file with the name `README.md` and write some content in it, like:
     ```
@@ -39,10 +52,18 @@ Before starting with commands, it's useful to get to know ourself with some word
 5. Let's check the status of our repository by executing `git status` command. You will see your `README.md` in the section **untracked files**. This means `git` knows about your file, but it's not part of the snapshot it will create, so let's fix that in the next step.
 6. By executing `git add README.md` we say to `git` that we want to add that file to **staging area** which is like a space where git is aware of your files and which will be included in the snapshot (commit). Like saying a photographer to line up and frame the shot. Now we take the actuall snapshot (commit) in the next step.
 7. Execute `git commit -m "Add README file with initial content"` command which tells `git` to make the actuall snapshot (or **commit**). `-m` stands for **message** and its **required** in *commit* command, and not supplying it will open your default terminal text editor to enter the message. Message should be short but descriptive note explaining what you changed and why.
-8. Now let's upload our files to *Github* (or **push** the changes we made). First we need to create a repository in our *Github*. Go to [github.com/new](https://github.com/new) and enter the name for your new remote repository. You can use the same name as your local directory: `simple-python-shop`.  Then choose visibility setting (public or private). **DO NOT** create files *Github* offers: *README*, *.gitignore*, *license*; we will do these manually. Click on the green *Create repository* button.
-9. Github will offer varius ways of getting things done, but the main thing you should be looking for is the command starting with `git remote add origin`. Copy that whole line and paste it in your terminal (be sure you are in our current directory (`simple-python-shop`)). The line should look something like `git remote add origin https://github.com/your-username/simple-python-shop.git`. Execute the command to add our remote repository as **remote** to our current git repository, so we can **push** the changes we made to online repository. 
+8. Now let's upload our files to *Github* (or **push** the changes we made). First we need to create a repository in our *Github*. Go to [github.com/new](https://github.com/new) and enter the name for your new remote repository. You can use the same name as your local directory: `simple-bookstore`.  Then choose visibility setting (public or private). **DO NOT** create files *Github* offers: *README*, *.gitignore*, *license*; we will do these manually. Click on the green *Create repository* button.
+9. Github will offer varius ways of getting things done, but the main thing you should be looking for is the command starting with `git remote add origin`. Copy that whole line and paste it in your terminal (be sure you are in our current directory (`simple-bookstore`)). The line should look something like `git remote add origin https://github.com/your-username/simple-bookstore.git`. Execute the command to add our remote repository as **remote** to our current git repository, so we can **push** the changes we made to online repository. 
 10. Now run `git push -u origin main` to send files to your *remote* we just added in the previus step. The `-u` flag is used only **first time** you push to set up *tracking connections* so in later pushes, we can just do `git push`.
-11. Check your *Github* for pushed code. You should see your `README.md` sitting there on your repository view. Congratulations! You’ve just mastered the fundamental workflow of Git and GitHub.
+11. Check your *Github* for pushed code. You should see your `README.md` sitting there on your repository view. Congratulations! You've just mastered the fundamental workflow of Git and GitHub.
+
+:::tip
+In the above step 6, we executed `git add README.md`. This is fine when you have a few files to add to staging area, but what if there are dozens, or hundreds?
+
+Git helps us out with `git add .` (notice the dot `.`) which will add **all** unstaged files to staging area.
+
+This may not be what you always want, but it is a nice shortcut.
+:::
 
 ## What's Next {#next-lesson}
 We are finally done with introductions and essential setup so we can start with python lessons. Let's learn.
