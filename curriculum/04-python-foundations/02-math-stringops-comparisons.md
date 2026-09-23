@@ -211,7 +211,7 @@ print("not True: ", not True)
 Try to solve [excercise-3](https://github.com/ThePythonLedger/python-exercises/tree/main/exercises%2Ffoundations%2F03_math_and_comparisons) for better understanding.
 
 ## Assignment
-In the last assignment we have declared our bookstore variables and printed the inventory. In this one you are tasked with:
+In the last assignment we have declared our bookstore variables and printed the inventory. In this one you are tasked with making code more robust and logical.
 
 1. Open your code editor in your last project directory `simple-bookstore`
 2. Open `main.py` file we have been working on
@@ -224,11 +224,11 @@ In the last assignment we have declared our bookstore variables and printed the 
     * Modify `book_avilable` so it evaluates whether `book_quantity` is greater than `0`.
 6. Update your output to use **f-string** :
     ```
-    Welcome to inventory system for WILLOW CREEK BOOKS
+    Welcome to WILLOW CREEK BOOKS inventory system
     - - - - - - - - - - - - - - - - - - - -
     CURRENT INVENTORY
     - - - - - - - - - - - - - - - - - - - -
-    Book: The Last Cartographer -> [price:18.5, copies: 3, available: True]
+    - Book: The Last Cartographer -> [price:18.5, copies: 3, available: True]
     - - - - - - - - - - - - - - - - - - - -
     Inventory total: 55.5
     - - - - - - - - - - - - - - - - - - - -
