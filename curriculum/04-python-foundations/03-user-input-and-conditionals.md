@@ -88,22 +88,31 @@ elif age <= 15:
 ## Assigment
 Now that you know how to get user input and branch your program using conditional logic (`if`, `elif`, `else`) the code can move away from hardcoded values and become interactive. 
 
-**Goal:** use `input()` to collect user choices, cast strings to numbers, and use conditional logic to apply discounts and stock checks.
-
-1. Open `main.py` file in our `simple-python-shop` project directory.
-2. Add a new variable `item_stock` and set it to some integer
-3. Interactive input: 
-    * Ask the user for desired `item_quantity` using `input()`. **Don't forget** to cast the string to integer !
-4. Stock & Availability Check
-    * If `item_quantity` is less or equal to `0` print an error message: `Invalid quantity ordered`
-    * If `item_quantity` is greater then `item_stock` print `Sorry, we do not have enough stock.`
-5. Dynamic discount (conditionals)
+1. Open `main.py` file in our `simple-bookstore` project directory.
+2. Create a new variable to hold stock count
+    * `book_stock` - an **int**, for example `3`
+3. Now the customer comes in to buy the only book we have at our bookstore, so you must:
+    * Ask the user (using `input()`) how many books he wants to buy and save that to `book_quantity` variable. **Do not forget** to cast **str** to **int**.
+4. We need to check if the customer entered valid order and do we have that much in stock. If any of below conditions is `True` print the warning message to the user and **do not** do calculations or final print.
+    * `book_quantity` is less or equal to zero
+    * `book_quantity` is less or equal to `book_stock`
+5. Customers have a discount of 10% if their `total` is over `100`
     * Calculate the total (you should have this from the last lesson)
-    * If `total` is over `100` apply a **10%** discount (`total * 0.90`) and print: `Discount applied: 10%`
-    * Otherwise print: `No discount applied`
+    * If `total` is over `100` apply a **10%** discount (`total * 0.90`) and print: `Discount applied: 10%`, otherwise print: `No discount applied`
 6. Receipt Output
-    * Output the final receipt showing item name, quantity, applied discount state, and final amount due.
-7. Commit and push your updated code to Github.
+    * Output the final receipt showing book title, quantity, applied discount state, and final amount due.
+    ```
+    Welcome to WILLOW CREEK BOOKS
+    --------------------------------
+    Book: The Last Cartographer
+    Purchased: 3 x 18.50
+    No discount applied !
+    Total: $55.50
+    Bulk Order: True
+    --------------------------------
+    Thank you for your purchase !
+    ```
+7. Commit and push your changes.
 
 ## Deepen Your Knowledge
 * Learn more about [Indentation in Python](https://realpython.com/ref/glossary/indentation/) from this **Real Python** article

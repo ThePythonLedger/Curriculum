@@ -119,13 +119,13 @@ These statements `break` and `continue` work only in loops. If you try to use th
 :::
 
 ## Assigment
-1. Open `main.py` in your `simple-python-shop` project.
-2. Create a new variable named `item_count` and set it to `0` as its initial value.
-3. Use a `while` loop to repeatedly prompt the user for an item price.
-    * If the price entered is 0 break out of the loop
-    * Otherwise, add the price user entered to `total` and increment `item_count` by 1.
+1. Open `main.py` in your `simple-bookstore` project.
+2. Create a new variable named `book_count` and set it to `0` as its initial value.
+3. Use a `while` loop to ring up a stack of books at checkout: repeatedly prompt for the price printed on the price tag of the next book being scanned (this is a small bookstore without barcode lookup yet, so the cashier reads each tag by hand).
+    * If the price entered is 0, break out of the loop (no more books to scan)
+    * Otherwise, add the price entered to `total` and increment `book_count` by 1.
 4. When the loop finishes, determine if the `total` can have a discount and print out the final receipt.
-5. Make sure your program works, then commit and push your code
+5. Make sure your program works, then commit and push changes.
 
 ## Deepen Your Knowlege
 
