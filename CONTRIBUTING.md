@@ -39,12 +39,12 @@ That's it! A maintainer will review it.
 
 New content needs to be coordinated first, so we don't end up with two people writing the same lesson.
 
-1. **Check the [Curriculum Roadmap](/curriculum-roadmap.md)** to see which lessons still need to be written.
+1. **Check the [Curriculum Roadmap](curriculum-roadmap.md)** to see which lessons still need to be written.
 2. **Open an issue** describing the lesson you'd like to write and its scope.
 3. **Wait to be assigned.** A maintainer will assign the issue to you. (If nobody replies after a few days, leave a comment on the issue.)
 4. **Fork** this repository.
 5. **Create a new `.md` file** in the appropriate folder (e.g. `01-foundations/`).
-6. **Follow the [Lesson Guidelines](/lesson-guidelines.md)** so your lesson fits in with the existing lessons.
+6. **Follow the [Lesson Guidelines](lesson-guidelines.md)** so your lesson fits in with the existing lessons.
 7. **Open a draft PR** as soon as you have some content. We'll label the lesson as *Being Worked On*, so others know it's taken. Our pipeline checks your document for inconsistencies automatically, even on draft PRs, so you get early feedback.
 8. **Link your issue** in the PR description (see [below](#-linking-your-issue)).
 9. When you're happy with it, mark the PR as **Ready for review**.
