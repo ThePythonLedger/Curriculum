@@ -1,37 +1,105 @@
-# CONTRIBUTING.md
-First off, thank you for considering a contribution to **The Python Ledger**! High-quality, accessible education is built by the many, not the few.
+# 🛠️ How to Contribute
 
-As a contributor, you are a **"Ledger Keeper"**. Whether you're fixing a typo or designing a new module, your help keeps this roadmap accurate for the next generation of developers.
+Thanks for helping improve this project! Every contribution counts, from fixing a single typo to writing a whole new lesson.
 
-## 🏗️ Our Architecture
-To keep things simple, we use a Two-Repo System:
-* The Ledger (This Repo): Contains only Markdown files.
-* The Engine: A separate repository that handles the website and the Python interpreter.
+## Which path is mine?
 
-You do not need to know `React` or `JavaScript` to contribute here. You only need to know `Markdown` and `Python`.
+| I want to... | What to do | Issue needed? |
+|---|---|---|
+| Fix a typo, broken link, or small mistake in an existing lesson | [Quick fix](#-quick-fix-typos-and-small-bugs) | ❌ No |
+| Add a new lesson or project | [New lesson or project](#-new-lesson-or-project) | ✅ Yes, assigned to you |
+| Make a bigger change to existing lessons (rewrites, many files) | [Bigger change](#-bigger-changes) | ✅ Yes, assigned to you |
+| Suggest an idea or report something I can't fix myself | [Open an issue](https://github.com/OWNER/REPO/issues/new) | n/a |
 
-## 🛠️ How to Contribute
-* Fix a Typo or Bug
-If you see a mistake in a lesson:
-    1. Click the "Edit this page" button at the bottom of the lesson on the website.
-    2. This will take you directly to the file on GitHub.
-    3. Make your changes and submit a Pull Request (PR).
+> Not sure which one fits? Open an issue and ask. We're happy to help.
 
-* Propose a New Lesson or Project
-If you want to add a new section to the curriculum:
-    1. Open [Curriculum Roadmap](/ROADMAP.md) to see what lessons need to be worked on.
-    2. Open an **Issue** first to discuss the scope.
-    3. Fork this repository.
-    4. Create a new `.md` file in the appropriate folder (e.g., 01-foundations/).
-    5. Follow the [Lesson Guidelines](/LESSON_GUIDELINES.md) document to structure your lesson to confront with the project lessons.
-    6. Submit a **draft PR** for so we can label the lesson as *Being Worked On* as soon as you have some content. Our pipeline will check your document for inconsistencies automaticly even in draft PRs.
+---
 
-## 🚦 Pull Request Process
-* Submit a **draft PR** as soon as possible so somebody else does not do double work.
-* Ensure your Markdown is valid and links are not broken.
-* When your changes are complete, submit a PR.
-* Your PR will be reviewed by a maintainer.
-* Once merged, the Engine will automatically detect the changes and rebuild the live site within minutes.
+## ⚡ Quick fix (typos and small bugs)
 
-## 📜 Code of Conduct
-By contributing, you agree to uphold our Code of Conduct. We are dedicated to providing a harassment-free experience for everyone, regardless of skill level or background.
+No issue and no permission needed. Just send the PR.
+
+**A change counts as a quick fix when all of these are true:**
+
+- It only **edits existing** Markdown files (`.md` or `.mdx`). No new files, renames, or deletions.
+- It touches **3 files or fewer**.
+- It changes **20 lines or fewer** in total. Fixing a single word counts as 2 changed lines (one removed, one added), so you have room for roughly 10 edited lines.
+
+**Steps:**
+
+1. Click the **"Edit this page"** button at the bottom of the lesson on the website.
+2. This takes you directly to the file on GitHub.
+3. Make your change and submit a Pull Request (PR).
+
+That's it! A maintainer will review it.
+
+---
+
+## 📚 New lesson or project
+
+New content needs to be coordinated first, so we don't end up with two people writing the same lesson.
+
+1. **Check the [Curriculum Roadmap](/curriculum-roadmap.md)** to see which lessons still need to be written.
+2. **Open an issue** describing the lesson you'd like to write and its scope.
+3. **Wait to be assigned.** A maintainer will assign the issue to you. (If nobody replies after a few days, leave a comment on the issue.)
+4. **Fork** this repository.
+5. **Create a new `.md` file** in the appropriate folder (e.g. `01-foundations/`).
+6. **Follow the [Lesson Guidelines](/lesson-guidelines.md)** so your lesson fits in with the existing lessons.
+7. **Open a draft PR** as soon as you have some content. We'll label the lesson as *Being Worked On*, so others know it's taken. Our pipeline checks your document for inconsistencies automatically, even on draft PRs, so you get early feedback.
+8. **Link your issue** in the PR description (see [below](#-linking-your-issue)).
+9. When you're happy with it, mark the PR as **Ready for review**.
+
+---
+
+## 🔧 Bigger changes
+
+If your change to existing lessons is larger than a quick fix (more than 3 files, more than 20 changed lines, or it adds/removes/renames files), follow the same steps as for a [new lesson](#-new-lesson-or-project): open an issue, get it assigned, then send a PR that links it.
+
+---
+
+## 🔗 Linking your issue
+
+Add a closing keyword and the issue number to the **PR description**:
+
+```
+Closes #12
+```
+
+`Fixes #12` and `Resolves #12` work too. The issue must be **assigned to you**.
+
+---
+
+## 🤖 What the automatic check does
+
+When you open a PR, a bot checks whether it's a quick fix. If it isn't, it checks that you linked an issue assigned to you.
+
+If something is missing, the bot will:
+
+1. Add the **`needs-issue`** label and leave a comment explaining what to do.
+2. Give you time to fix it. Your PR is **not** closed right away.
+3. Post a reminder after about 5 days and close the PR after about 7 days if nothing has changed. You can always reopen it once the issue is sorted out.
+
+**To fix it**, link an assigned issue in the PR description. Editing the description re-runs the check automatically, and the label and comment disappear once everything is fine.
+
+---
+
+## ❓ FAQ
+
+**My PR got the `needs-issue` label. Did I do something wrong?**
+No! It just means your PR is bigger than a quick fix or has no assigned issue linked. Follow the steps in [Linking your issue](#-linking-your-issue).
+
+**The bot says my issue isn't assigned to me.**
+Comment on the issue to claim it and wait for a maintainer to assign it. Then edit your PR description (or push a new commit) to re-run the check.
+
+**My PR was closed automatically.**
+It stayed without an assigned issue for about a week. Claim an issue, then reopen the PR.
+
+**I only fixed a typo but the bot still complains.**
+Check that you only edited existing `.md`/`.mdx` files, stayed within 3 files and 20 changed lines, and didn't add or rename any file. If it still looks wrong, leave a comment and a maintainer will take a look.
+
+**Can I work on a lesson without opening a draft PR?**
+Yes, but a draft PR helps us mark the lesson as *Being Worked On* and lets the pipeline give you feedback early.
+
+---
+
+Thank you for contributing! 💙
