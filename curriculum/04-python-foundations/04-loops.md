@@ -88,7 +88,7 @@ Now we have told the function we want every number from 0 to 11 but in **step**s
 
 ## `break` And `continue`
 ### `break`
-What if you need to break out of the loop early? You have found something you are looking for and the loop needs to finish? Python has a keyword `brake` which does exactly what it's name suggests. Breaks out of the loop.
+What if you need to break out of the loop early? You have found something you are looking for and the loop needs to finish? Python has a keyword `break` which does exactly what it's name suggests. Breaks out of the loop.
 
 Let us demonstrate this:
 ```python interactive
