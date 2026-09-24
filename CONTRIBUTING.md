@@ -9,7 +9,7 @@ Thanks for helping improve this project! Every contribution counts, from fixing 
 | Fix a typo, broken link, or small mistake in an existing lesson | [Quick fix](#-quick-fix-typos-and-small-bugs) | ❌ No |
 | Add a new lesson or project | [New lesson or project](#-new-lesson-or-project) | ✅ Yes, assigned to you |
 | Make a bigger change to existing lessons (rewrites, many files) | [Bigger change](#-bigger-changes) | ✅ Yes, assigned to you |
-| Suggest an idea or report something I can't fix myself | [Open an issue](https://github.com/OWNER/REPO/issues/new) | n/a |
+| Suggest an idea or report something I can't fix myself | [Open an issue](https://github.com/ThePythonLedger/Curriculum/issues/new) | n/a |
 
 > Not sure which one fits? Open an issue and ask. We're happy to help.
 
