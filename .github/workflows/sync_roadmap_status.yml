@@ -24,9 +24,15 @@ jobs:
     if: github.event_name == 'issues' || github.event_name == 'pull_request_target'
     runs-on: ubuntu-latest
     steps:
+      # Uses a PAT (not the default GITHUB_TOKEN) so the later push is
+      # attributed to an account the ruleset's bypass list actually
+      # recognizes. The default token authenticates as github-actions[bot],
+      # which doesn't hold a real repo "Write" role, so role-based bypass
+      # entries never apply to it no matter how they're configured.
       - uses: actions/checkout@v4
         with:
           ref: main
+          token: ${{ secrets.ROADMAP_PAT }}
 
       - uses: actions/setup-python@v5
         with:
@@ -60,6 +66,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
+          token: ${{ secrets.ROADMAP_PAT }}
 
       - uses: actions/setup-python@v5
         with:
