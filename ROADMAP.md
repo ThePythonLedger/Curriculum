@@ -3,7 +3,7 @@ This may be subject to change.
 
 ## Legend
 `[ ]` - no work has been done
-`[-]` - somebody is working on this but it has not yet been completed. There should be a related PR.
+`[ ] 🚧` - work in progress (assigned / open PR)
 `[x]` - lesson completed
 
 ## Roadmap
