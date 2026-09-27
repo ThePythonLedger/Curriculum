@@ -89,7 +89,7 @@ def build_embed(phases: list[Phase]) -> dict:
 
 def patch_message(webhook_url: str, message_id: str, embed: dict) -> None:
     url = f"{webhook_url}/messages/{message_id}"
-    payload = json.dumps({"embeds": [embed]}).encode("utf-8")
+    payload = json.dumps({"content": "", "embeds": [embed]}).encode("utf-8")
     req = urllib.request.Request(
         url,
         data=payload,
