@@ -32,7 +32,7 @@ This may be subject to change.
     * [ ] 🚧 Tuples — #58
     * [ ] 🚧 Sets — #59
     * [ ] 🚧 Dictionaries — #60
-    * [ ] Coprehensions (`list`, `dict` `set`) — #61
+    * [ ] 🚧 Coprehensions (`list`, `dict` `set`) — #61
 6. Code Organization
     * [ ] Functions — #62
     * [ ] Scope and Namespaces (LEGB rule) — #63
