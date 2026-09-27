@@ -232,7 +232,7 @@ In the last assignment we have declared our shop variables and printed the inven
     --------------------------------
     Thank you for your purchase !
     ```
-7. Commit your changes with `git` and push to Github
+7. Commit your changes with `git` and push to Github.
 
 ## Deepen Your Knowledge
 1. Learn more about [Basic math in Python](https://cs.stanford.edu/people/nick/py/python-math.html#math) from article in **Stanford University**, covering all the topics in this lesson but in a different style and a bit more.

@@ -7,7 +7,6 @@ lesson: true
 isDraft: true
 ---
 # List
-## Introduction {#introduction}
 Up until now we have stored a single value in a variable, but what if we need to hold multiple values in some variable? Do we create multiple variables? Of course not, Python has a *built-in* mechanisms for dealing with collections of data which we call **data structures**. In this lesson we first take a look at **list**.
 
 Lists in Python are *built-in* data structure for storing ordered collections of items. They are **ordered** meaning they keep the order in which data came in. They are also **mutable** which means we can change them in place without creating a new copy. They can hold any other type of data including other lists or other data structures. Lists are probably the most used data structure in Python.
@@ -147,19 +146,37 @@ for item in a:
 This is very useful as we often need to work with specific elements from the list.
 
 :::explore[Learn more about Python lists]
-
 Learn more about Python Lists from these resources:
-* [Google for Education - Python Lists](https://developers.google.com/edu/python/lists)
-* [Official Python Documentation on Lists](https://docs.python.org/3/library/stdtypes.html#typesseq-list)
-* [Official Python Documentation on Data Structures - more on Lists](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)
-
+* Learn about `zip()` function from [zip() function - RealPython](https://realpython.com/ref/builtin-functions/zip/) and [zip() function - official Python Documentation](https://docs.python.org/3.3/library/functions.html#zip) that allows for combining of multiple lists (or other iterables as we will see later) by producing **tuples** (we cover these in the next lesson)
+* Learn about `.sort()` method from [official Python Documentation](https://docs.python.org/3/library/stdtypes.html#list.sort) which is very useful in sorting lists in-place. Sorting iterables is a very useful tehnique and there are multiple arguments and ways to sort iterables in Python. Be sure to read this [Sorting Tehniques - official Python documentation](https://docs.python.org/3/howto/sorting.html) to familiarize yourself with tehniques used.
+* Go thrue all the available methods on the lists in [More on Lists - official Python documentation](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists), as these will come in handy when working on your projects. You do not need to remember them all, but just read thrue them and their intended purpouse so you will know what is out there.
 :::
 
 ## Exercise
-Complete [Exercise 05 — The Cozy Bakery Inventory](#) to practice list creation, indexing, modification, and using python documentation to solve list tasks.
+Complete [[TODO] Exercise 05 — WorkingTitle](#) to practice list creation, indexing, modification, and using python documentation to solve list tasks.
 
 ## Assignment {#assignment}
-**Todo**
+1. Open `main.py` file in our `simple-python-shop` directory
+2. Replace `item_name`, `item_price` and `item_stock` static values with an empty list.
+3. In *infinite loop* ask the user to fill up the inventory by typing in a name, price and stock level of item.
+    * If user types **empty string**, break out of the loop and continue with program execution.
+    * User should enter all of the information on the same line. Use `.split()` method on the inputed string to catch all information needed. **Do not forget** to cast `price` to `float` and `stock` to `integer`.
+    * Append every information to their own respective list.
+4. Display the inventory by using `zip()` function and combining all three lists to display items one by one.
+5. Create variable `order` and assign it an empty list.
+6. Create another *infinite loop* and inside the loop ask the user to enter the name of the item he wants to buy.
+    * If user enters empty string, break out of the loop.
+    * If the item user entered is in the `item_name` list, find its index position and assign it to variable, otherwise inform the user that there is no such item at the moment, and **continue** with next iteration of loop
+    * When you have an index of the item user asked, ask the user to enter quantity of the items. Check if entered item quantity is not bigger then actual item stock and if it is, tell the user that we do not have that many items in stock, then **continue** with new iteration.
+    * If we have the item and have enough of stock, add the total for item (item price multiplied by quantity) to `order` list.
+    * Decrease the stock number of items by the quantity ammount and if item stock reaches 0, remove the item (and its relevant info) from the inventory lists.
+7. Calculate the total by adding all the numbers in `order` list using `sum()` function and calculate whether to give 10% discount (if `total > 100`).
+8. Print out the final receipt in the following format:
+    ```
+    Your total is: $<total>
+    ```
+9. Print the inventory after shopping.
+10. Make sure your application works correctly, commit the changes and push your code to Github.
 
 ## What's Next {#next-lesson}
 Lists are ordered and mutable, which makes them ideal for collections that grow or change over time. But what if you need an ordered collection that **cannot** be modified once created?

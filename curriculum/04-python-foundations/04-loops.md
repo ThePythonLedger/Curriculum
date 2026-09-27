@@ -120,10 +120,12 @@ These statements `break` and `continue` work only in loops. If you try to use th
 
 ## Assigment
 1. Open `main.py` in your `simple-python-shop` project.
-2. Create a new variable named `item_count` and set it to `0` as its initial value.
+2. Set `item_quantity` to `0` as its initial value and remove `item_price` variable.
 3. Use a `while` loop to repeatedly prompt the user for an item price.
-    * If the price entered is 0 break out of the loop
-    * Otherwise, add the price user entered to `total` and increment `item_count` by 1.
+    * If the price entered is less then 0, print message saying `Invalid price, must be positive`, and skipping the rest of the iteration code, asking user again to enter the price.
+    * Otherwise check if the price entered is 0 and if so, break out of the loop.
+    * Otherwise, check if `item_stock - item_quantity` is more than `1` and if not, break out of the loop, informing the user we are out of stock.
+    * Otherwise, add the price user entered to `total` and increment `item_quantity` by 1.
 4. When the loop finishes, determine if the `total` can have a discount and print out the final receipt.
 5. Make sure your program works, then commit and push your code
 
