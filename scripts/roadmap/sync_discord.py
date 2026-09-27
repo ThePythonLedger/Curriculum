@@ -22,6 +22,7 @@ import json
 import os
 import re
 import sys
+import urllib.error
 import urllib.request
 
 ROADMAP_PATH = "ROADMAP.md"
@@ -93,14 +94,22 @@ def patch_message(webhook_url: str, message_id: str, embed: dict) -> None:
         url,
         data=payload,
         method="PATCH",
-        headers={"Content-Type": "application/json"},
+        headers={
+            "Content-Type": "application/json",
+            "User-Agent": "ThePythonLedger-RoadmapSync (https://github.com/ThePythonLedger/Curriculum, 1.0)",
+        },
     )
-    with urllib.request.urlopen(req) as resp:
-        if resp.status not in (200, 204):
-            print(
-                f"Unexpected status {resp.status} updating message {message_id}",
-                file=sys.stderr,
-            )
+    try:
+        with urllib.request.urlopen(req) as resp:
+            if resp.status not in (200, 204):
+                print(
+                    f"Unexpected status {resp.status} updating message {message_id}",
+                    file=sys.stderr,
+                )
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", errors="replace")
+        print(f"HTTP {e.code} updating message {message_id}: {body}", file=sys.stderr)
+        raise
 
 
 def main() -> None:
