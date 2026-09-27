@@ -22,7 +22,10 @@ import json
 import os
 import re
 import sys
+<<<<<<< HEAD
 import urllib.error
+=======
+>>>>>>> 78c3371 (Added automated scripts for pushing ROADMAP updates automaticly on Issue assigment. Changed ROADMAP.md to fit new workflow.)
 import urllib.request
 
 ROADMAP_PATH = "ROADMAP.md"
@@ -89,11 +92,16 @@ def build_embed(phases: list[Phase]) -> dict:
 
 def patch_message(webhook_url: str, message_id: str, embed: dict) -> None:
     url = f"{webhook_url}/messages/{message_id}"
+<<<<<<< HEAD
     payload = json.dumps({"content": "", "embeds": [embed]}).encode("utf-8")
+=======
+    payload = json.dumps({"embeds": [embed]}).encode("utf-8")
+>>>>>>> 78c3371 (Added automated scripts for pushing ROADMAP updates automaticly on Issue assigment. Changed ROADMAP.md to fit new workflow.)
     req = urllib.request.Request(
         url,
         data=payload,
         method="PATCH",
+<<<<<<< HEAD
         headers={
             "Content-Type": "application/json",
             "User-Agent": "ThePythonLedger-RoadmapSync (https://github.com/ThePythonLedger/Curriculum, 1.0)",
@@ -110,6 +118,16 @@ def patch_message(webhook_url: str, message_id: str, embed: dict) -> None:
         body = e.read().decode("utf-8", errors="replace")
         print(f"HTTP {e.code} updating message {message_id}: {body}", file=sys.stderr)
         raise
+=======
+        headers={"Content-Type": "application/json"},
+    )
+    with urllib.request.urlopen(req) as resp:
+        if resp.status not in (200, 204):
+            print(
+                f"Unexpected status {resp.status} updating message {message_id}",
+                file=sys.stderr,
+            )
+>>>>>>> 78c3371 (Added automated scripts for pushing ROADMAP updates automaticly on Issue assigment. Changed ROADMAP.md to fit new workflow.)
 
 
 def main() -> None:

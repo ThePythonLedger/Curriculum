@@ -9,18 +9,22 @@ on:
   # (already in the event payload) and write to ROADMAP.md on main.
   pull_request_target:
     types: [opened, ready_for_review, closed]
+<<<<<<< HEAD
   # Run reconcile.py on demand ("Run workflow" button) and once a day
   # as a safety net against any missed event (e.g. an issue closed
   # before its ROADMAP.md line had "— #N" linked to it yet).
   workflow_dispatch: {}
   schedule:
     - cron: "0 4 * * *"
+=======
+>>>>>>> 78c3371 (Added automated scripts for pushing ROADMAP updates automaticly on Issue assigment. Changed ROADMAP.md to fit new workflow.)
 
 permissions:
   contents: write
 
 jobs:
   sync:
+<<<<<<< HEAD
     if: github.event_name == 'issues' || github.event_name == 'pull_request_target'
     runs-on: ubuntu-latest
     steps:
@@ -33,6 +37,13 @@ jobs:
         with:
           ref: main
           token: ${{ secrets.ROADMAP_PAT }}
+=======
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+>>>>>>> 78c3371 (Added automated scripts for pushing ROADMAP updates automaticly on Issue assigment. Changed ROADMAP.md to fit new workflow.)
 
       - uses: actions/setup-python@v5
         with:
