@@ -35,8 +35,8 @@ This may be subject to change.
     * [ ] Dictionaries — #60
     * [ ] Coprehensions (`list`, `dict` `set`) — #61
 6. Code Organization
-    * [ ] 🚧 Functions — #62
-    * [ ] 🚧 Scope and Namespaces (LEGB rule) — #63
+    * [ ] Functions — #62
+    * [ ] Scope and Namespaces (LEGB rule) — #63
     * [ ] 🚧 Type Hints — #64
     * [ ] 🚧 Modules — #65
 7. Capstone Project 1
