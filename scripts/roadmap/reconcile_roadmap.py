@@ -17,6 +17,7 @@ issue's own state (closed / has an assignee) is used as the signal.
 That covers the common paths (assigned, merged-and-closed) even for
 history that predates the automation.
 """
+
 import json
 import os
 import sys
@@ -24,13 +25,7 @@ import urllib.error
 import urllib.request
 
 sys.path.insert(0, os.path.dirname(__file__))
-from sync_roadmap import (  # noqa: E402
-    LINE_RE,
-    ROADMAP_PATH,
-    Update,
-    apply_updates,
-    update_from_issue,
-)
+from sync_roadmap import LINE_RE, ROADMAP_PATH, apply_updates  # noqa: E402
 
 
 def find_linked_issues() -> set[int]:
@@ -58,6 +53,14 @@ def fetch_issue(repo: str, token: str, number: int) -> dict:
         return json.load(resp)
 
 
+def target_state(issue: dict) -> str:
+    if issue.get("state") == "closed":
+        return "x"
+    if issue.get("assignees"):
+        return "-"
+    return " "
+
+
 def main() -> None:
     repo = os.environ["GITHUB_REPOSITORY"]
     token = os.environ["GITHUB_TOKEN"]
@@ -67,14 +70,17 @@ def main() -> None:
         print("No linked issues found in ROADMAP.md.")
         return
 
-    updates: dict[int, Update] = {}
+    updates: dict[int, str] = {}
     for number in sorted(issue_numbers):
         try:
             issue = fetch_issue(repo, token, number)
         except urllib.error.HTTPError as e:
-            print(f"#{number}: could not fetch issue ({e.code}) — skipping", file=sys.stderr)
+            print(
+                f"#{number}: could not fetch issue ({e.code}) — skipping",
+                file=sys.stderr,
+            )
             continue
-        updates[number] = update_from_issue(issue)
+        updates[number] = target_state(issue)
 
     changed = apply_updates(updates)
     if not changed:
