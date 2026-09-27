@@ -33,6 +33,11 @@ This may be subject to change.
     * [ ] Sets (WIP)
     * [ ] Dictionaries (WIP)
     * [ ] Coprehensions (`list`, `dict` `set`) (WIP)
+    * [ ] 🚧 Lists — #57
+    * [ ] 🚧 Tuples — #58
+    * [ ] 🚧 Sets — #59
+    * [ ] 🚧 Dictionaries — #60
+    * [ ] 🚧 Coprehensions (`list`, `dict` `set`) — #61
 6. Code Organization
     * [ ] Functions
     * [ ] Scope and Namespaces (LEGB rule)
