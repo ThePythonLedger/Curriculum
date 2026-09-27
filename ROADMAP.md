@@ -29,10 +29,10 @@ This may be subject to change.
     * [x] User Input and Conditionals
     * [x] Loops
 5. Data Structures
-    * [ ] Lists — #57
-    * [ ] Tuples — #58
-    * [ ] Sets — #59
-    * [ ] Dictionaries — #60
+    * [ ] 🚧 Lists — #57
+    * [ ] 🚧 Tuples — #58
+    * [ ] 🚧 Sets — #59
+    * [ ] 🚧 Dictionaries — #60
     * [ ] Coprehensions (`list`, `dict` `set`) — #61
 6. Code Organization
     * [ ] Functions — #62
