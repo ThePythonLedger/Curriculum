@@ -76,7 +76,7 @@ This may be subject to change.
 6. Code Organization
     * [ ] Functions — #62
     * [ ] Scope and Namespaces (LEGB rule) — #63
-    * [ ] 🚧 Type Hints — #64
+    * [ ] Type Hints — #64
     * [ ] 🚧 Modules — #65
 7. Capstone Project 1
     * [ ] 🚧 Problem Solving — #66
