@@ -9,12 +9,19 @@ on:
   # (already in the event payload) and write to ROADMAP.md on main.
   pull_request_target:
     types: [opened, ready_for_review, closed]
+  # Run reconcile.py on demand ("Run workflow" button) and once a day
+  # as a safety net against any missed event (e.g. an issue closed
+  # before its ROADMAP.md line had "— #N" linked to it yet).
+  workflow_dispatch: {}
+  schedule:
+    - cron: "0 4 * * *"
 
 permissions:
   contents: write
 
 jobs:
   sync:
+    if: github.event_name == 'issues' || github.event_name == 'pull_request_target'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -37,6 +44,39 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: sync roadmap status [skip ci]"
+          file_pattern: ROADMAP.md
+
+      - name: Sync Discord
+        if: steps.update.outputs.changed == 'true'
+        run: python scripts/roadmap/sync_discord.py
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          DISCORD_MESSAGE_IDS: ${{ vars.DISCORD_MESSAGE_IDS }}
+
+  reconcile:
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Reconcile ROADMAP.md with issue states
+        id: update
+        run: python scripts/roadmap/reconcile_roadmap.py
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit ROADMAP.md
+        if: steps.update.outputs.changed == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: reconcile roadmap status [skip ci]"
           file_pattern: ROADMAP.md
 
       - name: Sync Discord
