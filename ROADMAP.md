@@ -10,7 +10,7 @@ This may be subject to change.
 1. Introduction
     * [x] How course works?
     * [x] Motivation and Mindset
-    * [ ] Asking for Help (WIP) — #32
+    * [ ] Asking for Help — #32
     * [ ] Join the Community — #33
     * [x] Computer Science basics, Programming and Python 
 2. Prerequisites 
