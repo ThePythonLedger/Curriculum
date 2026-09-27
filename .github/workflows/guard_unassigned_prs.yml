@@ -2,43 +2,164 @@ name: Guard Unassigned PRs
 
 on:
   pull_request_target:
-    types: [opened]
+    types: [opened, reopened, edited, synchronize]
+
+# One run per PR at a time, newest wins (avoids duplicate comments/labels).
+concurrency:
+  group: pr-guard-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
 
 jobs:
   check-assignee:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
-      issues: read
+      issues: write
     steps:
+      # SECURITY: pull_request_target runs with write permissions.
+      # Never add actions/checkout of the PR head (or run any PR code) here.
       - uses: actions/github-script@v7
         with:
           script: |
+            // ---- Config -------------------------------------------------
+            const MAX_FILES = 3;                    // small fix: max files touched
+            const MAX_CHANGED_LINES = 20;           // small fix: max added+removed lines
+            const SMALL_FIX_EXTENSIONS = ['.md', '.mdx'];
+            const LABEL = 'needs-issue';
+            const STALE_LABEL = 'stale';            // set by the stale workflow
+            const MARKER = '<!-- pr-guard -->';
+            // -------------------------------------------------------------
+
             const { owner, repo, number } = context.issue;
             const pr = context.payload.pull_request;
             const author = pr.user.login;
+            const currentLabels = (pr.labels ?? []).map(l => l.name);
 
-            // Extract linked issue number (e.g., "Closes #12" or "Fixes #5")
-            const match = pr.body?.match(/(?:fixes|closes|resolves)\s+#(\d+)/i);
-            
-            if (!match) {
-              await github.rest.issues.createComment({
-                owner, repo, issue_number: number,
-                body: `Hi @${author}! Please reference an issue in your PR body (e.g., \`Closes #12\`) and make sure it is assigned to you.`
+            // Ignore closed PRs (edited also fires on closed ones)
+            if (pr.state !== 'open') return;
+
+            // 1. Maintainers and bots bypass
+            if (
+              pr.user.type === 'Bot' ||
+              ['OWNER', 'MEMBER', 'COLLABORATOR'].includes(pr.author_association)
+            ) return;
+
+            const footer =
+              `\n\nThis PR is labelled \`${LABEL}\` and will be closed automatically ` +
+              `after about a week if this isn't resolved. Editing the PR description ` +
+              `re-runs this check.`;
+
+            // Returns null if the PR is fine, otherwise a message for the author
+            async function findProblem() {
+              // 2. Small edits to existing docs bypass (typos, bug fixes)
+              const files = await github.paginate(github.rest.pulls.listFiles, {
+                owner, repo, pull_number: number, per_page: 100,
               });
-              await github.rest.pulls.update({ owner, repo, pull_number: number, state: 'closed' });
+              const totalChanges = files.reduce((sum, f) => sum + f.changes, 0);
+              const isSmallFix =
+                files.length <= MAX_FILES &&
+                totalChanges <= MAX_CHANGED_LINES &&
+                files.every(f =>
+                  f.status === 'modified' &&
+                  SMALL_FIX_EXTENSIONS.some(ext => f.filename.endsWith(ext))
+                );
+              if (isSmallFix) return null;
+
+              // 3. Everything else needs a linked issue assigned to the author
+              const intro =
+                `Hi @${author}! Thanks for contributing ðŸ™Œ\n\n` +
+                `Small fixes to existing lessons (up to ${MAX_FILES} Markdown files and ` +
+                `${MAX_CHANGED_LINES} changed lines) are welcome directly. ` +
+                `This PR is larger or adds new files, so it needs a linked issue.\n\n`;
+
+              const match = (pr.body ?? '').match(
+                /\b(?:fix(?:es|ed)?|close[sd]?|resolve[sd]?)\s*:?\s+#(\d+)/i
+              );
+              if (!match) {
+                return intro +
+                  `Please reference an issue in the PR description (e.g. \`Closes #12\`) ` +
+                  `that is assigned to you.` + footer;
+              }
+
+              const issueNum = parseInt(match[1], 10);
+              let issue;
+              try {
+                ({ data: issue } = await github.rest.issues.get({
+                  owner, repo, issue_number: issueNum,
+                }));
+              } catch (e) {
+                if (e.status !== 404) throw e;
+                return intro + `Issue #${issueNum} could not be found.` + footer;
+              }
+
+              if (issue.pull_request) {
+                return intro +
+                  `#${issueNum} is a pull request, not an issue. ` +
+                  `Please link the issue you were assigned.` + footer;
+              }
+
+              if (!issue.assignees.some(a => a.login === author)) {
+                return intro +
+                  `Issue #${issueNum} is not assigned to you. ` +
+                  `Please comment on it to claim it first!` + footer;
+              }
+
+              return null;
+            }
+
+            const problem = await findProblem();
+
+            // Find our previous comment (so we update instead of spamming)
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner, repo, issue_number: number, per_page: 100,
+            });
+            const existing = comments.find(
+              c => c.user.login === 'github-actions[bot]' && c.body?.includes(MARKER)
+            );
+
+            // ---- All good: clean up any earlier warning -------------------
+            if (!problem) {
+              for (const name of [LABEL, STALE_LABEL]) {
+                if (!currentLabels.includes(name)) continue;
+                try {
+                  await github.rest.issues.removeLabel({
+                    owner, repo, issue_number: number, name,
+                  });
+                } catch (e) {
+                  if (e.status !== 404) throw e;
+                }
+              }
+              if (existing) {
+                await github.rest.issues.deleteComment({
+                  owner, repo, comment_id: existing.id,
+                });
+              }
               return;
             }
 
-            const issueNum = parseInt(match[1]);
-            const issue = await github.rest.issues.get({ owner, repo, issue_number: issueNum });
-            const isAssigned = issue.data.assignees.some(a => a.login === author);
-
-            if (!isAssigned) {
-              await github.rest.issues.createComment({
-                owner, repo, issue_number: number,
-                body: `Hi @${author}! This PR was automatically closed because Issue #${issueNum} is not assigned to you. Please comment on the issue to claim it first!`
+            // ---- Problem: label + comment, but don't close ----------------
+            try {
+              await github.rest.issues.createLabel({
+                owner, repo, name: LABEL, color: 'd93f0b',
+                description: 'PR needs a linked issue assigned to the author',
               });
-              await github.rest.pulls.update({ owner, repo, pull_number: number, state: 'closed' });
+            } catch (e) {
+              if (e.status !== 422) throw e; // 422 = label already exists
             }
-            
+
+            if (!currentLabels.includes(LABEL)) {
+              await github.rest.issues.addLabels({
+                owner, repo, issue_number: number, labels: [LABEL],
+              });
+            }
+
+            const body = `${MARKER}\n${problem}`;
+            if (!existing) {
+              await github.rest.issues.createComment({
+                owner, repo, issue_number: number, body,
+              });
+            } else if (existing.body !== body) {
+              await github.rest.issues.updateComment({
+                owner, repo, comment_id: existing.id, body,
+              });
+            }
