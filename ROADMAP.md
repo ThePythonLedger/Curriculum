@@ -10,7 +10,7 @@ This may be subject to change.
 1. Introduction
     * [x] How course works?
     * [x] Motivation and Mindset
-    * [ ] Asking for Help — #32
+    * [ ] 🚧 Asking for Help — #32
     * [ ] Join the Community — #33
     * [x] Computer Science basics, Programming and Python 
 2. Prerequisites 
@@ -28,20 +28,20 @@ This may be subject to change.
     * [x] User Input and Conditionals
     * [x] Loops
 5. Data Structures
-    * [ ] Lists — #57
-    * [ ] Tuples — #58
-    * [ ] Sets — #59
-    * [ ] Dictionaries — #60
-    * [ ] Coprehensions (`list`, `dict` `set`) — #61
+    * [ ] 🚧 Lists — #57
+    * [ ] 🚧 Tuples — #58
+    * [ ] 🚧 Sets — #59
+    * [ ] 🚧 Dictionaries — #60
+    * [ ] 🚧 Coprehensions (`list`, `dict` `set`) — #61
 6. Code Organization
-    * [ ] Functions — #62
-    * [ ] Scope and Namespaces (LEGB rule) — #63
-    * [ ] Type Hints — #64
-    * [ ] Modules — #65
+    * [ ] 🚧 Functions — #62
+    * [ ] 🚧 Scope and Namespaces (LEGB rule) — #63
+    * [ ] 🚧 Type Hints — #64
+    * [ ] 🚧 Modules — #65
 7. Capstone Project 1
-    * [ ] Problem Solving — #66
-    * [ ] Problem Solving - Fizz-Buzz Example — #67
-    * [ ] Capstone Project - **Hangman game** — #68
+    * [ ] 🚧 Problem Solving — #66
+    * [ ] 🚧 Problem Solving - Fizz-Buzz Example — #67
+    * [ ] 🚧 Capstone Project - **Hangman game** — #68
 8. Errors, Debugging, I/O
     * [ ] Understanding Errors and Error Handling
     * [ ] `logging` module
