@@ -11,6 +11,7 @@ This may be subject to change.
 1. Introduction
     * [x] How course works?
     * [x] Motivation and Mindset
+<<<<<<< HEAD
     * [ ] Asking for help
     * [ ] Join the Community
     * [x] Computers and Programming Languages (CS Basics)
@@ -19,6 +20,16 @@ This may be subject to change.
     * [x] Text Editor basics
     * [x] Command Line basics
     * [x] Python - What is it? REPL vs Scripts
+=======
+    * [ ] Asking for Help — #32
+    * [ ] Join the Community — #33
+    * [x] Computer Science basics, Programming and Python 
+2. Prerequisites 
+    * [x] Software Installation
+    * [x] Text and Code Editors 
+    * [x] Command Line Basics
+    * [x] Python - REPL vs Scripts
+>>>>>>> 8c7939b (Added a reconcile step for manual triggering and scheduled at 04:00 AM)
 3. Git Basics
     * [x] Introduction to Git
     * [x] Setting up Git and Github
