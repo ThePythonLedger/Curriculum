@@ -1,0 +1,47 @@
+name: Sync Roadmap Status
+
+on:
+  issues:
+    types: [assigned, unassigned, closed, reopened]
+  # pull_request_target (not pull_request) so the workflow gets write
+  # access even for PRs opened from forks. Safe here because we never
+  # check out or run the fork's code — we only read the PR body
+  # (already in the event payload) and write to ROADMAP.md on main.
+  pull_request_target:
+    types: [opened, ready_for_review, closed]
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Update ROADMAP.md
+        id: update
+        run: python scripts/roadmap/sync_roadmap.py
+        env:
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
+          GITHUB_EVENT_PATH: ${{ github.event_path }}
+
+      - name: Commit ROADMAP.md
+        if: steps.update.outputs.changed == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: sync roadmap status [skip ci]"
+          file_pattern: ROADMAP.md
+
+      - name: Sync Discord
+        if: steps.update.outputs.changed == 'true'
+        run: python scripts/roadmap/sync_discord.py
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          DISCORD_MESSAGE_IDS: ${{ vars.DISCORD_MESSAGE_IDS }}
