@@ -2,6 +2,46 @@
 
 Thanks for helping improve this project! Every contribution counts, from fixing a single typo to writing a whole new lesson.
 
+## 🚀 Before You Start
+
+You do **not** have write access to this repo directly — all changes go through a fork and a Pull Request. If you clone this repo and try to push to it, you'll get a `403` error. That's expected; it just means you're pushing to the wrong place.
+
+1. **Fork** this repo (the "Fork" button, top-right) — you'll get your own copy at `github.com/<your-username>/Curriculum`.
+2. **Clone your fork**, not this repo:
+   ```
+   git clone https://github.com/<your-username>/Curriculum.git
+   ```
+3. Add this repo as a second remote, called `upstream`, so you can pull in new changes later:
+   ```
+   git remote add upstream https://github.com/ThePythonLedger/Curriculum.git
+   ```
+4. Make your changes and push to **your fork** (`origin`), then open a PR from your fork's branch into `ThePythonLedger:main`.
+
+### Keeping your fork in sync
+
+Content here moves fast — other contributors' lessons get merged into `main` regularly. If your fork falls behind, your PR can end up showing dozens of commits and files that aren't actually yours, just because your branch never caught up. Syncing before you start, and again before you open a PR, avoids that.
+
+**Before you start new work:**
+```
+git checkout main
+git fetch upstream
+git rebase upstream/main
+git push origin main
+```
+
+**Before opening a PR** (or if you're asked to update an existing one):
+```
+git fetch upstream
+git rebase upstream/main
+git push --force-with-lease origin your-branch-name
+```
+
+If you hit conflicts during rebase, Git will pause and tell you which files need attention. Fix them, then run `git add <file>` and `git rebase --continue`.
+
+> **Why rebase instead of merge?** Merging pulls in a merge commit and tangles your branch's history with everyone else's. Rebasing replays just your commits on top of the latest `main`, so your PR shows only the changes you actually made — easier for us to review, and easier for you to reason about.
+
+---
+
 ## Which path is mine?
 
 | I want to... | What to do | Issue needed? |
@@ -42,7 +82,7 @@ New content needs to be coordinated first, so we don't end up with two people wr
 1. **Check the [Curriculum Roadmap](./curriculum-roadmap.md)** to see which lessons still need to be written.
 2. **Open an issue** describing the lesson you'd like to write and its scope.
 3. **Wait to be assigned.** A maintainer will assign the issue to you. (If nobody replies after a few days, leave a comment on the issue.)
-4. **Fork** this repository.
+4. **Fork** this repository (see [Before You Start](#-before-you-start) if you haven't already).
 5. **Create a new `.md` file** in the appropriate folder (e.g. `01-foundations/`).
 6. **Follow the [Lesson Guidelines](./lesson-guidelines.md)** so your lesson fits in with the existing lessons.
 7. **Open a draft PR** as soon as you have some content. We'll label the lesson as *Being Worked On*, so others know it's taken. Our pipeline checks your document for inconsistencies automatically, even on draft PRs, so you get early feedback.
@@ -84,6 +124,12 @@ If something is missing, the bot will:
 ---
 
 ## ❓ FAQ
+
+**I cloned the repo and tried to push, but I got a 403.**
+You cloned this repo directly instead of forking it. See [Before You Start](#-before-you-start) — fork the repo first, then clone and push to your own fork.
+
+**My PR shows a lot more commits/files than I actually changed.**
+Your fork's branch probably fell behind `main`. Sync it with `git fetch upstream && git rebase upstream/main`, then push with `--force-with-lease`. See [Keeping your fork in sync](#keeping-your-fork-in-sync).
 
 **My PR got the `needs-issue` label. Did I do something wrong?**
 No! It just means your PR is bigger than a quick fix or has no assigned issue linked. Follow the steps in [Linking your issue](#-linking-your-issue).
