@@ -81,7 +81,7 @@ This may be subject to change.
 7. Capstone Project 1
     * [ ] 🚧 Problem Solving — #66
     * [ ] 🚧 Problem Solving - Fizz-Buzz Example — #67
-    * [ ] 🚧 Capstone Project - **Hangman game** — #68
+    * [ ] Capstone Project - **Hangman game** — #68
 8. Errors, Debugging, I/O
     * [ ] Understanding Errors and Error Handling
     * [ ] `logging` module
