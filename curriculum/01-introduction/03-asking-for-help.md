@@ -25,7 +25,7 @@ Check if:
 - your syntax are correct or valid
 - your code is complete as you intended
 
-**If** any of above is Fasle, Fix them and re-run your code.
+**If** any of above is False, Fix them and re-run your code.
 
 **Else**, if all of above is True and error still persist, proceed to the step 2(the question space) of this topic.
 
