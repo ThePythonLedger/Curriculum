@@ -9,16 +9,11 @@ This may be subject to change.
 ## Roadmap
 1. Introduction
     * [x] How course works?
-<<<<<<< HEAD
     * [x] Motivation and Mindset
+    * [ ] Asking for Help — #32
     * [ ] Asking for Help (WIP) — #32
     * [ ] Asking for Help — #32
     * [ ] Join the Community — #33
-=======
-    * [ ] Motivation and Mindset
-    * [ ] Asking for Help (WIP)
-    * [x] Join the Community
->>>>>>> f8b636d (Updated lists lessons and ROADMAPmd)
     * [x] Computer Science basics, Programming and Python 
 2. Prerequisites 
     * [x] Software Installation
@@ -35,59 +30,38 @@ This may be subject to change.
     * [x] Arithmetic and String Operations, Comparisons
     * [x] User Input and Conditionals
     * [x] Loops
-<<<<<<< HEAD
-    * [-] Data Structures
-        * [-] List
-        * [-] Tuple
-        * [-] Set
-        * [-] Dictionary
-     * [ ] Functions
-     * [ ] Project 1
-5. Modules, Working with Files and Error Handling 
-    * [ ] Working with multiple files (`__init.py__`, directory structure, etc...)
-    * [ ] Opening, Closing and Manipulating files
-    * [ ] Error Handling (`try-except-else-finally`)
-    * [ ] Custom Exceptions
-    * [ ] Defensive Coding patterns
-    * [ ] Working with structured data (`json`, `csv`, etc...)
-    * [ ] Project 2
-6. OOP, Virtual Environments and third party libraries, Working with APIs
-    * [ ] Classes and OOP
-    * [ ] Usage and setup of virtual environments
-    * [ ] Installation of third party libraries
-    * [ ] Working with APIs
-    * [ ] Project 3 - *probably: * weather app
-7. Working on Projects, Solving bugs, Reading errors
-=======
 5. Data Structures
     * [ ] Lists — #57
     * [ ] Tuples — #58
     * [ ] Sets — #59
     * [ ] Dictionaries — #60
     * [ ] Coprehensions (`list`, `dict` `set`) — #61
-    * [x] Lists (WIP)
-    * [x] Tuples (WIP)
-    * [x] Sets (WIP)
-    * [x] Dictionaries (WIP)
-    * [x] Coprehensions (`list`, `dict` `set`) (WIP)
 6. Code Organization
     * [ ] Functions — #62
     * [ ] Scope and Namespaces (LEGB rule) — #63
-    * [ ] 🚧 Type Hints — #64
-    * [ ] 🚧 Modules — #65
+    * [ ] Type Hints — #64
+    * [ ] Modules — #65
 7. Capstone Project 1
-    * [ ] Problem Solving
-    * [ ] Problem Solving - Fizz-Buzz Example 
-    * [ ] Capstone Project - **Hangman game**
+    * [ ] Problem Solving — #66
+    * [ ] Problem Solving - Fizz-Buzz Example — #67
+    * [ ] Capstone Project - **Hangman game** — #68
 8. Errors, Debugging, I/O
-    * [ ] Functions
-    * [ ] Scope and Namespaces (LEGB rule)
     * [ ] Understanding Errors and Error Handling
+    * [ ] `logging` module
+    * [ ] Debugging tehniques
     * [ ] File Handling
-    * [ ] Modules
-7. Capstone Project 1
-    * [ ] Problem Solving
-    * [ ] Problem Solving - Fizz-Buzz Example 
+9. Capstone Project 2
+    * [ ] Git Workflow: Branches and Pull Requests
+    * [ ] Revisiting Project 1 (hangman game):
+        * Creating branch, adding features, merging back to `main`
+        * Loading *words* from external file
+        * Catching and logging errors
+    * [ ] Capstone Project
+10. Intermediate Python
+    * [ ] Decorators
+    * [ ] Generators
+    * [ ] Context Managers
+11. Capstone Project 3
     * [ ] Capstone Project
 12. Built-in and Modules
     * [-] Data Structures
@@ -157,24 +131,21 @@ This may be subject to change.
     * [ ] `pathlib` / `os` module
     * [ ] `csv` module
     * [ ] `sys` module
-9. Third-party Modules
+    * [ ] `re` module
+13. Third-party Modules
     * [ ] Virtual Environments
     * [ ] Using `pip` and `requirements.txt`
     * [ ] Creating python package -  `pyproject.toml` file
-    * [ ] ? Linting, Formatting, Type Checking (`ruff`, `mypy`) ?
-14. Capstone Project 4
+10. Capstone Project 2
     * [ ] Clean Code Priciples
     * [ ] Capstone Project
-    * [ ] Testing Your Code (`pytest`)
-    * [ ] Revisit Project 4
-        * Develop a testing suite for the project
-15. Object Oriented Programming - Part 1
+11. Object Oriented Programming - Part 1
     * [ ] Introduction to classes and instances
     * [ ] Methods (instance, class, static)
     * [ ] Dunder Methods (`__str__`, `__repr__`, etc...)
-16. Capstone Project 5
+12. Capstone Project 3
     * [ ] Capstone Project
-17. Object Oriented Programming - Part 2
+13. Object Oriented Programming - Part 2
     * [ ] Four Pillars of Object-Oriented Programming (Encapsulation, Abstraction, Inheritance, Polymorphism)
 18. Capstone Project 6
 10. Third-party Modules
@@ -193,26 +164,5 @@ This may be subject to change.
 14. Object Oriented Programming - Part 2
     * [ ] Four Pillars of Object-Oriented Programming (Encapsulation, Abstraction, Inheritance, Polymorphism)
 15. Capstone Project 4
-    * [ ] Capstone Project
-=======
-10. Third-party Modules
-=======
-9. Third-party Modules
->>>>>>> 71088b3 (Fixed "WHATS'S NEXT" in dictionary lesson and added "WHAT'S NEXT" section to coprehensions lesson)
-    * [ ] Virtual Environments
-    * [ ] Using `pip` and `requirements.txt`
-    * [ ] Creating python package -  `pyproject.toml` file
-10. Capstone Project 2
-    * [ ] Clean Code Priciples
-    * [ ] Capstone Project
-11. Object Oriented Programming - Part 1
-    * [ ] Introduction to classes and instances
-    * [ ] Methods (instance, class, static)
-    * [ ] Dunder Methods (`__str__`, `__repr__`, etc...)
-12. Capstone Project 3
-    * [ ] Capstone Project
-13. Object Oriented Programming - Part 2
-    * [ ] Four Pillars of Object-Oriented Programming (Encapsulation, Abstraction, Inheritance, Polymorphism)
-14. Capstone Project 4
     * [ ] Capstone Project
 >>>>>>> f8b636d (Updated lists lessons and ROADMAPmd)
