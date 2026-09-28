@@ -5,6 +5,7 @@ This may be subject to change.
 `[ ]` - no work has been done
 `[ ] 🚧` - work in progress (assigned / open PR)
 `[x]` - lesson completed
+`👤 name` - who is working on issue
 
 ## Roadmap
 1. Introduction
