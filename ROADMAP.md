@@ -11,7 +11,7 @@ This may be subject to change.
 1. Introduction
     * [x] How course works?
     * [x] Motivation and Mindset
-    * [ ] 🚧 Asking for Help — #32
+    * [ ] 🚧 Asking for Help — #32 👤 tkcompani
     * [ ] Join the Community — #33
     * [x] Computer Science basics, Programming and Python 
 2. Prerequisites 
@@ -29,11 +29,11 @@ This may be subject to change.
     * [x] User Input and Conditionals
     * [x] Loops
 5. Data Structures
-    * [ ] 🚧 Lists — #57
-    * [ ] 🚧 Tuples — #58
-    * [ ] 🚧 Sets — #59
-    * [ ] 🚧 Dictionaries — #60
-    * [ ] 🚧 Coprehensions (`list`, `dict` `set`) — #61
+    * [ ] 🚧 Lists — #57 👤 razorblade23
+    * [ ] 🚧 Tuples — #58 👤 razorblade23
+    * [ ] 🚧 Sets — #59 👤 razorblade23
+    * [ ] 🚧 Dictionaries — #60 👤 razorblade23
+    * [ ] 🚧 Coprehensions (`list`, `dict` `set`) — #61 👤 razorblade23
 6. Code Organization
     * [ ] Functions — #62
     * [ ] Scope and Namespaces (LEGB rule) — #63
