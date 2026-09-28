@@ -50,7 +50,7 @@ results = var1 + var2 #this raises an error, why?—you will learn how to go abo
 ```
 Your `code` should follow the pep8 style, as well as the `syntax` should be valid so you get an appropriate help response.
 
-### 3. How to Format Your Code 🔃</>
+### 3. How to Format Your Code 🔃
 - You are required to format your code (_python code_) using the markdown language in order to get the appropriate responses to your help requests.
 
 Steps to format your code:
