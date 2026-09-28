@@ -62,42 +62,7 @@ Steps to format your code:
 ### 4. What to Expect Next ➡
 Once you have submitted your help request, sit down tight and the appropriate help will be sent straight to you.
 
-If unfortunately the help response delays or never comes, use the next approach which is _Who To Ask_.
+## Introduction
+This lesson is intended to help you become good in seeking for help
 
-
-## Who to Ask for Help 🧔🏻❔
-subs:
-* Ask yourself
-* Ask someone with experience
-* Ask a trusted community
-* Ask an Ai agent
-
-### 1. Ask Yourself Before Anyone
-You may say, why myself, i don't know?—Ofcourse you know all the answers to your own questions most of the times. **Ask yourself why, why did the error come; Ask yourself how, how did the error come; and Ask yourself what, what brought up a particular error** :(. You are not actually finding the correct solution to the cause of the error with these questions overnight (as if it was a magic :)), **but** what you are doing is you are training your thinking, which may help you think creatively gradually—to solve future problems. "Problem solving requires a creative and effective thinking"—Baldwin.J,. college success(2021).
-
-After you have had your answers to those three question, store them safely as we will learn how they might become useful later in this lesson.
-
-### 2. Ask Someone with Experience
-Why ask someone with experience?—An experienced programmer, specifically python programmer, knows how to solve or debug almost every bug or error respectively. Therefore asking an experienced person means there is a higher probability you will get a solution to an/a error/bug.
-
-Now let see how your answers at the _ask yourself_ sub gets useful here. Compare your answers obtained at the _ask yourself_ sub to the ones you obtained from the experienced programmer and **Ask youself one more time—what did i missed?**—Keep this particular answer to yourself (treat it as important), it might help you in your future decisions when debugging other or similar errors later on.
-
-### 3. Ask a Trusted Community
-Though there isn't a full guarantee that a community will contain only experienced programmers,—That is there would be beginners, intermediates and experts—but there are people with at least an experience if not much, these people might have already at least solved a bug which you just met, and could share with you how they handled it—which might be a fantastic approach you could learn also.
-
-Therefore asking verified communities like the stackoverflow, github, telegram groups, reddit, discord and others i could'nt mention—though one should proceed this with caution—is a must once you are learning the python or any other programming langauge.
-
-### 4. Ask an AI Agent
-AI tools or agents are a smart way to debug errors faster, but the question is—Does the AI agent know the best approch to avoid future code breaks?
-
-This does not neccessarily mean using AI assistance for debugging errors is bad. But for best decision sake; That is if you know enough or understand how to select the best approach out of the many provided by the AI model, then you are encouraged to proceed with this approach—the advice is simple, that is use AI to recall the best solutions you already know quickly and not to decide the best solutions for you.
-
-This really counts in a serious project or even in the real world practices, but it is also a good thing to keep it in practice now—even if you are learning.
-
-
-## Where to Ask for Help
-- _work in progress_
-
-
-
-[ **_WORK IN PROGRESS_** ]
+## Work in progress
