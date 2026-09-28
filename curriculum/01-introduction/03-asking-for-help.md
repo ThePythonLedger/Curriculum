@@ -43,3 +43,7 @@ Paste your code below:
 ### 4. What to Expect Next
 Once you have submitted your help request, sit down tight and the appropriate help will be sent straight to you.
 
+## Introduction
+This lesson is intended to help you become good in seeking for help
+
+## Work in progress
