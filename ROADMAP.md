@@ -13,6 +13,7 @@ This may be subject to change.
     * [x] Motivation and Mindset
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     * [ ] Asking for help
     * [ ] Join the Community
     * [x] Computers and Programming Languages (CS Basics)
@@ -26,6 +27,9 @@ This may be subject to change.
 =======
     * [ ] 🚧 Asking for Help — #32
 >>>>>>> d188ac4 (chore: reconcile roadmap status [skip ci])
+=======
+    * [ ] 🚧 Asking for Help — #32 👤 tkcompani
+>>>>>>> 3f081b9 (chore: reconcile roadmap status [skip ci])
     * [ ] Join the Community — #33
     * [x] Computer Science basics, Programming and Python 
 2. Prerequisites 
@@ -68,11 +72,11 @@ This may be subject to change.
 7. Working on Projects, Solving bugs, Reading errors
 =======
 5. Data Structures
-    * [ ] 🚧 Lists — #57
-    * [ ] 🚧 Tuples — #58
-    * [ ] 🚧 Sets — #59
-    * [ ] 🚧 Dictionaries — #60
-    * [ ] 🚧 Coprehensions (`list`, `dict` `set`) — #61
+    * [ ] 🚧 Lists — #57 👤 razorblade23
+    * [ ] 🚧 Tuples — #58 👤 razorblade23
+    * [ ] 🚧 Sets — #59 👤 razorblade23
+    * [ ] 🚧 Dictionaries — #60 👤 razorblade23
+    * [ ] 🚧 Coprehensions (`list`, `dict` `set`) — #61 👤 razorblade23
 6. Code Organization
     * [ ] Functions — #62
     * [ ] Scope and Namespaces (LEGB rule) — #63
