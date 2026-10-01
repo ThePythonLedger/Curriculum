@@ -35,7 +35,7 @@ This may be subject to change.
     * [ ] 🚧 Dictionaries — #60 👤 razorblade23
     * [ ] 🚧 Coprehensions (`list`, `dict` `set`) — #61 👤 razorblade23
 6. Code Organization
-    * [ ] Functions — #62
+    * [ ] 🚧 Functions — #62 👤 tajirdev
     * [ ] Scope and Namespaces (LEGB rule) — #63
     * [ ] Type Hints — #64
     * [ ] Modules — #65
