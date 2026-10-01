@@ -1,0 +1,5 @@
+#after every update and before any commit/push, run:
+- git fetch upstream
+- git rebase upstream/main
+- git push origin master
+
