@@ -38,22 +38,31 @@ Before you ask anything check if:
 
 
 ### 2. The Question space 📰❔
-Paste your code below:
+Carefully study the `code` below:
 
-′′′python
+```python
 
-import A
+var1 = "12"
+var2 = 12
 
-′′′
+results = var1 + var2 #this raises an error, why?—you will learn how to go about finding a soln—to the why, how, &what.
+
+```
+Your `code` should follow the pep8 style, as well as the `syntax` should be valid so you get an appropriate help response.
 
 ### 3. How to Format Your Code 🔃</>
 - You are required to format your code (_python code_) using the markdown language in order to get the appropriate responses to your help requests.
-...
+
+Steps to format your code:
+- Type in three of the ` ``` ` character(three) to open it and close with another three of the ` ``` ` character. 
+- In between the opening and closing character sets, type `python` and enter a `space` character. You should have something like this: ` ```python ``` ` .
+- Press `Enter` to go to a new line, now you are set to paste your `code` for submission—make sure the code syntax is valid, and is same as the one which raised the error; that is the `indentaion`, `spacing`, and `others` are all same.
+
 
 ### 4. What to Expect Next ➡
 Once you have submitted your help request, sit down tight and the appropriate help will be sent straight to you.
 
-If unfortunately the help response delays or never comes, use the next approach which is _WHO TO ASK_.
+If unfortunately the help response delays or never comes, use the next approach which is _Who To Ask_.
 
 
 ## Who to Ask for Help 🧔🏻❔
@@ -64,7 +73,7 @@ subs:
 * Ask an Ai agent
 
 ### 1. Ask Yourself Before Anyone
-You may say, why myself, i don't know?—Ofcourse you know all the answers to your own questions most of the times. **Ask yourself why, why did the error come; Ask yourself how, how did the error come; and Ask yourself what, what brought up a particular error** :(. You are not actually finding the correct solution to the cause of the error with these questions overnight (as if it was a magic :)), *but* what you are doing is you are training your thinking which may help you think creatively gradually—to solve future problems. "Problem solving requires a creative and effective thinking"—Baldwin.J,. college success(2021).
+You may say, why myself, i don't know?—Ofcourse you know all the answers to your own questions most of the times. **Ask yourself why, why did the error come; Ask yourself how, how did the error come; and Ask yourself what, what brought up a particular error** :(. You are not actually finding the correct solution to the cause of the error with these questions overnight (as if it was a magic :)), **but** what you are doing is you are training your thinking, which may help you think creatively gradually—to solve future problems. "Problem solving requires a creative and effective thinking"—Baldwin.J,. college success(2021).
 
 After you have had your answers to those three question, store them safely as we will learn how they might become useful later in this lesson.
 
