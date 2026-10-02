@@ -179,7 +179,7 @@ You will need to do this assignment on your own machine.
     Item price: $67.2
     Item available: True
     ```
-7. Make sure your program works as expected then create a repository and push your code to github
+7. Make sure your program works as expected then create a repository and push your code to Github.
 
 ## Deepen Your Knowlege
 Go through these articles to deepen your knowlege about the topics covered in this lesson.

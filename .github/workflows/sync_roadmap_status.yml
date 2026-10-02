@@ -33,6 +33,14 @@ jobs:
         with:
           ref: main
           token: ${{ secrets.ROADMAP_PAT }}
+    runs-on: ubuntu-latest
+    steps:
+    if: github.event_name == 'issues' || github.event_name == 'pull_request_target'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-python@v5
         with:
@@ -57,6 +65,7 @@ jobs:
         run: python scripts/roadmap/sync_discord.py
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          
           DISCORD_MESSAGE_IDS: ${{ vars.DISCORD_MESSAGE_IDS }}
 
   reconcile:
@@ -91,4 +100,5 @@ jobs:
         run: python scripts/roadmap/sync_discord.py
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+
           DISCORD_MESSAGE_IDS: ${{ vars.DISCORD_MESSAGE_IDS }}

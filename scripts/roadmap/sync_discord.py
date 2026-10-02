@@ -23,6 +23,7 @@ import os
 import re
 import sys
 import urllib.error
+import urllib.error
 import urllib.request
 
 ROADMAP_PATH = "ROADMAP.md"
@@ -90,6 +91,8 @@ def build_embed(phases: list[Phase]) -> dict:
 def patch_message(webhook_url: str, message_id: str, embed: dict) -> None:
     url = f"{webhook_url}/messages/{message_id}"
     payload = json.dumps({"content": "", "embeds": [embed]}).encode("utf-8")
+    payload = json.dumps({"embeds": [embed]}).encode("utf-8")
+    payload = json.dumps({"content": "", "embeds": [embed]}).encode("utf-8")
     req = urllib.request.Request(
         url,
         data=payload,
@@ -110,6 +113,12 @@ def patch_message(webhook_url: str, message_id: str, embed: dict) -> None:
         body = e.read().decode("utf-8", errors="replace")
         print(f"HTTP {e.code} updating message {message_id}: {body}", file=sys.stderr)
         raise
+    with urllib.request.urlopen(req) as resp:
+        if resp.status not in (200, 204):
+            print(
+                f"Unexpected status {resp.status} updating message {message_id}",
+                file=sys.stderr,
+            )
 
 
 def main() -> None:
