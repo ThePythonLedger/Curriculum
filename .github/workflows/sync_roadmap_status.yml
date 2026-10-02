@@ -9,47 +9,18 @@ on:
   # (already in the event payload) and write to ROADMAP.md on main.
   pull_request_target:
     types: [opened, ready_for_review, closed]
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8c7939b (Added a reconcile step for manual triggering and scheduled at 04:00 AM)
-=======
->>>>>>> c65e0c6 (Added automated scripts for pushing ROADMAP updates automaticly on Issue assigment. Changed ROADMAP.md to fit new workflow.)
-=======
->>>>>>> b74705e (Added a reconcile step for manual triggering and scheduled at 04:00 AM)
   # Run reconcile.py on demand ("Run workflow" button) and once a day
   # as a safety net against any missed event (e.g. an issue closed
   # before its ROADMAP.md line had "— #N" linked to it yet).
   workflow_dispatch: {}
   schedule:
     - cron: "0 4 * * *"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 78c3371 (Added automated scripts for pushing ROADMAP updates automaticly on Issue assigment. Changed ROADMAP.md to fit new workflow.)
-=======
->>>>>>> 8c7939b (Added a reconcile step for manual triggering and scheduled at 04:00 AM)
-=======
-=======
->>>>>>> 2bfe0cf (Added automated scripts for pushing ROADMAP updates automaticly on Issue assigment. Changed ROADMAP.md to fit new workflow.)
->>>>>>> c65e0c6 (Added automated scripts for pushing ROADMAP updates automaticly on Issue assigment. Changed ROADMAP.md to fit new workflow.)
-=======
->>>>>>> b74705e (Added a reconcile step for manual triggering and scheduled at 04:00 AM)
 
 permissions:
   contents: write
 
 jobs:
   sync:
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c65e0c6 (Added automated scripts for pushing ROADMAP updates automaticly on Issue assigment. Changed ROADMAP.md to fit new workflow.)
     if: github.event_name == 'issues' || github.event_name == 'pull_request_target'
     runs-on: ubuntu-latest
     steps:
@@ -62,28 +33,14 @@ jobs:
         with:
           ref: main
           token: ${{ secrets.ROADMAP_PAT }}
-=======
-<<<<<<< HEAD
-=======
-    if: github.event_name == 'issues' || github.event_name == 'pull_request_target'
->>>>>>> 8c7939b (Added a reconcile step for manual triggering and scheduled at 04:00 AM)
-=======
->>>>>>> c65e0c6 (Added automated scripts for pushing ROADMAP updates automaticly on Issue assigment. Changed ROADMAP.md to fit new workflow.)
     runs-on: ubuntu-latest
     steps:
-=======
     if: github.event_name == 'issues' || github.event_name == 'pull_request_target'
     runs-on: ubuntu-latest
     steps:
->>>>>>> b74705e (Added a reconcile step for manual triggering and scheduled at 04:00 AM)
       - uses: actions/checkout@v4
         with:
           ref: main
-<<<<<<< HEAD
->>>>>>> 78c3371 (Added automated scripts for pushing ROADMAP updates automaticly on Issue assigment. Changed ROADMAP.md to fit new workflow.)
-=======
->>>>>>> 2bfe0cf (Added automated scripts for pushing ROADMAP updates automaticly on Issue assigment. Changed ROADMAP.md to fit new workflow.)
->>>>>>> c65e0c6 (Added automated scripts for pushing ROADMAP updates automaticly on Issue assigment. Changed ROADMAP.md to fit new workflow.)
 
       - uses: actions/setup-python@v5
         with:
@@ -108,6 +65,40 @@ jobs:
         run: python scripts/roadmap/sync_discord.py
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-=======
->>>>>>> 2bfe0cf (Added automated scripts for pushing ROADMAP updates automaticly on Issue assigment. Changed ROADMAP.md to fit new workflow.)
+          
+          DISCORD_MESSAGE_IDS: ${{ vars.DISCORD_MESSAGE_IDS }}
+
+  reconcile:
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.ROADMAP_PAT }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Reconcile ROADMAP.md with issue states
+        id: update
+        run: python scripts/roadmap/reconcile_roadmap.py
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit ROADMAP.md
+        if: steps.update.outputs.changed == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: reconcile roadmap status [skip ci]"
+          file_pattern: ROADMAP.md
+
+      - name: Sync Discord
+        if: steps.update.outputs.changed == 'true'
+        run: python scripts/roadmap/sync_discord.py
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+
           DISCORD_MESSAGE_IDS: ${{ vars.DISCORD_MESSAGE_IDS }}

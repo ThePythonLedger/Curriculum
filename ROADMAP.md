@@ -5,6 +5,7 @@ This may be subject to change.
 `[ ]` - no work has been done
 `[ ] 🚧` - work in progress (assigned / open PR)
 `[x]` - lesson completed
+`👤 name` - who is working on issue
 
 ## Roadmap
 1. Introduction
@@ -20,7 +21,6 @@ This may be subject to change.
     * [x] Text and Code Editors 
     * [x] Command Line Basics
     * [x] Python - REPL vs Scripts
->>>>>>> 8c7939b (Added a reconcile step for manual triggering and scheduled at 04:00 AM)
 3. Git Basics
     * [x] Introduction to Git
     * [x] Setting up Git and Github
@@ -131,8 +131,6 @@ This may be subject to change.
     * [ ] `pathlib` / `os` module
     * [ ] `csv` module
     * [ ] `sys` module
-<<<<<<< HEAD
-<<<<<<< HEAD
     * [ ] `re` module
 13. Third-party Modules
     * [ ] Virtual Environments
@@ -167,12 +165,8 @@ This may be subject to change.
     * [ ] Four Pillars of Object-Oriented Programming (Encapsulation, Abstraction, Inheritance, Polymorphism)
 15. Capstone Project 4
     * [ ] Capstone Project
->>>>>>> f8b636d (Updated lists lessons and ROADMAPmd)
-=======
 10. Third-party Modules
-=======
 9. Third-party Modules
->>>>>>> 71088b3 (Fixed "WHATS'S NEXT" in dictionary lesson and added "WHAT'S NEXT" section to coprehensions lesson)
     * [ ] Virtual Environments
     * [ ] Using `pip` and `requirements.txt`
     * [ ] Creating python package -  `pyproject.toml` file
@@ -189,4 +183,20 @@ This may be subject to change.
     * [ ] Four Pillars of Object-Oriented Programming (Encapsulation, Abstraction, Inheritance, Polymorphism)
 14. Capstone Project 4
     * [ ] Capstone Project
->>>>>>> f8b636d (Updated lists lessons and ROADMAPmd)
+    * [ ] ? Linting, Formatting, Type Checking (`ruff`, `mypy`) ?
+14. Capstone Project 4
+    * [ ] Clean Code Priciples
+    * [ ] Capstone Project
+    * [ ] Testing Your Code (`pytest`)
+    * [ ] Revisit Project 4
+        * Develop a testing suite for the project
+15. Object Oriented Programming - Part 1
+    * [ ] Introduction to classes and instances
+    * [ ] Methods (instance, class, static)
+    * [ ] Dunder Methods (`__str__`, `__repr__`, etc...)
+16. Capstone Project 5
+    * [ ] Capstone Project
+17. Object Oriented Programming - Part 2
+    * [ ] Four Pillars of Object-Oriented Programming (Encapsulation, Abstraction, Inheritance, Polymorphism)
+18. Capstone Project 6
+    * [ ] Capstone Project
