@@ -17,7 +17,7 @@ In this lesson you will learn how to get help whenever you need it. And by the e
 ## Lesson outline 📝
 * How to Get Help
 * Who to Ask for Help
-* Where to Ask for Help
+* Where to Ask for Help (**Under Construction...**)
 
 ## How to Get Help ❔
 Steps to follow to get help:
@@ -96,5 +96,20 @@ This really counts in a serious project or even in the real world practices, but
 
 
 ## Where to Ask for Help
+Subs:
+- Ask the social media
+- Ask in learning centers
+
+### 1. Ask the Social Media
+At least anyone who owns a smart device has an account registered on a social media platform—Some popularly known ones are: _WhatsApp, Facebook, Twitter, TikTok, Reddit, Discord, etc._—and on these platform so might be as well all kinds of programmers—experienced ones specifically.
+
+__Note__:
+```text
+In case it comes to pass that you are not registered on any of these platforms, just register on any of them to get started.
+```
+**Don't just ASK** _"Hello everyone i need help with fixing a bug"_—without a link to code, media files, just this text or similar— this will actually lead others to either just leave a 'like' or do nothing. _What is the right way to ask the social media?_— **ASK by** including a clear title, clear content/message describing the error process and your expectations, a link to the code somewhere or a screenshot of the code, and optionally the methods you have used that never worked.
+
+### 2. Ask in Learning Centers
+
 - _work in progress_
 
