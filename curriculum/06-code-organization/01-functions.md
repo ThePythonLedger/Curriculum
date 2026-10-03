@@ -97,8 +97,8 @@ you can pass multiple parameters by separating them by comma
 
 ```python interactive
 
-def greet_customer(name,address)
- print "hello", name,"from", address
+def greet_customer(name,address):
+ print ("hello", name,"from", address)
 
 #And calling will be
 
@@ -122,8 +122,9 @@ print(add_numbers(10)) #result 12
 
 ```
 
-:::[Order of Default parameters]
-info Parameters with default values must always be placed **after** parameters without default values in your function definition. 
+:::info
+
+ Parameters with default values must always be placed **after** parameters without default values in your function definition. 
 :::
 
 
@@ -179,7 +180,8 @@ apart from these function there other types of function you can study more from 
 [**Learn More: Official Documentation & Best Practices**] Read the following resources to build a deeper mental model of how arguments and documentation work in Python:
 
 1. Read [**Python Tutorial: Defining Functions**](https://docs.python.org/3/tutorial/controlflow.html#23defining-functions) (Sections 4.7, 4.7.1, and 4.7.2). Pay close attention to how Python handles positional arguments versus keyword arguments.
-2. Read **Section 4.7.7 (Documentation Strings)** in the official documentation to see how professionals document what a function does. :::
+2. Read **Section 4.7.7 (Documentation Strings)** in the official documentation to see how professionals document what a function does. 
+:::
 
 ## Check Knowledge
 
