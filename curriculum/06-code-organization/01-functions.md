@@ -35,7 +35,7 @@ When talking about function think like self-contained machine:
 2. **Process**: it carries out a sequence of instructions.
 3. **Output**: it produce a result and hands it back to you (return)
 
-:::tip [The DRY Principle]
+:::tip The DRY Principle
  One thing to know by organizing code into function, your programs follow the DRY principle : Don’t Repeat Yourself
 ::: 
 
@@ -45,7 +45,7 @@ A function is defined using the **def** keyword followed by descriptive name in 
 
 Example:
 
-```python interactive debuge
+```python interactive debug
 
 def display_welcome():
 
@@ -167,7 +167,7 @@ Broadly speaking, function in Python fall into two categories:
 
 
 :::tip 
-apart from these function there other types of function you can study more from here [**types of functions**](https://www.geeksforgeeks.org/python/python-functions) 
+Apart from these function there other types of function you can study more from here [**types of functions**](https://www.geeksforgeeks.org/python/python-functions) 
 :::
 
 
@@ -177,7 +177,7 @@ apart from these function there other types of function you can study more from 
 ## Deepen your Knowledge
 
 :::explore
-[**Learn More: Official Documentation & Best Practices**] Read the following resources to build a deeper mental model of how arguments and documentation work in Python:
+**Learn More: Official Documentation & Best Practices** Read the following resources to build a deeper mental model of how arguments and documentation work in Python:
 
 1. Read [**Python Tutorial: Defining Functions**](https://docs.python.org/3/tutorial/controlflow.html#23defining-functions) (Sections 4.7, 4.7.1, and 4.7.2). Pay close attention to how Python handles positional arguments versus keyword arguments.
 2. Read **Section 4.7.7 (Documentation Strings)** in the official documentation to see how professionals document what a function does. 
