@@ -157,29 +157,28 @@ Visit our [python-excercise repository](https://github.com/ThePythonLedger/pytho
 After cloning, try to solve [excercise-1](https://github.com/ThePythonLedger/python-exercises/tree/main/exercises%2Ffoundations%2F01_hello_world) and [excercise-2](https://github.com/ThePythonLedger/python-exercises/tree/main/exercises%2Ffoundations%2F02_datatypes) for better understanding.
 
 ## Assignment {#assignment}
-Try the following excercise to establish your knowlege. We will build a shop, starting with defining (declaring) diffrent variables in this lesson and progress with our little shop as we go further along.
+Try the following excercise to establish your knowlege. We will build a bookstore, starting with defining (declaring) diffrent variables in this lesson and progress with our little bookstore as we go further along.
 
 You will need to do this assignment on your own machine.
 
-1. Create a new directory with the name `simple-python-shop`
-2. Navigate inside the newly created directory
-3. Instantiate `git` repository
-4. Create a new file with the name `main.py`
-5. Inside the file define the the following variables:
-    * `shop_name` - set its value to some **string**
-    * `item_name` - set its value to some **string**
-    * `item_quantity` - set its value to some **integer**
-    * `item_price` - set its value to some **float**
-    * `item_available` - set its value to some **boolean**
-6. Output the variables you defined (using `print()` function) like the following example:
+1. Create a new file with the name `main.py`
+2. Inside the file define the following variables:
+    * `bookstore_name` - set its value to some **string** (*eg. `"Willow Creek Books"`*)
+    * `book_title` - set its value to some **string** (*eg. `"The Last Cartographer"`*)
+    * `book_quantity` - set its value to some **integer** (*eg. `3`*)
+    * `book_price` - set its value to some **float** (*eg. `18.5`*)
+    * `book_available` - set its value to some **boolean** (*eg. `True`*)
+3. Output the variables you defined (using `print()` function) like the following example:
     ```
-    Shop name: Merlin Shop
-    Item name: Excalibur
-    Item quantity: 3
-    Item price: $67.2
-    Item available: True
+    Welcome to Willow Creek Books inventory system.
+    CURRENT INVENTORY:
+    - Book: The Last Cartographer -> [price: $18.5, copies: 3, available: True]
     ```
-7. Make sure your program works as expected then create a repository and push your code to github
+4. Make sure your program works as expected then:
+    * Check *git* status with `git status` command.
+    * Above command should tell you that your `main.py` is not yet in the staging area, so we need to add it with `git add main.py` command.
+    * Now that we have our file in staging area, we can finally do a commit with `git commit -m "Added basic variables"`
+    * Final step is to push the changes to your remote repository, which we can do with `git push` command
 
 ## Deepen Your Knowlege
 Go through these articles to deepen your knowlege about the topics covered in this lesson.
