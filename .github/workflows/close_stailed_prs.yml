@@ -1,0 +1,38 @@
+name: Close Stale Unlinked PRs
+
+on:
+  schedule:
+    - cron: '17 3 * * *'   # daily, 03:17 UTC
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          # Only touch PRs flagged by the guard workflow
+          only-labels: needs-issue
+
+          # Leave issues alone
+          days-before-issue-stale: -1
+          days-before-issue-close: -1
+
+          # Warn after 5 quiet days, close 2 days later (~1 week total)
+          days-before-pr-stale: 5
+          days-before-pr-close: 2
+          stale-pr-label: stale
+
+          stale-pr-message: >
+            Friendly reminder: this PR still needs a linked issue that is
+            assigned to you (e.g. `Closes #12` in the description).
+            Small typo fixes don't need one, but this PR is larger or adds
+            new files. If nothing changes in the next 2 days, it will be
+            closed. You're welcome to reopen it once the issue is sorted out.
+          close-pr-message: >
+            Closing due to inactivity, since no assigned issue was linked.
+            Feel free to reopen this PR once you've claimed an issue.
