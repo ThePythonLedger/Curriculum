@@ -211,28 +211,42 @@ print("not True: ", not True)
 Try to solve [excercise-3](https://github.com/ThePythonLedger/python-exercises/tree/main/exercises%2Ffoundations%2F03_math_and_comparisons) for better understanding.
 
 ## Assignment
-In the last assignment we have declared our shop variables and printed the inventory. In this one you are tasked with:
-1. Open your code editor in your last project directory `simple-python-shop`
+In the last assignment we have declared our bookstore variables and printed the inventory. In this one you are tasked with making code more robust and logical.
+
+1. Open your code editor in your last project directory `simple-bookstore`
 2. Open `main.py` file we have been working on
 3. Standardize your strings:
-    * Convert `shop_name` to **uppercase** (e.g., `MERLIN SHOP`)
-    * Convert item name to **titlecase** (e.g., `Excalibur`)
+    * Convert `bookstore_name` to **uppercase** (e.g., `WILLOW CREEK BOOKS`)
+    * Convert book title to **capitalised** (e.g., `The last cartographer`)
 4. Calculate the checkout price:
-    * Create variable `total` by multiplying `item_price` and `item_quantity`
+    * Create variable `inventory_total` by multiplying `book_price` and `book_quantity`
 5. Comparison checks:
-    * Create a boolean `is_large_order` that evaluates whether `item_quantity` is greater then or equal to `3`.
+    * Modify `book_avilable` so it evaluates whether `book_quantity` is greater than `0`.
 6. Update your output to use **f-string** :
     ```
-    Welcome to MERLIN SHOP
-    --------------------------------
-    Item: Excalibur
-    Purchased: 3 x 67.20
-    Total: $201.60
-    Large Order: True
-    --------------------------------
-    Thank you for your purchase !
+    Welcome to WILLOW CREEK BOOKS inventory system
+    - - - - - - - - - - - - - - - - - - - -
+    CURRENT INVENTORY
+    - - - - - - - - - - - - - - - - - - - -
+    - Book: The Last Cartographer -> [price:18.5, copies: 3, available: True]
+    - - - - - - - - - - - - - - - - - - - -
+    Inventory total: 55.5
+    - - - - - - - - - - - - - - - - - - - -
+    Thank you for using our inventory system.
     ```
-7. Commit your changes with `git` and push to Github
+7. Make sure your program works as expected, then:
+    * Check your *git* status (`git status`)
+    * Above command should show that your file `main.py` has changes from the last time. Just run `git commit -m "Added basic receipt"` as we already have `main.py` in our commit from before.
+    * Finally, `git push` to your remote repository
+
+:::info
+While you are developing our little bookstore, most of your `git` commands will be the same in structure:
+* Check status with `git status`.
+* Commit changes with `git commit -m "<commit_message>"`.
+* Push the changes to remote repository with `git push`
+
+From now on, we will assume you know what commands to run in order to push the changes to remote repository, so lessons will use a shorter `"Commit and push the changes"` form.
+:::
 
 ## Deepen Your Knowledge
 1. Learn more about [Basic math in Python](https://cs.stanford.edu/people/nick/py/python-math.html#math) from article in **Stanford University**, covering all the topics in this lesson but in a different style and a bit more.

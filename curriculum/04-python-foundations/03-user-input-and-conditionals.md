@@ -85,25 +85,52 @@ elif age <= 15:
     print(f"{name} is not 15 years old")
 ```
 
+:::tip
+In below assigment you are tasked with checking some rules and exiting application if any are broken.
+
+You can use built-in module called `sys` which has some handy functionality to work with our operating system. For now, we are only interested in using its `exit()` function. It takes in **int** value to provide as **exit code** which other applications can use to interpret whether your program run successfully or failed and in what way.
+
+It is common to use `0` as **success** and any other positive integer to signify a failure.
+
+To use other modules, you use `import` keyword, followed by the name of the module. Usually, these are located at the top of the file, before writing your logic.
+
+You can use it like this:
+```python
+import sys # once at the top of the file
+sys.exit(0) # success
+sys.exit(1) # failed / error
+```
+
+We will learn more about built-in, custom and third-party **modules** (called libraries) later in the course.
+:::
+
 ## Assigment
-Now that you know how to get user input and branch your program using conditional logic (`if`, `elif`, `else`) the code can move away from hardcoded values and become interactive. 
+Now that you know how to get user input and branch your program using conditional logic the code can move away from hardcoded values and become interactive. 
 
-**Goal:** use `input()` to collect user choices, cast strings to numbers, and use conditional logic to apply discounts and stock checks.
-
-1. Open `main.py` file in our `simple-python-shop` project directory.
-2. Add a new variable `item_stock` and set it to some integer
-3. Interactive input: 
-    * Ask the user for desired `item_quantity` using `input()`. **Don't forget** to cast the string to integer !
-4. Stock & Availability Check
-    * If `item_quantity` is less or equal to `0` print an error message: `Invalid quantity ordered`
-    * If `item_quantity` is greater then `item_stock` print `Sorry, we do not have enough stock.`
-5. Dynamic discount (conditionals)
-    * Calculate the total (you should have this from the last lesson)
-    * If `total` is over `100` apply a **10%** discount (`total * 0.90`) and print: `Discount applied: 10%`
-    * Otherwise print: `No discount applied`
-6. Receipt Output
-    * Output the final receipt showing item name, quantity, applied discount state, and final amount due.
-7. Commit and push your updated code to Github.
+1. Open `main.py` file in our `simple-bookstore` project directory.
+2. Instead of hardcoding values (`booktore_name`, `book_title`, `book_quantity`, `book_price`) we will ask the user to enter these values using `input()` function. **Remember** that `input()` always returns **str** so we must *cast* the string to desired type (`book_quantity` to **int** and `book_price` to **float**). Replace all of these variables hardcoded values to `input()` function, asking the user to enter the data.
+3. Now the system must add some contraints, printing the error message and exiting if any of the rules are broken. Add these below each of the inputs, so that check runs as soon as user enters something. Rules are as follows:
+    * `bookstore_name` must be between 3 and 20 characters long
+    * `book_name` must be between 3 and 15 characters long
+    * `book_quantity` must be positive **integer** (above `0`)
+    * `book_price` must be positive **float** (above `0.00`)
+4. System must now also calculate taxes that depend on the `book_price`, so make another variable `book_tax` and set it to `0`. Then calculate the tax using below rules, assign it to `book_tax` and print out the tax applied.
+    * If `book_price` is above `5` tax is `3%` (`0.03`)
+    * If `book_price` is above `10` tax is `5%` (`0.05`)
+    * If `book_price` is above `18` tax is `10%` (`0.1`)
+5. Display inventory listing like this:
+    ```
+    Welcome to WILLOW CREEK BOOKS inventory system
+    - - - - - - - - - - - - - - - - - - - -
+    CURRENT INVENTORY
+    - - - - - - - - - - - - - - - - - - - -
+    - Book: The Last Cartographer -> [price:$18.5, tax: 10%, copies: 3, available: True]
+    - - - - - - - - - - - - - - - - - - - -
+    Inventory total: $55.5 [VAT: $60.05]
+    - - - - - - - - - - - - - - - - - - - -
+    Thank you for using our inventory system.
+    ```
+6. Commit and push your changes.
 
 ## Deepen Your Knowledge
 * Learn more about [Indentation in Python](https://realpython.com/ref/glossary/indentation/) from this **Real Python** article
