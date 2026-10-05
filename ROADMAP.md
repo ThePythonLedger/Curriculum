@@ -36,7 +36,7 @@ This may be subject to change.
     * [ ] 🚧 Coprehensions (`list`, `dict` `set`) — #61 👤 razorblade23
 6. Code Organization
     * [x] Functions — #62
-    * [ ] Scope and Namespaces (LEGB rule) — #63
+    * [ ] 🚧 Scope and Namespaces (LEGB rule) — #63 👤 tajirdev
     * [ ] Type Hints — #64
     * [ ] Modules — #65
 7. Capstone Project 1
