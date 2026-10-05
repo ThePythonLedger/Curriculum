@@ -114,19 +114,42 @@ for item in range(10):
 
 :::tip[Both `break` and `continue` work only in loops]
 
-These statements `break` and `continue` work only in loops. If you try to use them outside of the loop you will encounter an error.
-
+These statements `break` and `continue` work only in loops. If you try to use them outside the loop you will encounter an error.
 :::
+
+## `else` In Loops
+Both **for** and **while** loops have an optional condition `else` which is used when loop exits *without* hitting a break inside the loop, but the loop exits. Extremly useful and one of the less known Python feature. 
+
+In a `for` loop, the `else` clause is executed after the loop finishes its final iteration, that is, if no break occurred.
+
+In a `while` loop, it’s executed after the loop’s condition becomes false.
+
+In either kind of loop, the `else` clause is not executed if the loop was terminated by a `break`. Of course, other ways of ending the loop early, such as a `return` or a `raised exception`, will also skip execution of the `else` clause.
+
+Let us see this in action:
+```python interactive debug
+for n in range(2, 10):
+    for x in range(2, n):
+        if n % x == 0:
+            print(n, 'equals', x, '*', n//x)
+            break
+    else:
+        # loop fell through without finding a factor
+        print(n, 'is a prime number')
+```
+Look closely, the `else` clause belongs to the `for` loop, not `if` statement.
 
 ## Assigment
 1. Open `main.py` in your `simple-bookstore` project.
-2. Create a new variable named `book_count` and set it to `0` as its initial value.
-3. Use a `while` loop to ring up a stack of books at checkout: repeatedly prompt for the price printed on the price tag of the next book being scanned (this is a small bookstore without barcode lookup yet, so the cashier reads each tag by hand).
-    * If the price entered is 0, break out of the loop (no more books to scan)
-    * Otherwise, add the price entered to `total` and increment `book_count` by 1.
-4. When the loop finishes, determine if the `total` can have a discount and print out the final receipt.
+2. Create a lock for our application by:
+    * Create new variable `PIN_CODE` and assign it some integer (*eg. `1234`*).
+    * Create another variable `UNLOCK_ATTEMPTS` and assign it `3`.
+    * We need another `correct_pin_code` variable to track the state, so set it to `False` initially.
+    * Now write a **for** loop that runs `UNLOCK_ATTEMPTS` times
+    * For each iteration, ask the user to enter PIN code, then check if it is correct and if it is, set `correct_pin_code` to `True`, otherwise `continue` with iteration.
+    * If the user did not enter correct PIN code in all three iterations, print the message saying that console is locked and exit the application.
+3. Write **while** loop that runs while `correct_pin_code` is `True`, then indent the rest of the code so it belongs to that loop.
+4. Keep everything else in the loop and replace those `sys.exit()` calls with `continue` so iteration starts over if user enters the wrong information.
 5. Make sure your program works, then commit and push changes.
-
-## Deepen Your Knowlege
 
 ## What's Next

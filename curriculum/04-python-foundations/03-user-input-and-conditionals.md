@@ -88,13 +88,15 @@ elif age <= 15:
 :::tip
 In below assigment you are tasked with checking some rules and exiting application if any are broken.
 
-You can use built-in module called `sys` which has some handy functionality to work with our operating system. For now, we are only interested in using its `exit()` functions. It takes in **int** value to provide as **exit code** which other applications can use to interpret whether your program run successfully or failed and in what way.
+You can use built-in module called `sys` which has some handy functionality to work with our operating system. For now, we are only interested in using its `exit()` function. It takes in **int** value to provide as **exit code** which other applications can use to interpret whether your program run successfully or failed and in what way.
 
 It is common to use `0` as **success** and any other positive integer to signify a failure.
 
+To use other modules, you use `import` keyword, followed by the name of the module. Usually, these are located at the top of the file, before writing your logic.
+
 You can use it like this:
 ```python
-import sys
+import sys # once at the top of the file
 sys.exit(0) # success
 sys.exit(1) # failed / error
 ```
