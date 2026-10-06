@@ -141,18 +141,15 @@ Look closely, the `else` clause belongs to the `for` loop, not `if` statement.
 
 ## Assigment
 1. Open `main.py` in your `simple-bookstore` project.
-2. Create a new variable named `book_count` and set it to `0` as its initial value.
-3. Use a `while` loop to ring up a stack of books at checkout: repeatedly prompt for the price printed on the price tag of the next book being scanned (this is a small bookstore without barcode lookup yet, so the cashier reads each tag by hand).
-    * If the price entered is 0, break out of the loop (no more books to scan)
-    * Otherwise, add the price entered to `total` and increment `book_count` by 1.
-1. Open `main.py` in your `simple-python-shop` project.
-2. Set `item_quantity` to `0` as its initial value and remove `item_price` variable.
-3. Use a `while` loop to repeatedly prompt the user for an item price.
-    * If the price entered is less then 0, print message saying `Invalid price, must be positive`, and skipping the rest of the iteration code, asking user again to enter the price.
-    * Otherwise check if the price entered is 0 and if so, break out of the loop.
-    * Otherwise, check if `item_stock - item_quantity` is more than `1` and if not, break out of the loop, informing the user we are out of stock.
-    * Otherwise, add the price user entered to `total` and increment `item_quantity` by 1.
-4. When the loop finishes, determine if the `total` can have a discount and print out the final receipt.
+2. Create a lock for our application by:
+    * Create new variable `PIN_CODE` and assign it some integer (*eg. `1234`*).
+    * Create another variable `UNLOCK_ATTEMPTS` and assign it `3`.
+    * We need another `correct_pin_code` variable to track the state, so set it to `False` initially.
+    * Now write a **for** loop that runs `UNLOCK_ATTEMPTS` times
+    * For each iteration, ask the user to enter PIN code, then check if it is correct and if it is, set `correct_pin_code` to `True`, otherwise `continue` with iteration.
+    * If the user did not enter correct PIN code in all three iterations, print the message saying that console is locked and exit the application.
+3. Write **while** loop that runs while `correct_pin_code` is `True`, then indent the rest of the code so it belongs to that loop.
+4. Keep everything else in the loop and replace those `sys.exit()` calls with `continue` so iteration starts over if user enters the wrong information.
 5. Make sure your program works, then commit and push changes.
 
 ## What's Next

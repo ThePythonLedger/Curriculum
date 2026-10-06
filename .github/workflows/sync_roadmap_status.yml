@@ -21,6 +21,9 @@ permissions:
 
 jobs:
   sync:
+    concurrency:
+      group: roadmap-sync
+      cancel-in-progress: true
     if: github.event_name == 'issues' || github.event_name == 'pull_request_target'
     runs-on: ubuntu-latest
     steps:
@@ -29,6 +32,8 @@ jobs:
       # recognizes. The default token authenticates as github-actions[bot],
       # which doesn't hold a real repo "Write" role, so role-based bypass
       # entries never apply to it no matter how they're configured.
+      - run: sleep 180
+
       - uses: actions/checkout@v4
         with:
           ref: main

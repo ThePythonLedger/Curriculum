@@ -170,13 +170,15 @@ You will need to do this assignment on your own machine.
     * `book_available` - set its value to some **boolean** (*eg. `True`*)
 3. Output the variables you defined (using `print()` function) like the following example:
     ```
-    Shop name: Merlin Shop
-    Item name: Excalibur
-    Item quantity: 3
-    Item price: $67.2
-    Item available: True
+    Welcome to Willow Creek Books inventory system.
+    CURRENT INVENTORY:
+    - Book: The Last Cartographer -> [price: $18.5, copies: 3, available: True]
     ```
-7. Make sure your program works as expected then create a repository and push your code to Github.
+4. Make sure your program works as expected then:
+    * Check *git* status with `git status` command.
+    * Above command should tell you that your `main.py` is not yet in the staging area, so we need to add it with `git add main.py` command.
+    * Now that we have our file in staging area, we can finally do a commit with `git commit -m "Added basic variables"`
+    * Final step is to push the changes to your remote repository, which we can do with `git push` command
 
 ## Deepen Your Knowlege
 Go through these articles to deepen your knowlege about the topics covered in this lesson.
