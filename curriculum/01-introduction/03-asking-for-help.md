@@ -1,4 +1,5 @@
 ---
+metadata
 ---
 id: asking-for-help
 title: Asking For Help
