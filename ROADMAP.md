@@ -38,7 +38,7 @@ This may be subject to change.
     * [x] Functions — #62
     * [x] Scope and Namespaces (LEGB rule) — #63
     * [x] Type Hints — #64
-    * [ ] Modules — #65
+    * [ ] 🚧 Modules — #65 👤 tajirdev
 7. Capstone Project 1
     * [ ] Problem Solving — #66
     * [ ] Problem Solving - Fizz-Buzz Example — #67
